@@ -1,0 +1,70 @@
+{
+	"name": "spr_player",
+	"plugin-id": "Sprite",
+	"sid": 269615049500789,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [
+		{
+			"behaviorId": "scrollto",
+			"name": "ScrollTo",
+			"sid": 495144696122158
+		},
+		{
+			"behaviorId": "EightDir",
+			"name": "8Direction",
+			"sid": 986045638141085
+		}
+	],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 250,
+						"height": 250,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"fileType": "image/png",
+						"imageSpriteId": 7076432,
+						"collisionPoly": {
+							"points": [
+								0.49399999999999955,
+								0.19600000000000004,
+								0.7179999999999999,
+								0.2679999999999998,
+								0.8080000000000002,
+								0.4979999999999998,
+								0.7110000000000003,
+								0.6909999999999998,
+								0.5105000000000002,
+								0.7654999999999998,
+								0.3022500000000001,
+								0.6987499999999998,
+								0.20200000000000007,
+								0.5159999999999996,
+								0.26800000000000007,
+								0.28
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1,
+						"tag": ""
+					}
+				],
+				"sid": 611429084913162,
+				"name": "Animation 1",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}
