@@ -1,0 +1,15 @@
+{
+	"name": "PopUp_text",
+	"plugin-id": "Text",
+	"sid": 746336037172599,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [
+		{
+			"behaviorId": "Pin",
+			"name": "Pin",
+			"sid": 655667372878268
+		}
+	],
+	"effectTypes": []
+}

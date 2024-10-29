@@ -376,6 +376,49 @@
 				}
 			],
 			"sid": 159649833795236
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-start-of-layout",
+					"objectClass": "System",
+					"sid": 874190376559646
+				}
+			],
+			"actions": [
+				{
+					"id": "pin-to-object-properties",
+					"objectClass": "PopUp",
+					"sid": 453687040094697,
+					"behaviorType": "Pin",
+					"parameters": {
+						"pin-to": "spr_player",
+						"x": true,
+						"y": true,
+						"angle": false,
+						"width-type": "no",
+						"height-type": "no",
+						"z": false
+					}
+				},
+				{
+					"id": "pin-to-object-properties",
+					"objectClass": "PopUp_text",
+					"sid": 434710944640417,
+					"behaviorType": "Pin",
+					"parameters": {
+						"pin-to": "PopUp",
+						"x": true,
+						"y": true,
+						"angle": false,
+						"width-type": "no",
+						"height-type": "no",
+						"z": false
+					}
+				}
+			],
+			"sid": 558174566772353
 		}
 	],
 	"sid": 953197778318877
