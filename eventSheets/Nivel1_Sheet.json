@@ -438,6 +438,40 @@
 						}
 					],
 					"isOrBlock": true
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-collision-with-another-object",
+							"objectClass": "spr_enemigo",
+							"sid": 213329492891861,
+							"parameters": {
+								"object": "spr_flecha"
+							}
+						},
+						{
+							"id": "is-overlapping-another-object",
+							"objectClass": "spr_enemigo",
+							"sid": 891466228887389,
+							"parameters": {
+								"object": "spr_flecha"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "subtract-from-eventvar",
+							"objectClass": "System",
+							"sid": 328883453175651,
+							"parameters": {
+								"variable": "VidaEnemigo",
+								"value": "0.1"
+							}
+						}
+					],
+					"sid": 328245794910832,
+					"isOrBlock": true
 				}
 			],
 			"sid": 352392284844529
@@ -449,6 +483,124 @@
 			"description": "",
 			"isActiveOnStart": true,
 			"children": [
+				{
+					"eventType": "group",
+					"disabled": false,
+					"title": "Vida",
+					"description": "",
+					"isActiveOnStart": true,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 942580930236964,
+									"parameters": {
+										"variable": "VidaJugador",
+										"comparison": 4,
+										"value": "5"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-animation",
+									"objectClass": "spr_vida",
+									"sid": 169028334812346,
+									"parameters": {
+										"animation": "\"vida_3\"",
+										"from": "beginning"
+									}
+								}
+							],
+							"sid": 522071922299237
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 723001344269182,
+									"parameters": {
+										"variable": "VidaJugador",
+										"comparison": 0,
+										"value": "5"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-animation",
+									"objectClass": "spr_vida",
+									"sid": 647381869166157,
+									"parameters": {
+										"animation": "\"vida_2\"",
+										"from": "beginning"
+									}
+								}
+							],
+							"sid": 974581585896331
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 794698712859580,
+									"parameters": {
+										"variable": "VidaJugador",
+										"comparison": 2,
+										"value": "5"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-animation",
+									"objectClass": "spr_vida",
+									"sid": 772529234663510,
+									"parameters": {
+										"animation": "\"vida_1\"",
+										"from": "beginning"
+									}
+								}
+							],
+							"sid": 666037478220041
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 777638490777619,
+									"parameters": {
+										"variable": "VidaJugador",
+										"comparison": 3,
+										"value": "0"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-animation",
+									"objectClass": "spr_vida",
+									"sid": 335379690319249,
+									"parameters": {
+										"animation": "\"vida_0\"",
+										"from": "beginning"
+									}
+								}
+							],
+							"sid": 388651814042892
+						}
+					],
+					"sid": 646221990355175
+				},
 				{
 					"eventType": "group",
 					"disabled": false,
@@ -644,6 +796,14 @@
 									"parameters": {
 										"variable": "cant_flechas",
 										"value": "1"
+									}
+								},
+								{
+									"id": "set-text",
+									"objectClass": "txt_cantflechas",
+									"sid": 869165144688455,
+									"parameters": {
+										"text": "\"X\" & cant_flechas"
 									}
 								}
 							],
@@ -1213,6 +1373,17 @@
 							}
 						},
 						{
+							"id": "shake",
+							"objectClass": "spr_player",
+							"sid": 114134813298442,
+							"behaviorType": "ScrollTo",
+							"parameters": {
+								"magnitude": "2",
+								"duration": "0.1",
+								"mode": "reducing-magnitude"
+							}
+						},
+						{
 							"id": "set-default-color",
 							"objectClass": "spr_player",
 							"sid": 185283697258296,
@@ -1238,6 +1409,44 @@
 						}
 					],
 					"sid": 665285808175998
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-collision-with-another-object",
+							"objectClass": "spr_player",
+							"sid": 811188984462167,
+							"parameters": {
+								"object": "spr_item_flechas"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "add-to-eventvar",
+							"objectClass": "System",
+							"sid": 236410608877176,
+							"parameters": {
+								"variable": "cant_flechas",
+								"value": "3"
+							}
+						},
+						{
+							"id": "destroy",
+							"objectClass": "spr_item_flechas",
+							"sid": 979148877052106
+						},
+						{
+							"id": "set-text",
+							"objectClass": "txt_cantflechas",
+							"sid": 570539731069591,
+							"parameters": {
+								"text": "\"X\" & cant_flechas"
+							}
+						}
+					],
+					"sid": 853153418414491
 				}
 			],
 			"sid": 222920941293229
@@ -1294,12 +1503,12 @@
 			],
 			"actions": [
 				{
-					"id": "set-text",
-					"objectClass": "PopUp_text",
-					"sid": 705323664339831,
-					"disabled": true,
+					"id": "set-ignoring-input",
+					"objectClass": "spr_player",
+					"sid": 406989794410956,
+					"behaviorType": "8Direction",
 					"parameters": {
-						"text": "spr_player.ColorValue"
+						"input": "stop-ignoring"
 					}
 				},
 				{
@@ -1315,6 +1524,107 @@
 						"width-type": "no",
 						"height-type": "no",
 						"z": false
+					}
+				},
+				{
+					"id": "pin-to-object-properties",
+					"objectClass": "txt_cantflechas",
+					"sid": 561510711624196,
+					"behaviorType": "Pin",
+					"parameters": {
+						"pin-to": "spr_cantflechas",
+						"x": true,
+						"y": true,
+						"angle": false,
+						"width-type": "no",
+						"height-type": "no",
+						"z": false
+					}
+				},
+				{
+					"id": "pin-to-object-properties",
+					"objectClass": "spr_vida",
+					"sid": 962152673727334,
+					"behaviorType": "Pin",
+					"parameters": {
+						"pin-to": "spr_hud",
+						"x": true,
+						"y": true,
+						"angle": false,
+						"width-type": "no",
+						"height-type": "no",
+						"z": false
+					}
+				},
+				{
+					"id": "pin-to-object-properties",
+					"objectClass": "spr_cantflechas",
+					"sid": 791359758178476,
+					"behaviorType": "Pin",
+					"parameters": {
+						"pin-to": "spr_hud",
+						"x": true,
+						"y": true,
+						"angle": false,
+						"width-type": "no",
+						"height-type": "no",
+						"z": false
+					}
+				},
+				{
+					"id": "pin-to-object-properties",
+					"objectClass": "spr_moriste",
+					"sid": 224213454633853,
+					"behaviorType": "Pin",
+					"parameters": {
+						"pin-to": "spr_hud",
+						"x": true,
+						"y": true,
+						"angle": false,
+						"width-type": "no",
+						"height-type": "no",
+						"z": false
+					}
+				},
+				{
+					"id": "set-position",
+					"objectClass": "spr_hud",
+					"sid": 245069221063600,
+					"parameters": {
+						"x": "spr_player.X",
+						"y": "spr_player.Y"
+					}
+				},
+				{
+					"id": "pin-to-object-properties",
+					"objectClass": "spr_hud",
+					"sid": 865168964628120,
+					"behaviorType": "Pin",
+					"parameters": {
+						"pin-to": "spr_player",
+						"x": true,
+						"y": true,
+						"angle": false,
+						"width-type": "no",
+						"height-type": "no",
+						"z": false
+					}
+				},
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 333060236896959,
+					"parameters": {
+						"variable": "cant_flechas",
+						"value": "0"
+					}
+				},
+				{
+					"id": "set-text",
+					"objectClass": "txt_cantflechas",
+					"sid": 785267318413469,
+					"parameters": {
+						"text": "\"X\" & cant_flechas"
 					}
 				}
 			],
@@ -1424,12 +1734,28 @@
 			],
 			"actions": [
 				{
-					"id": "set-boolean-eventvar",
-					"objectClass": "System",
-					"sid": 394616484791958,
+					"id": "set-visible",
+					"objectClass": "spr_moriste",
+					"sid": 701874723927728,
 					"parameters": {
-						"variable": "Reset",
-						"value": "true"
+						"visibility": "visible"
+					}
+				},
+				{
+					"id": "set-ignoring-input",
+					"objectClass": "spr_player",
+					"sid": 574797680767577,
+					"behaviorType": "8Direction",
+					"parameters": {
+						"input": "start-ignoring"
+					}
+				},
+				{
+					"id": "set-time-scale",
+					"objectClass": "System",
+					"sid": 477403834890551,
+					"parameters": {
+						"time-scale": "0"
 					}
 				}
 			],
@@ -1459,6 +1785,14 @@
 					"sid": 444373593693256,
 					"parameters": {
 						"reset-static": false
+					}
+				},
+				{
+					"id": "set-time-scale",
+					"objectClass": "System",
+					"sid": 961655606699871,
+					"parameters": {
+						"time-scale": "1"
 					}
 				}
 			],

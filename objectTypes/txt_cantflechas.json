@@ -1,0 +1,15 @@
+{
+	"name": "txt_cantflechas",
+	"plugin-id": "Text",
+	"sid": 243410458794777,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [
+		{
+			"behaviorId": "Pin",
+			"name": "Pin",
+			"sid": 153385196747728
+		}
+	],
+	"effectTypes": []
+}

@@ -122,7 +122,13 @@
 			"Cuchillo",
 			"spr_arco",
 			"cofre_arco",
-			"spr_flecha"
+			"spr_flecha",
+			"spr_vida",
+			"spr_hud",
+			"spr_cantflechas",
+			"txt_cantflechas",
+			"spr_item_flechas",
+			"spr_moriste"
 		],
 		"subfolders": []
 	},
