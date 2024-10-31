@@ -12,6 +12,26 @@
 			"sid": 958002310877030
 		},
 		{
+			"eventType": "variable",
+			"name": "Cofre",
+			"type": "boolean",
+			"initialValue": "false",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 979013970079060
+		},
+		{
+			"eventType": "variable",
+			"name": "Cuchillo",
+			"type": "boolean",
+			"initialValue": "false",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 758682811851259
+		},
+		{
 			"eventType": "group",
 			"disabled": false,
 			"title": "Enemigo",
@@ -292,6 +312,15 @@
 							"objectClass": "spr_player",
 							"sid": 632884095344996,
 							"behaviorType": "8Direction"
+						},
+						{
+							"id": "compare-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 861216715224370,
+							"parameters": {
+								"variable": "Cuchillo"
+							},
+							"isInverted": true
 						}
 					],
 					"actions": [
@@ -332,6 +361,15 @@
 							"sid": 163541040049808,
 							"behaviorType": "8Direction",
 							"isInverted": true
+						},
+						{
+							"id": "compare-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 836366322818130,
+							"parameters": {
+								"variable": "Cuchillo"
+							},
+							"isInverted": true
 						}
 					],
 					"actions": [
@@ -346,6 +384,101 @@
 						}
 					],
 					"sid": 977805323084305
+				},
+				{
+					"eventType": "comment",
+					"text": "Si se mueve + cuchillo = caminar",
+					"text-color": [
+						0,
+						0,
+						0,
+						0
+					],
+					"background-color": [
+						0.5215686274509804,
+						0.9568627450980393,
+						0.6078431372549019,
+						1
+					]
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-moving",
+							"objectClass": "spr_player",
+							"sid": 421144291369356,
+							"behaviorType": "8Direction"
+						},
+						{
+							"id": "compare-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 493204134571481,
+							"parameters": {
+								"variable": "Cuchillo"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-animation",
+							"objectClass": "spr_player",
+							"sid": 422677101117375,
+							"parameters": {
+								"animation": "\"Caminando.Cuchillo\"",
+								"from": "beginning"
+							}
+						}
+					],
+					"sid": 994095968919744
+				},
+				{
+					"eventType": "comment",
+					"text": "Si NO se mueve + cuchillo = parar",
+					"text-color": [
+						0,
+						0,
+						0,
+						0
+					],
+					"background-color": [
+						0.5215686274509804,
+						0.9568627450980393,
+						0.6078431372549019,
+						1
+					]
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-moving",
+							"objectClass": "spr_player",
+							"sid": 958242800893872,
+							"behaviorType": "8Direction",
+							"isInverted": true
+						},
+						{
+							"id": "compare-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 269883399253059,
+							"parameters": {
+								"variable": "Cuchillo"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-animation",
+							"objectClass": "spr_player",
+							"sid": 997964949277801,
+							"parameters": {
+								"animation": "\"Parado.Cuchillo\"",
+								"from": "beginning"
+							}
+						}
+					],
+					"sid": 505623578539836
 				},
 				{
 					"eventType": "comment",
@@ -401,6 +534,15 @@
 								"x": "spr_player.X",
 								"y": "spr_player.Y - 150"
 							}
+						},
+						{
+							"id": "set-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 377698443377953,
+							"parameters": {
+								"variable": "Cofre",
+								"value": "true"
+							}
 						}
 					],
 					"sid": 125287900649201
@@ -427,9 +569,105 @@
 								"variable": "PopUp",
 								"value": "false"
 							}
+						},
+						{
+							"id": "set-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 407257407658968,
+							"parameters": {
+								"variable": "Cofre",
+								"value": "false"
+							}
 						}
 					],
 					"sid": 990872229386332
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 773277652882725,
+							"parameters": {
+								"variable": "Cofre"
+							}
+						},
+						{
+							"id": "key-is-down",
+							"objectClass": "Keyboard",
+							"sid": 967461056863072,
+							"parameters": {
+								"key": 69
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 474795576829440,
+							"parameters": {
+								"variable": "Cuchillo",
+								"value": "true"
+							}
+						},
+						{
+							"id": "destroy",
+							"objectClass": "Cofre",
+							"sid": 816193729448291
+						}
+					],
+					"sid": 428258245508217
+				},
+				{
+					"eventType": "comment",
+					"text": "Si space = Ataca",
+					"text-color": [
+						0,
+						0,
+						0,
+						0
+					],
+					"background-color": [
+						0.5215686274509804,
+						0.9568627450980393,
+						0.6078431372549019,
+						1
+					]
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "key-is-down",
+							"objectClass": "Keyboard",
+							"sid": 626340880610479,
+							"parameters": {
+								"key": 32
+							}
+						},
+						{
+							"id": "compare-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 325444075539922,
+							"parameters": {
+								"variable": "Cuchillo"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-animation",
+							"objectClass": "spr_player",
+							"sid": 142307089925501,
+							"parameters": {
+								"animation": "\"Ataca.Cuchillo\"",
+								"from": "beginning"
+							}
+						}
+					],
+					"sid": 750322596888120
 				}
 			],
 			"sid": 222920941293229
@@ -481,22 +719,6 @@
 				}
 			],
 			"actions": [
-				{
-					"id": "pin-to-object-properties",
-					"objectClass": "PopUp",
-					"sid": 453687040094697,
-					"disabled": true,
-					"behaviorType": "Pin",
-					"parameters": {
-						"pin-to": "spr_player",
-						"x": true,
-						"y": true,
-						"angle": false,
-						"width-type": "no",
-						"height-type": "no",
-						"z": false
-					}
-				},
 				{
 					"id": "pin-to-object-properties",
 					"objectClass": "PopUp_text",
