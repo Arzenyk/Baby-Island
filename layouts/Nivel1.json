@@ -5828,8 +5828,8 @@
 						"expanded": true
 					},
 					"world": {
-						"x": 1565,
-						"y": 2125,
+						"x": 3256,
+						"y": 1549,
 						"width": 128,
 						"height": 128,
 						"originX": 0.5,
@@ -5955,7 +5955,7 @@
 					}
 				},
 				{
-					"type": "Cofre",
+					"type": "cofre_cuchillo",
 					"properties": {
 						"initially-visible": true,
 						"initial-animation": "Animation 1",
@@ -6049,8 +6049,8 @@
 						"expanded": true
 					},
 					"world": {
-						"x": 1564,
-						"y": 2059,
+						"x": 1847,
+						"y": 2246,
 						"width": 250,
 						"height": 250,
 						"originX": 0.5,
@@ -6106,8 +6106,8 @@
 						"expanded": true
 					},
 					"world": {
-						"x": 1565,
-						"y": 2017,
+						"x": 1848,
+						"y": 2204,
 						"width": 206,
 						"height": 80,
 						"originX": 0.5,
@@ -6182,6 +6182,88 @@
 						"height": 250,
 						"originX": 0.5,
 						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "cofre_arco",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 128,
+					"sid": 913052476126531,
+					"tags": "",
+					"instanceVariables": {},
+					"behaviors": {},
+					"instanceFolderItem": {
+						"sid": 913052476126531,
+						"expanded": true
+					},
+					"world": {
+						"x": 3285.5,
+						"y": 1360,
+						"width": 120,
+						"height": 112,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "spr_flecha",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 129,
+					"sid": 911493821688903,
+					"tags": "",
+					"instanceVariables": {},
+					"behaviors": {
+						"Bullet": {
+							"properties": {
+								"speed": 400,
+								"acceleration": 0,
+								"gravity": 0,
+								"bounce-off-solids": false,
+								"set-angle": true,
+								"step": false,
+								"enabled": true
+							}
+						}
+					},
+					"instanceFolderItem": {
+						"sid": 911493821688903,
+						"expanded": true
+					},
+					"world": {
+						"x": 300,
+						"y": -166,
+						"width": 83,
+						"height": 59,
+						"originX": 0.46,
+						"originY": 0.48,
 						"color": [
 							1,
 							1,

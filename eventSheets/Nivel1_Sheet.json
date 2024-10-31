@@ -13,13 +13,23 @@
 		},
 		{
 			"eventType": "variable",
-			"name": "Cofre",
+			"name": "Cofre_cuchillo",
 			"type": "boolean",
 			"initialValue": "false",
 			"comment": "",
 			"isStatic": false,
 			"isConstant": false,
 			"sid": 979013970079060
+		},
+		{
+			"eventType": "variable",
+			"name": "Cofre_arco",
+			"type": "boolean",
+			"initialValue": "false",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 970871928074127
 		},
 		{
 			"eventType": "variable",
@@ -60,6 +70,36 @@
 			"isStatic": false,
 			"isConstant": false,
 			"sid": 761317912386078
+		},
+		{
+			"eventType": "variable",
+			"name": "Arco",
+			"type": "boolean",
+			"initialValue": "false",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 360257939820974
+		},
+		{
+			"eventType": "variable",
+			"name": "Cofre",
+			"type": "boolean",
+			"initialValue": "false",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 873749121785135
+		},
+		{
+			"eventType": "variable",
+			"name": "cant_flechas",
+			"type": "number",
+			"initialValue": "10",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 569545986511250
 		},
 		{
 			"eventType": "group",
@@ -410,385 +450,736 @@
 			"isActiveOnStart": true,
 			"children": [
 				{
-					"eventType": "comment",
-					"text": "Si se mueve = caminar",
-					"text-color": [
-						0,
-						0,
-						0,
-						0
-					],
-					"background-color": [
-						0.5215686274509804,
-						0.9568627450980393,
-						0.6078431372549019,
-						1
-					]
-				},
-				{
-					"eventType": "block",
-					"conditions": [
+					"eventType": "group",
+					"disabled": false,
+					"title": "Arco",
+					"description": "",
+					"isActiveOnStart": true,
+					"children": [
 						{
-							"id": "is-moving",
-							"objectClass": "spr_player",
-							"sid": 632884095344996,
-							"behaviorType": "8Direction"
+							"eventType": "comment",
+							"text": "Si se mueve + arco = caminar",
+							"text-color": [
+								0,
+								0,
+								0,
+								0
+							],
+							"background-color": [
+								0.5215686274509804,
+								0.9568627450980393,
+								0.6078431372549019,
+								1
+							]
 						},
 						{
-							"id": "compare-boolean-eventvar",
-							"objectClass": "System",
-							"sid": 861216715224370,
-							"parameters": {
-								"variable": "Cuchillo"
-							},
-							"isInverted": true
-						}
-					],
-					"actions": [
-						{
-							"id": "set-animation",
-							"objectClass": "spr_player",
-							"sid": 586418360854231,
-							"parameters": {
-								"animation": "\"Caminando\"",
-								"from": "beginning"
-							}
-						}
-					],
-					"sid": 247185069734433
-				},
-				{
-					"eventType": "comment",
-					"text": "Si NO se mueve = parar",
-					"text-color": [
-						0,
-						0,
-						0,
-						0
-					],
-					"background-color": [
-						0.5215686274509804,
-						0.9568627450980393,
-						0.6078431372549019,
-						1
-					]
-				},
-				{
-					"eventType": "block",
-					"conditions": [
-						{
-							"id": "is-moving",
-							"objectClass": "spr_player",
-							"sid": 163541040049808,
-							"behaviorType": "8Direction",
-							"isInverted": true
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "is-moving",
+									"objectClass": "spr_player",
+									"sid": 266136733806381,
+									"behaviorType": "8Direction"
+								},
+								{
+									"id": "compare-boolean-eventvar",
+									"objectClass": "System",
+									"sid": 886476189069056,
+									"parameters": {
+										"variable": "Cuchillo"
+									},
+									"isInverted": true
+								},
+								{
+									"id": "compare-boolean-eventvar",
+									"objectClass": "System",
+									"sid": 389205902606678,
+									"parameters": {
+										"variable": "Arco"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-animation",
+									"objectClass": "spr_player",
+									"sid": 866094990406464,
+									"parameters": {
+										"animation": "\"caminando.arco\"",
+										"from": "beginning"
+									}
+								}
+							],
+							"sid": 198797595272962
 						},
 						{
-							"id": "compare-boolean-eventvar",
-							"objectClass": "System",
-							"sid": 836366322818130,
-							"parameters": {
-								"variable": "Cuchillo"
-							},
-							"isInverted": true
-						}
-					],
-					"actions": [
-						{
-							"id": "set-animation",
-							"objectClass": "spr_player",
-							"sid": 243641672633531,
-							"parameters": {
-								"animation": "\"Parado\"",
-								"from": "beginning"
-							}
-						}
-					],
-					"sid": 977805323084305
-				},
-				{
-					"eventType": "comment",
-					"text": "Si se mueve + cuchillo = caminar",
-					"text-color": [
-						0,
-						0,
-						0,
-						0
-					],
-					"background-color": [
-						0.5215686274509804,
-						0.9568627450980393,
-						0.6078431372549019,
-						1
-					]
-				},
-				{
-					"eventType": "block",
-					"conditions": [
-						{
-							"id": "is-moving",
-							"objectClass": "spr_player",
-							"sid": 421144291369356,
-							"behaviorType": "8Direction"
+							"eventType": "comment",
+							"text": "Si NO se mueve + arco = parar",
+							"text-color": [
+								0,
+								0,
+								0,
+								0
+							],
+							"background-color": [
+								0.5215686274509804,
+								0.9568627450980393,
+								0.6078431372549019,
+								1
+							]
 						},
 						{
-							"id": "compare-boolean-eventvar",
-							"objectClass": "System",
-							"sid": 493204134571481,
-							"parameters": {
-								"variable": "Cuchillo"
-							}
-						}
-					],
-					"actions": [
-						{
-							"id": "set-animation",
-							"objectClass": "spr_player",
-							"sid": 422677101117375,
-							"parameters": {
-								"animation": "\"Caminando.Cuchillo\"",
-								"from": "beginning"
-							}
-						}
-					],
-					"sid": 994095968919744
-				},
-				{
-					"eventType": "comment",
-					"text": "Si NO se mueve + cuchillo = parar",
-					"text-color": [
-						0,
-						0,
-						0,
-						0
-					],
-					"background-color": [
-						0.5215686274509804,
-						0.9568627450980393,
-						0.6078431372549019,
-						1
-					]
-				},
-				{
-					"eventType": "block",
-					"conditions": [
-						{
-							"id": "is-moving",
-							"objectClass": "spr_player",
-							"sid": 958242800893872,
-							"behaviorType": "8Direction",
-							"isInverted": true
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "is-moving",
+									"objectClass": "spr_player",
+									"sid": 506516240386959,
+									"behaviorType": "8Direction",
+									"isInverted": true
+								},
+								{
+									"id": "compare-boolean-eventvar",
+									"objectClass": "System",
+									"sid": 977310180527442,
+									"parameters": {
+										"variable": "Cuchillo"
+									},
+									"isInverted": true
+								},
+								{
+									"id": "compare-boolean-eventvar",
+									"objectClass": "System",
+									"sid": 333339710238811,
+									"parameters": {
+										"variable": "Arco"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-animation",
+									"objectClass": "spr_player",
+									"sid": 844174370677222,
+									"parameters": {
+										"animation": "\"parado.arco\"",
+										"from": "beginning"
+									}
+								}
+							],
+							"sid": 664936074693060
 						},
 						{
-							"id": "compare-boolean-eventvar",
-							"objectClass": "System",
-							"sid": 269883399253059,
-							"parameters": {
-								"variable": "Cuchillo"
-							}
-						}
-					],
-					"actions": [
+							"eventType": "comment",
+							"text": "Si space = Ataca",
+							"text-color": [
+								0,
+								0,
+								0,
+								0
+							],
+							"background-color": [
+								0.5215686274509804,
+								0.9568627450980393,
+								0.6078431372549019,
+								1
+							]
+						},
 						{
-							"id": "set-animation",
-							"objectClass": "spr_player",
-							"sid": 997964949277801,
-							"parameters": {
-								"animation": "\"Parado.Cuchillo\"",
-								"from": "beginning"
-							}
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "on-key-pressed",
+									"objectClass": "Keyboard",
+									"sid": 440790991965560,
+									"parameters": {
+										"key": 32
+									}
+								},
+								{
+									"id": "compare-boolean-eventvar",
+									"objectClass": "System",
+									"sid": 330595047347611,
+									"parameters": {
+										"variable": "Arco"
+									}
+								},
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 970674820737853,
+									"parameters": {
+										"variable": "cant_flechas",
+										"comparison": 5,
+										"value": "1"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-animation",
+									"objectClass": "spr_player",
+									"sid": 344045347132258,
+									"parameters": {
+										"animation": "\"ataca.arco\"",
+										"from": "beginning"
+									}
+								},
+								{
+									"id": "spawn-another-object",
+									"objectClass": "spr_player",
+									"sid": 784526620889231,
+									"parameters": {
+										"object": "spr_flecha",
+										"layer": "0",
+										"image-point": "1",
+										"create-hierarchy": false,
+										"template-name": "\"\""
+									}
+								},
+								{
+									"id": "subtract-from-eventvar",
+									"objectClass": "System",
+									"sid": 140220179554975,
+									"parameters": {
+										"variable": "cant_flechas",
+										"value": "1"
+									}
+								}
+							],
+							"sid": 228845603176006
 						}
 					],
-					"sid": 505623578539836
+					"sid": 585682527863693
 				},
 				{
-					"eventType": "comment",
-					"text": "Si collision = cofre then popup",
-					"text-color": [
-						0,
-						0,
-						0,
-						0
+					"eventType": "group",
+					"disabled": false,
+					"title": "Cuchillo",
+					"description": "",
+					"isActiveOnStart": true,
+					"children": [
+						{
+							"eventType": "comment",
+							"text": "Si se mueve + cuchillo = caminar",
+							"text-color": [
+								0,
+								0,
+								0,
+								0
+							],
+							"background-color": [
+								0.5215686274509804,
+								0.9568627450980393,
+								0.6078431372549019,
+								1
+							]
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "is-moving",
+									"objectClass": "spr_player",
+									"sid": 147895043209470,
+									"behaviorType": "8Direction"
+								},
+								{
+									"id": "compare-boolean-eventvar",
+									"objectClass": "System",
+									"sid": 426194520853626,
+									"parameters": {
+										"variable": "Cuchillo"
+									}
+								},
+								{
+									"id": "compare-boolean-eventvar",
+									"objectClass": "System",
+									"sid": 460732768718264,
+									"parameters": {
+										"variable": "Arco"
+									},
+									"isInverted": true
+								}
+							],
+							"actions": [
+								{
+									"id": "set-animation",
+									"objectClass": "spr_player",
+									"sid": 981842352724320,
+									"parameters": {
+										"animation": "\"Caminando.Cuchillo\"",
+										"from": "beginning"
+									}
+								}
+							],
+							"sid": 393408079234379
+						},
+						{
+							"eventType": "comment",
+							"text": "Si NO se mueve + cuchillo = parar",
+							"text-color": [
+								0,
+								0,
+								0,
+								0
+							],
+							"background-color": [
+								0.5215686274509804,
+								0.9568627450980393,
+								0.6078431372549019,
+								1
+							]
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "is-moving",
+									"objectClass": "spr_player",
+									"sid": 997414392959650,
+									"behaviorType": "8Direction",
+									"isInverted": true
+								},
+								{
+									"id": "compare-boolean-eventvar",
+									"objectClass": "System",
+									"sid": 935596998892476,
+									"parameters": {
+										"variable": "Cuchillo"
+									}
+								},
+								{
+									"id": "compare-boolean-eventvar",
+									"objectClass": "System",
+									"sid": 465228335780732,
+									"parameters": {
+										"variable": "Arco"
+									},
+									"isInverted": true
+								}
+							],
+							"actions": [
+								{
+									"id": "set-animation",
+									"objectClass": "spr_player",
+									"sid": 767938061533051,
+									"parameters": {
+										"animation": "\"Parado.Cuchillo\"",
+										"from": "beginning"
+									}
+								}
+							],
+							"sid": 768565403810706
+						},
+						{
+							"eventType": "comment",
+							"text": "Si space = Ataca",
+							"text-color": [
+								0,
+								0,
+								0,
+								0
+							],
+							"background-color": [
+								0.5215686274509804,
+								0.9568627450980393,
+								0.6078431372549019,
+								1
+							]
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "key-is-down",
+									"objectClass": "Keyboard",
+									"sid": 633214890775173,
+									"parameters": {
+										"key": 32
+									}
+								},
+								{
+									"id": "compare-boolean-eventvar",
+									"objectClass": "System",
+									"sid": 746604551910793,
+									"parameters": {
+										"variable": "Cuchillo"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-animation",
+									"objectClass": "spr_player",
+									"sid": 136272624301253,
+									"parameters": {
+										"animation": "\"Ataca.Cuchillo\"",
+										"from": "beginning"
+									}
+								}
+							],
+							"sid": 653981902353138
+						}
 					],
-					"background-color": [
-						0.5215686274509804,
-						0.9568627450980393,
-						0.6078431372549019,
-						1
-					]
+					"sid": 589682757594051
 				},
 				{
-					"eventType": "block",
-					"conditions": [
+					"eventType": "group",
+					"disabled": false,
+					"title": "vacio",
+					"description": "",
+					"isActiveOnStart": true,
+					"children": [
 						{
-							"id": "is-overlapping-another-object",
-							"objectClass": "spr_player",
-							"sid": 514044843232367,
-							"parameters": {
-								"object": "Cofre"
-							}
+							"eventType": "comment",
+							"text": "Si se mueve = caminar",
+							"text-color": [
+								0,
+								0,
+								0,
+								0
+							],
+							"background-color": [
+								0.5215686274509804,
+								0.9568627450980393,
+								0.6078431372549019,
+								1
+							]
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "is-moving",
+									"objectClass": "spr_player",
+									"sid": 525128445011902,
+									"behaviorType": "8Direction"
+								},
+								{
+									"id": "compare-boolean-eventvar",
+									"objectClass": "System",
+									"sid": 265866283954222,
+									"parameters": {
+										"variable": "Cuchillo"
+									},
+									"isInverted": true
+								},
+								{
+									"id": "compare-boolean-eventvar",
+									"objectClass": "System",
+									"sid": 316994466872172,
+									"parameters": {
+										"variable": "Arco"
+									},
+									"isInverted": true
+								}
+							],
+							"actions": [
+								{
+									"id": "set-animation",
+									"objectClass": "spr_player",
+									"sid": 959209414218656,
+									"parameters": {
+										"animation": "\"Caminando\"",
+										"from": "beginning"
+									}
+								}
+							],
+							"sid": 884560060686400
+						},
+						{
+							"eventType": "comment",
+							"text": "Si NO se mueve = parar",
+							"text-color": [
+								0,
+								0,
+								0,
+								0
+							],
+							"background-color": [
+								0.5215686274509804,
+								0.9568627450980393,
+								0.6078431372549019,
+								1
+							]
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "is-moving",
+									"objectClass": "spr_player",
+									"sid": 409353928026957,
+									"behaviorType": "8Direction",
+									"isInverted": true
+								},
+								{
+									"id": "compare-boolean-eventvar",
+									"objectClass": "System",
+									"sid": 804773194043597,
+									"parameters": {
+										"variable": "Cuchillo"
+									},
+									"isInverted": true
+								},
+								{
+									"id": "compare-boolean-eventvar",
+									"objectClass": "System",
+									"sid": 759183733351317,
+									"parameters": {
+										"variable": "Arco"
+									},
+									"isInverted": true
+								}
+							],
+							"actions": [
+								{
+									"id": "set-animation",
+									"objectClass": "spr_player",
+									"sid": 883821945905168,
+									"parameters": {
+										"animation": "\"Parado\"",
+										"from": "beginning"
+									}
+								}
+							],
+							"sid": 414227961128012
 						}
 					],
-					"actions": [
-						{
-							"id": "set-boolean-eventvar",
-							"objectClass": "System",
-							"sid": 447244498647319,
-							"parameters": {
-								"variable": "PopUp",
-								"value": "true"
-							}
-						},
-						{
-							"id": "set-text",
-							"objectClass": "PopUp_text",
-							"sid": 844400528588498,
-							"parameters": {
-								"text": "\"'E' abrir\""
-							}
-						},
-						{
-							"id": "set-position",
-							"objectClass": "PopUp",
-							"sid": 961431230768422,
-							"parameters": {
-								"x": "spr_player.X",
-								"y": "spr_player.Y - 150"
-							}
-						},
-						{
-							"id": "set-boolean-eventvar",
-							"objectClass": "System",
-							"sid": 377698443377953,
-							"parameters": {
-								"variable": "Cofre",
-								"value": "true"
-							}
-						}
-					],
-					"sid": 125287900649201
+					"sid": 260251372765679
 				},
 				{
-					"eventType": "block",
-					"conditions": [
+					"eventType": "group",
+					"disabled": false,
+					"title": "Cofres",
+					"description": "",
+					"isActiveOnStart": true,
+					"children": [
 						{
-							"id": "is-overlapping-another-object",
-							"objectClass": "spr_player",
-							"sid": 746633847665999,
-							"parameters": {
-								"object": "Cofre"
-							},
-							"isInverted": true
-						}
-					],
-					"actions": [
-						{
-							"id": "set-boolean-eventvar",
-							"objectClass": "System",
-							"sid": 864408287026519,
-							"parameters": {
-								"variable": "PopUp",
-								"value": "false"
-							}
+							"eventType": "comment",
+							"text": "Si collision = cofre then popup",
+							"text-color": [
+								0,
+								0,
+								0,
+								0
+							],
+							"background-color": [
+								0.5215686274509804,
+								0.9568627450980393,
+								0.6078431372549019,
+								1
+							]
 						},
 						{
-							"id": "set-boolean-eventvar",
-							"objectClass": "System",
-							"sid": 407257407658968,
-							"parameters": {
-								"variable": "Cofre",
-								"value": "false"
-							}
-						}
-					],
-					"sid": 990872229386332
-				},
-				{
-					"eventType": "block",
-					"conditions": [
-						{
-							"id": "compare-boolean-eventvar",
-							"objectClass": "System",
-							"sid": 773277652882725,
-							"parameters": {
-								"variable": "Cofre"
-							}
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "is-overlapping-another-object",
+									"objectClass": "spr_player",
+									"sid": 997558223284587,
+									"parameters": {
+										"object": "cofre_cuchillo"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-boolean-eventvar",
+									"objectClass": "System",
+									"sid": 524584765778994,
+									"parameters": {
+										"variable": "Cofre",
+										"value": "true"
+									}
+								},
+								{
+									"id": "set-boolean-eventvar",
+									"objectClass": "System",
+									"sid": 372993882997597,
+									"parameters": {
+										"variable": "Cofre_cuchillo",
+										"value": "true"
+									}
+								}
+							],
+							"sid": 936048505297738
 						},
 						{
-							"id": "key-is-down",
-							"objectClass": "Keyboard",
-							"sid": 967461056863072,
-							"parameters": {
-								"key": 69
-							}
-						}
-					],
-					"actions": [
-						{
-							"id": "set-boolean-eventvar",
-							"objectClass": "System",
-							"sid": 474795576829440,
-							"parameters": {
-								"variable": "Cuchillo",
-								"value": "true"
-							}
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "is-overlapping-another-object",
+									"objectClass": "spr_player",
+									"sid": 406457235648925,
+									"parameters": {
+										"object": "cofre_arco"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-boolean-eventvar",
+									"objectClass": "System",
+									"sid": 755509691506958,
+									"parameters": {
+										"variable": "Cofre",
+										"value": "true"
+									}
+								},
+								{
+									"id": "set-boolean-eventvar",
+									"objectClass": "System",
+									"sid": 115356141741019,
+									"parameters": {
+										"variable": "Cofre_arco",
+										"value": "true"
+									}
+								}
+							],
+							"sid": 355543192101489
 						},
 						{
-							"id": "destroy",
-							"objectClass": "Cofre",
-							"sid": 816193729448291
-						}
-					],
-					"sid": 428258245508217
-				},
-				{
-					"eventType": "comment",
-					"text": "Si space = Ataca",
-					"text-color": [
-						0,
-						0,
-						0,
-						0
-					],
-					"background-color": [
-						0.5215686274509804,
-						0.9568627450980393,
-						0.6078431372549019,
-						1
-					]
-				},
-				{
-					"eventType": "block",
-					"conditions": [
-						{
-							"id": "key-is-down",
-							"objectClass": "Keyboard",
-							"sid": 626340880610479,
-							"parameters": {
-								"key": 32
-							}
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "is-overlapping-another-object",
+									"objectClass": "spr_player",
+									"sid": 242847658157227,
+									"parameters": {
+										"object": "cofre_cuchillo"
+									},
+									"isInverted": true
+								},
+								{
+									"id": "is-overlapping-another-object",
+									"objectClass": "spr_player",
+									"sid": 517783098733738,
+									"parameters": {
+										"object": "cofre_arco"
+									},
+									"isInverted": true
+								}
+							],
+							"actions": [
+								{
+									"id": "set-boolean-eventvar",
+									"objectClass": "System",
+									"sid": 661549400207752,
+									"parameters": {
+										"variable": "PopUp",
+										"value": "false"
+									}
+								},
+								{
+									"id": "set-boolean-eventvar",
+									"objectClass": "System",
+									"sid": 126701285465414,
+									"parameters": {
+										"variable": "Cofre",
+										"value": "false"
+									}
+								},
+								{
+									"id": "set-boolean-eventvar",
+									"objectClass": "System",
+									"sid": 719227702407197,
+									"parameters": {
+										"variable": "Cofre_cuchillo",
+										"value": "false"
+									}
+								},
+								{
+									"id": "set-boolean-eventvar",
+									"objectClass": "System",
+									"sid": 578411417919864,
+									"parameters": {
+										"variable": "Cofre_arco",
+										"value": "false"
+									}
+								}
+							],
+							"sid": 599121717862171
 						},
 						{
-							"id": "compare-boolean-eventvar",
-							"objectClass": "System",
-							"sid": 325444075539922,
-							"parameters": {
-								"variable": "Cuchillo"
-							}
-						}
-					],
-					"actions": [
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-boolean-eventvar",
+									"objectClass": "System",
+									"sid": 616677975089600,
+									"parameters": {
+										"variable": "Cofre_cuchillo"
+									}
+								},
+								{
+									"id": "key-is-down",
+									"objectClass": "Keyboard",
+									"sid": 306218021339703,
+									"parameters": {
+										"key": 69
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-boolean-eventvar",
+									"objectClass": "System",
+									"sid": 196853995279549,
+									"parameters": {
+										"variable": "Cuchillo",
+										"value": "true"
+									}
+								},
+								{
+									"id": "destroy",
+									"objectClass": "cofre_cuchillo",
+									"sid": 718055598208078
+								}
+							],
+							"sid": 658072832906304
+						},
 						{
-							"id": "set-animation",
-							"objectClass": "spr_player",
-							"sid": 142307089925501,
-							"parameters": {
-								"animation": "\"Ataca.Cuchillo\"",
-								"from": "beginning"
-							}
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-boolean-eventvar",
+									"objectClass": "System",
+									"sid": 538645944423794,
+									"parameters": {
+										"variable": "Cofre_arco"
+									}
+								},
+								{
+									"id": "key-is-down",
+									"objectClass": "Keyboard",
+									"sid": 581969130687316,
+									"parameters": {
+										"key": 69
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-boolean-eventvar",
+									"objectClass": "System",
+									"sid": 996435318664312,
+									"parameters": {
+										"variable": "Arco",
+										"value": "true"
+									}
+								},
+								{
+									"id": "destroy",
+									"objectClass": "cofre_arco",
+									"sid": 754162579214439
+								}
+							],
+							"sid": 125449415949998
 						}
 					],
-					"sid": 750322596888120
+					"sid": 818325178420812
 				},
 				{
 					"eventType": "block",
@@ -1072,6 +1463,48 @@
 				}
 			],
 			"sid": 184387158238480
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 176675047220106,
+					"parameters": {
+						"variable": "Cofre"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 790445759253283,
+					"parameters": {
+						"variable": "PopUp",
+						"value": "true"
+					}
+				},
+				{
+					"id": "set-text",
+					"objectClass": "PopUp_text",
+					"sid": 873225969880549,
+					"parameters": {
+						"text": "\"'E' abrir\""
+					}
+				},
+				{
+					"id": "set-position",
+					"objectClass": "PopUp",
+					"sid": 388645794003229,
+					"parameters": {
+						"x": "spr_player.X",
+						"y": "spr_player.Y - 150"
+					}
+				}
+			],
+			"sid": 946165384005402
 		}
 	],
 	"sid": 953197778318877

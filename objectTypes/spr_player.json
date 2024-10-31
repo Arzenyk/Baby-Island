@@ -496,6 +496,13 @@
 									]
 								},
 								"useCollisionPoly": true,
+								"imagePoints": [
+									{
+										"name": "flecha",
+										"x": 0.788,
+										"y": 0.208
+									}
+								],
 								"duration": 1,
 								"tag": ""
 							}
@@ -541,6 +548,13 @@
 									]
 								},
 								"useCollisionPoly": true,
+								"imagePoints": [
+									{
+										"name": "flecha",
+										"x": 0.788,
+										"y": 0.208
+									}
+								],
 								"duration": 1,
 								"tag": ""
 							},
@@ -575,6 +589,13 @@
 									]
 								},
 								"useCollisionPoly": true,
+								"imagePoints": [
+									{
+										"name": "flecha",
+										"x": 0.788,
+										"y": 0.208
+									}
+								],
 								"duration": 1,
 								"tag": ""
 							},
@@ -609,6 +630,13 @@
 									]
 								},
 								"useCollisionPoly": true,
+								"imagePoints": [
+									{
+										"name": "flecha",
+										"x": 0.788,
+										"y": 0.208
+									}
+								],
 								"duration": 1,
 								"tag": ""
 							},
@@ -643,6 +671,13 @@
 									]
 								},
 								"useCollisionPoly": true,
+								"imagePoints": [
+									{
+										"name": "flecha",
+										"x": 0.788,
+										"y": 0.208
+									}
+								],
 								"duration": 1,
 								"tag": ""
 							}
@@ -668,6 +703,13 @@
 								"fileType": "image/png",
 								"imageSpriteId": 9072358,
 								"useCollisionPoly": true,
+								"imagePoints": [
+									{
+										"name": "flecha",
+										"x": 0.788,
+										"y": 0.208
+									}
+								],
 								"duration": 1,
 								"tag": ""
 							},
@@ -682,6 +724,13 @@
 								"fileType": "image/png",
 								"imageSpriteId": 175204,
 								"useCollisionPoly": true,
+								"imagePoints": [
+									{
+										"name": "flecha",
+										"x": 0.788,
+										"y": 0.208
+									}
+								],
 								"duration": 1,
 								"tag": ""
 							},
@@ -696,6 +745,13 @@
 								"fileType": "image/png",
 								"imageSpriteId": 9202315,
 								"useCollisionPoly": true,
+								"imagePoints": [
+									{
+										"name": "flecha",
+										"x": 0.788,
+										"y": 0.208
+									}
+								],
 								"duration": 1,
 								"tag": ""
 							},
@@ -710,6 +766,13 @@
 								"fileType": "image/png",
 								"imageSpriteId": 4921174,
 								"useCollisionPoly": true,
+								"imagePoints": [
+									{
+										"name": "flecha",
+										"x": 0.788,
+										"y": 0.208
+									}
+								],
 								"duration": 1,
 								"tag": ""
 							},
@@ -724,6 +787,13 @@
 								"fileType": "image/png",
 								"imageSpriteId": 8728053,
 								"useCollisionPoly": true,
+								"imagePoints": [
+									{
+										"name": "flecha",
+										"x": 0.788,
+										"y": 0.208
+									}
+								],
 								"duration": 1,
 								"tag": ""
 							},
@@ -738,6 +808,13 @@
 								"fileType": "image/png",
 								"imageSpriteId": 879580,
 								"useCollisionPoly": true,
+								"imagePoints": [
+									{
+										"name": "flecha",
+										"x": 0.788,
+										"y": 0.208
+									}
+								],
 								"duration": 1,
 								"tag": ""
 							}

@@ -36,6 +36,13 @@
 		},
 		{
 			"type": "behavior",
+			"id": "Bullet",
+			"name": "Bullet",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "behavior",
 			"id": "EightDir",
 			"name": "8 Direction",
 			"author": "Scirra",
@@ -111,9 +118,11 @@
 			"Sprite",
 			"PopUp",
 			"PopUp_text",
-			"Cofre",
+			"cofre_cuchillo",
 			"Cuchillo",
-			"spr_arco"
+			"spr_arco",
+			"cofre_arco",
+			"spr_flecha"
 		],
 		"subfolders": []
 	},
