@@ -112,7 +112,8 @@
 			"PopUp",
 			"PopUp_text",
 			"Cofre",
-			"Cuchillo"
+			"Cuchillo",
+			"spr_arco"
 		],
 		"subfolders": []
 	},
