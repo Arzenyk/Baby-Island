@@ -5893,6 +5893,9 @@
 								"direct-movement": "to-destination",
 								"enabled": true
 							}
+						},
+						"Flash": {
+							"properties": {}
 						}
 					},
 					"instanceFolderItem": {
