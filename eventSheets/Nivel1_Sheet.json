@@ -2,6 +2,16 @@
 	"name": "Nivel1_Sheet",
 	"events": [
 		{
+			"eventType": "variable",
+			"name": "PopUp",
+			"type": "boolean",
+			"initialValue": "false",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 958002310877030
+		},
+		{
 			"eventType": "group",
 			"disabled": false,
 			"title": "Enemigo",
@@ -259,6 +269,22 @@
 			"isActiveOnStart": true,
 			"children": [
 				{
+					"eventType": "comment",
+					"text": "Si se mueve = caminar",
+					"text-color": [
+						0,
+						0,
+						0,
+						0
+					],
+					"background-color": [
+						0.5215686274509804,
+						0.9568627450980393,
+						0.6078431372549019,
+						1
+					]
+				},
+				{
 					"eventType": "block",
 					"conditions": [
 						{
@@ -283,7 +309,7 @@
 				},
 				{
 					"eventType": "comment",
-					"text": "Si se mueve = caminar",
+					"text": "Si NO se mueve = parar",
 					"text-color": [
 						0,
 						0,
@@ -323,7 +349,7 @@
 				},
 				{
 					"eventType": "comment",
-					"text": "Si NO se mueve = parar",
+					"text": "Si collision = cofre then popup",
 					"text-color": [
 						0,
 						0,
@@ -336,6 +362,74 @@
 						0.6078431372549019,
 						1
 					]
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-overlapping-another-object",
+							"objectClass": "spr_player",
+							"sid": 514044843232367,
+							"parameters": {
+								"object": "Cofre"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 447244498647319,
+							"parameters": {
+								"variable": "PopUp",
+								"value": "true"
+							}
+						},
+						{
+							"id": "set-text",
+							"objectClass": "PopUp_text",
+							"sid": 844400528588498,
+							"parameters": {
+								"text": "\"'E' abrir\""
+							}
+						},
+						{
+							"id": "set-position",
+							"objectClass": "PopUp",
+							"sid": 961431230768422,
+							"parameters": {
+								"x": "spr_player.X",
+								"y": "spr_player.Y - 150"
+							}
+						}
+					],
+					"sid": 125287900649201
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-overlapping-another-object",
+							"objectClass": "spr_player",
+							"sid": 746633847665999,
+							"parameters": {
+								"object": "Cofre"
+							},
+							"isInverted": true
+						}
+					],
+					"actions": [
+						{
+							"id": "set-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 864408287026519,
+							"parameters": {
+								"variable": "PopUp",
+								"value": "false"
+							}
+						}
+					],
+					"sid": 990872229386332
 				}
 			],
 			"sid": 222920941293229
@@ -391,6 +485,7 @@
 					"id": "pin-to-object-properties",
 					"objectClass": "PopUp",
 					"sid": 453687040094697,
+					"disabled": true,
 					"behaviorType": "Pin",
 					"parameters": {
 						"pin-to": "spr_player",
@@ -419,6 +514,71 @@
 				}
 			],
 			"sid": 558174566772353
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 446177281376704,
+					"parameters": {
+						"variable": "PopUp"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-visible",
+					"objectClass": "PopUp",
+					"sid": 571706593311707,
+					"parameters": {
+						"visibility": "visible"
+					}
+				},
+				{
+					"id": "set-visible",
+					"objectClass": "PopUp_text",
+					"sid": 728655881414760,
+					"parameters": {
+						"visibility": "visible"
+					}
+				}
+			],
+			"sid": 930486086051864
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 868927738045010,
+					"parameters": {
+						"variable": "PopUp"
+					},
+					"isInverted": true
+				}
+			],
+			"actions": [
+				{
+					"id": "set-visible",
+					"objectClass": "PopUp",
+					"sid": 491864560848822,
+					"parameters": {
+						"visibility": "invisible"
+					}
+				},
+				{
+					"id": "set-visible",
+					"objectClass": "PopUp_text",
+					"sid": 733508602146180,
+					"parameters": {
+						"visibility": "invisible"
+					}
+				}
+			],
+			"sid": 560347607447233
 		}
 	],
 	"sid": 953197778318877

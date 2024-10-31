@@ -5828,8 +5828,8 @@
 						"expanded": true
 					},
 					"world": {
-						"x": 704,
-						"y": 608,
+						"x": 1565,
+						"y": 2125,
 						"width": 128,
 						"height": 128,
 						"originX": 0.5,
@@ -5952,7 +5952,7 @@
 					}
 				},
 				{
-					"type": "PopUp",
+					"type": "Cofre",
 					"properties": {
 						"initially-visible": true,
 						"initial-animation": "Animation 1",
@@ -5960,85 +5960,22 @@
 						"enable-collisions": true,
 						"live-preview": false
 					},
-					"uid": 123,
-					"sid": 522169042891974,
+					"uid": 125,
+					"sid": 524809542415731,
 					"tags": "",
 					"instanceVariables": {},
-					"behaviors": {
-						"Pin": {
-							"properties": {
-								"destroy": false
-							}
-						}
-					},
+					"behaviors": {},
 					"instanceFolderItem": {
-						"sid": 522169042891974,
+						"sid": 524809542415731,
 						"expanded": true
 					},
 					"world": {
-						"x": 700,
-						"y": 488,
-						"width": 250,
-						"height": 250,
+						"x": 1591.7277515131273,
+						"y": 1772.6413908878353,
+						"width": 115.0995272362893,
+						"height": 115.00526664439917,
 						"originX": 0.5,
 						"originY": 0.5,
-						"color": [
-							1,
-							1,
-							1,
-							1
-						],
-						"angle": 0,
-						"zElevation": 0
-					}
-				},
-				{
-					"type": "PopUp_text",
-					"properties": {
-						"text": "PopUp",
-						"enable-bbcode": true,
-						"font": "Arial",
-						"size": 12,
-						"line-height": 0,
-						"bold": false,
-						"italic": false,
-						"color": [
-							0,
-							0,
-							0,
-							1
-						],
-						"horizontal-alignment": "left",
-						"vertical-alignment": "top",
-						"wrapping": "word",
-						"text-direction": "ltr",
-						"icon-set": -1,
-						"initially-visible": true,
-						"origin": "top-left",
-						"read-aloud": false
-					},
-					"uid": 124,
-					"sid": 148878404573066,
-					"tags": "",
-					"instanceVariables": {},
-					"behaviors": {
-						"Pin": {
-							"properties": {
-								"destroy": false
-							}
-						}
-					},
-					"instanceFolderItem": {
-						"sid": 148878404573066,
-						"expanded": true
-					},
-					"world": {
-						"x": 599,
-						"y": 400,
-						"width": 206,
-						"height": 80,
-						"originX": 0,
-						"originY": 0,
 						"color": [
 							1,
 							1,
@@ -6065,6 +6002,139 @@
 				1,
 				1,
 				1,
+				1
+			],
+			"isTransparent": true,
+			"parallaxX": 1,
+			"parallaxY": 1,
+			"scaleRate": 1,
+			"forceOwnTexture": false,
+			"renderingMode": "3d",
+			"drawOrder": "z-order",
+			"useRenderCells": false,
+			"blendMode": "normal",
+			"zElevation": 0,
+			"global": false
+		},
+		{
+			"name": "PopUp",
+			"overriden": 0,
+			"subLayers": [],
+			"instances": [
+				{
+					"type": "PopUp",
+					"properties": {
+						"initially-visible": false,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 123,
+					"sid": 522169042891974,
+					"tags": "",
+					"instanceVariables": {},
+					"behaviors": {
+						"Pin": {
+							"properties": {
+								"destroy": false
+							}
+						}
+					},
+					"instanceFolderItem": {
+						"sid": 522169042891974,
+						"expanded": true
+					},
+					"world": {
+						"x": 1564,
+						"y": 2059,
+						"width": 250,
+						"height": 250,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "PopUp_text",
+					"properties": {
+						"text": "PopUp",
+						"enable-bbcode": true,
+						"font": "Comic Sans MS",
+						"size": 20,
+						"line-height": 0,
+						"bold": true,
+						"italic": false,
+						"color": [
+							0,
+							0,
+							0,
+							1
+						],
+						"horizontal-alignment": "center",
+						"vertical-alignment": "center",
+						"wrapping": "character",
+						"text-direction": "ltr",
+						"icon-set": 191736027400422,
+						"initially-visible": false,
+						"origin": "center",
+						"read-aloud": false
+					},
+					"uid": 124,
+					"sid": 148878404573066,
+					"tags": "",
+					"instanceVariables": {},
+					"behaviors": {
+						"Pin": {
+							"properties": {
+								"destroy": false
+							}
+						}
+					},
+					"instanceFolderItem": {
+						"sid": 148878404573066,
+						"expanded": true
+					},
+					"world": {
+						"x": 1565,
+						"y": 2017,
+						"width": 206,
+						"height": 80,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				}
+			],
+			"sid": 450358191624414,
+			"effectTypes": [],
+			"isInitiallyVisible": true,
+			"isInitiallyInteractive": true,
+			"isHTMLElementsLayer": false,
+			"color": [
+				1,
+				1,
+				1,
+				1
+			],
+			"backgroundColor": [
+				0.5019607843137255,
+				0.5019607843137255,
+				0.5019607843137255,
 				1
 			],
 			"isTransparent": true,

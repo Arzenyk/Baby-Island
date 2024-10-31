@@ -103,7 +103,8 @@
 			"Spawn1",
 			"Sprite",
 			"PopUp",
-			"PopUp_text"
+			"PopUp_text",
+			"Cofre"
 		],
 		"subfolders": []
 	},
