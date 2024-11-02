@@ -1,0 +1,14 @@
+{
+	"name": "pbar_vida_enemigo",
+	"plugin-id": "progressbar",
+	"sid": 916915551862028,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [
+		{
+			"behaviorId": "Pin",
+			"name": "Pin",
+			"sid": 757014096308141
+		}
+	]
+}

@@ -35,6 +35,13 @@
 			"bundled": false
 		},
 		{
+			"type": "plugin",
+			"id": "progressbar",
+			"name": "Progress bar",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
 			"type": "behavior",
 			"id": "Bullet",
 			"name": "Bullet",
@@ -128,7 +135,8 @@
 			"spr_cantflechas",
 			"txt_cantflechas",
 			"spr_item_flechas",
-			"spr_moriste"
+			"spr_moriste",
+			"pbar_vida_enemigo"
 		],
 		"subfolders": []
 	},

@@ -6143,7 +6143,7 @@
 					"world": {
 						"x": 41,
 						"y": -84,
-						"width": 62.96786112631298,
+						"width": 62.96786112631299,
 						"height": 69.51762474445763,
 						"originX": 0.5,
 						"originY": 0.5,
@@ -6530,7 +6530,7 @@
 						"initially-visible": false,
 						"initial-animation": "Animation 1",
 						"initial-frame": 0,
-						"enable-collisions": true,
+						"enable-collisions": false,
 						"live-preview": false
 					},
 					"uid": 132,
@@ -6563,6 +6563,46 @@
 						],
 						"angle": 0,
 						"zElevation": 0
+					}
+				},
+				{
+					"type": "pbar_vida_enemigo",
+					"properties": {
+						"value": 20,
+						"maximum": 20,
+						"tooltip": "",
+						"initially-visible": true,
+						"id": "",
+						"class": ""
+					},
+					"uid": 133,
+					"sid": 239937056683119,
+					"tags": "",
+					"instanceVariables": {},
+					"behaviors": {
+						"Pin": {
+							"properties": {
+								"destroy": false
+							}
+						}
+					},
+					"instanceFolderItem": {
+						"sid": 239937056683119,
+						"expanded": true
+					},
+					"world": {
+						"x": 590,
+						"y": -67,
+						"width": 200,
+						"height": 25,
+						"originX": 0,
+						"originY": 0,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						]
 					}
 				}
 			],
