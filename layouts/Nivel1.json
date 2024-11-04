@@ -5863,8 +5863,8 @@
 						"expanded": true
 					},
 					"world": {
-						"x": 3256,
-						"y": 1549,
+						"x": 3974,
+						"y": 3237,
 						"width": 128,
 						"height": 128,
 						"originX": 0.5,
@@ -6504,10 +6504,255 @@
 						"expanded": true
 					},
 					"world": {
-						"x": 3521,
-						"y": 3143,
-						"width": 250,
-						"height": 250,
+						"x": 3536,
+						"y": 3142,
+						"width": 124.75564641065867,
+						"height": 118.09529237366831,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 4.69550849477819,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "spr_cofre_monedas",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 152,
+					"sid": 841894750625639,
+					"tags": "",
+					"instanceVariables": {},
+					"behaviors": {},
+					"instanceFolderItem": {
+						"sid": 841894750625639,
+						"expanded": true
+					},
+					"world": {
+						"x": 1709,
+						"y": 285,
+						"width": 124.75564641065867,
+						"height": 118.09529237366831,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 4.69550849477819,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "spr_cofre_monedas",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 153,
+					"sid": 109433962381939,
+					"tags": "",
+					"instanceVariables": {},
+					"behaviors": {},
+					"instanceFolderItem": {
+						"sid": 109433962381939,
+						"expanded": true
+					},
+					"world": {
+						"x": 278,
+						"y": 4094,
+						"width": 124.75564641065867,
+						"height": 118.09529237366831,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 3.1976181428794836,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "spr_llave",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 154,
+					"sid": 111165844746070,
+					"tags": "",
+					"instanceVariables": {},
+					"behaviors": {},
+					"instanceFolderItem": {
+						"sid": 111165844746070,
+						"expanded": true
+					},
+					"world": {
+						"x": 877,
+						"y": 2690,
+						"width": 72.44866381202834,
+						"height": 58.74222980900011,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 5.739524390275273,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "spr_llave",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 155,
+					"sid": 316325778266681,
+					"tags": "",
+					"instanceVariables": {},
+					"behaviors": {},
+					"instanceFolderItem": {
+						"sid": 316325778266681,
+						"expanded": true
+					},
+					"world": {
+						"x": 1358,
+						"y": 2448,
+						"width": 72.44866381202834,
+						"height": 58.74222980900011,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0.925200248999445,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "spr_llave",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 156,
+					"sid": 693348580318273,
+					"tags": "",
+					"instanceVariables": {},
+					"behaviors": {},
+					"instanceFolderItem": {
+						"sid": 693348580318273,
+						"expanded": true
+					},
+					"world": {
+						"x": 1107,
+						"y": 3801,
+						"width": 72.44866381202834,
+						"height": 58.74222980900011,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0.925200248999445,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "spr_llave",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 157,
+					"sid": 520605548848521,
+					"tags": "",
+					"instanceVariables": {},
+					"behaviors": {},
+					"instanceFolderItem": {
+						"sid": 520605548848521,
+						"expanded": true
+					},
+					"world": {
+						"x": 3304,
+						"y": 2205,
+						"width": 72.44866381202834,
+						"height": 58.74222980900011,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0.925200248999445,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "spr_salida",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 158,
+					"sid": 859431826505720,
+					"tags": "",
+					"instanceVariables": {},
+					"behaviors": {},
+					"instanceFolderItem": {
+						"sid": 859431826505720,
+						"expanded": true
+					},
+					"world": {
+						"x": 3569,
+						"y": 4045,
+						"width": 178,
+						"height": 168,
 						"originX": 0.5,
 						"originY": 0.5,
 						"color": [
@@ -7083,6 +7328,9 @@
 							"properties": {
 								"destroy": false
 							}
+						},
+						"Flash": {
+							"properties": {}
 						}
 					},
 					"instanceFolderItem": {
@@ -7248,5 +7496,5 @@
 	"vpX": 0.5,
 	"vpY": 0.5,
 	"projection": "perspective",
-	"eventSheet": "Nivel1_Sheet"
+	"eventSheet": "Nivel1_sheet"
 }

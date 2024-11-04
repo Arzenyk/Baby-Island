@@ -8,6 +8,13 @@
 	"usedAddons": [
 		{
 			"type": "plugin",
+			"id": "Button",
+			"name": "Button",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
 			"id": "Keyboard",
 			"name": "Keyboard",
 			"author": "Scirra",
@@ -150,7 +157,14 @@
 			"spr_puerta",
 			"spr_llave",
 			"hud_llave",
-			"spr_cofre_monedas"
+			"spr_cofre_monedas",
+			"spr_salida",
+			"txt_Ganaste",
+			"Button",
+			"txt_menu",
+			"txt_controles",
+			"btnjugar",
+			"btn_menu_moriste"
 		],
 		"subfolders": []
 	},
@@ -162,13 +176,19 @@
 	},
 	"layouts": {
 		"items": [
-			"Nivel1"
+			"Nivel1",
+			"Ganaste",
+			"Menu",
+			"Moriste"
 		],
 		"subfolders": []
 	},
 	"eventSheets": {
 		"items": [
-			"Nivel1_Sheet"
+			"Nivel1_sheet",
+			"Ganaste_sheet",
+			"Menu_sheet",
+			"moriste_sheet"
 		],
 		"subfolders": []
 	},

@@ -1,21 +1,10 @@
 {
-	"name": "hud_moneda",
+	"name": "spr_salida",
 	"plugin-id": "Sprite",
-	"sid": 327205146697539,
+	"sid": 493988564935966,
 	"isGlobal": false,
 	"instanceVariables": [],
-	"behaviorTypes": [
-		{
-			"behaviorId": "Pin",
-			"name": "Pin",
-			"sid": 384056236370174
-		},
-		{
-			"behaviorId": "Flash",
-			"name": "Flash",
-			"sid": 248632302256273
-		}
-	],
+	"behaviorTypes": [],
 	"effectTypes": [],
 	"animations": {
 		"items": [
@@ -30,13 +19,13 @@
 						"exportFormat": "lossless",
 						"exportQuality": 0.8,
 						"fileType": "image/png",
-						"imageSpriteId": 7158108,
+						"imageSpriteId": 1800503,
 						"useCollisionPoly": true,
 						"duration": 1,
 						"tag": ""
 					}
 				],
-				"sid": 485965504855410,
+				"sid": 272302636301357,
 				"name": "Animation 1",
 				"isLooping": false,
 				"isPingPong": false,

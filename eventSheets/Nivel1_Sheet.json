@@ -1,5 +1,5 @@
 {
-	"name": "Nivel1_Sheet",
+	"name": "Nivel1_sheet",
 	"events": [
 		{
 			"eventType": "variable",
@@ -95,7 +95,7 @@
 			"eventType": "variable",
 			"name": "cant_flechas",
 			"type": "number",
-			"initialValue": "10",
+			"initialValue": "0",
 			"comment": "",
 			"isStatic": false,
 			"isConstant": false,
@@ -140,6 +140,16 @@
 			"isStatic": false,
 			"isConstant": false,
 			"sid": 192877526492609
+		},
+		{
+			"eventType": "variable",
+			"name": "Cofre_moneda",
+			"type": "boolean",
+			"initialValue": "false",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 155109899845991
 		},
 		{
 			"eventType": "group",
@@ -1389,6 +1399,40 @@
 								{
 									"id": "is-overlapping-another-object",
 									"objectClass": "spr_player",
+									"sid": 686621628927181,
+									"parameters": {
+										"object": "spr_cofre_monedas"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-boolean-eventvar",
+									"objectClass": "System",
+									"sid": 945398453271942,
+									"parameters": {
+										"variable": "Cofre",
+										"value": "true"
+									}
+								},
+								{
+									"id": "set-boolean-eventvar",
+									"objectClass": "System",
+									"sid": 519923492107174,
+									"parameters": {
+										"variable": "Cofre_moneda",
+										"value": "true"
+									}
+								}
+							],
+							"sid": 600177433072897
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "is-overlapping-another-object",
+									"objectClass": "spr_player",
 									"sid": 242847658157227,
 									"parameters": {
 										"object": "cofre_cuchillo"
@@ -1401,6 +1445,15 @@
 									"sid": 517783098733738,
 									"parameters": {
 										"object": "cofre_arco"
+									},
+									"isInverted": true
+								},
+								{
+									"id": "is-overlapping-another-object",
+									"objectClass": "spr_player",
+									"sid": 806850017822677,
+									"parameters": {
+										"object": "spr_cofre_monedas"
 									},
 									"isInverted": true
 								}
@@ -1439,6 +1492,15 @@
 									"sid": 578411417919864,
 									"parameters": {
 										"variable": "Cofre_arco",
+										"value": "false"
+									}
+								},
+								{
+									"id": "set-boolean-eventvar",
+									"objectClass": "System",
+									"sid": 899901461150461,
+									"parameters": {
+										"variable": "Cofre_moneda",
 										"value": "false"
 									}
 								}
@@ -1538,6 +1600,63 @@
 								}
 							],
 							"sid": 125449415949998
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-boolean-eventvar",
+									"objectClass": "System",
+									"sid": 590433272544253,
+									"parameters": {
+										"variable": "Cofre_moneda"
+									}
+								},
+								{
+									"id": "key-is-down",
+									"objectClass": "Keyboard",
+									"sid": 558947741899765,
+									"parameters": {
+										"key": 69
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "destroy",
+									"objectClass": "spr_cofre_monedas",
+									"sid": 400099298307359
+								},
+								{
+									"id": "add-to-eventvar",
+									"objectClass": "System",
+									"sid": 717592962921386,
+									"parameters": {
+										"variable": "Monedas",
+										"value": "3"
+									}
+								},
+								{
+									"id": "set-text",
+									"objectClass": "txt_monedas",
+									"sid": 539726177034710,
+									"parameters": {
+										"text": "Monedas"
+									}
+								},
+								{
+									"id": "flash",
+									"objectClass": "hud_moneda",
+									"sid": 148287526329741,
+									"behaviorType": "Flash",
+									"parameters": {
+										"on-time": "0.1",
+										"off-time": "0.1",
+										"duration": "0.5"
+									}
+								}
+							],
+							"sid": 694065383156883
 						}
 					],
 					"sid": 818325178420812
@@ -1695,6 +1814,30 @@
 					],
 					"sid": 171481532629740,
 					"isOrBlock": true
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-overlapping-another-object",
+							"objectClass": "spr_player",
+							"sid": 325198644701277,
+							"parameters": {
+								"object": "spr_salida"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "go-to-layout-by-name",
+							"objectClass": "System",
+							"sid": 486818351839362,
+							"parameters": {
+								"layout": "\"Ganaste\""
+							}
+						}
+					],
+					"sid": 483990144353032
 				}
 			],
 			"sid": 222920941293229
@@ -2054,6 +2197,7 @@
 					"id": "set-visible",
 					"objectClass": "spr_moriste",
 					"sid": 701874723927728,
+					"disabled": true,
 					"parameters": {
 						"visibility": "visible"
 					}
@@ -2074,6 +2218,14 @@
 					"disabled": true,
 					"parameters": {
 						"time-scale": "0"
+					}
+				},
+				{
+					"id": "go-to-layout",
+					"objectClass": "System",
+					"sid": 507354203761877,
+					"parameters": {
+						"layout": "Moriste"
 					}
 				}
 			],

@@ -1,0 +1,27 @@
+{
+	"name": "moriste_sheet",
+	"events": [
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-clicked",
+					"objectClass": "btn_menu_moriste",
+					"sid": 494327831613383
+				}
+			],
+			"actions": [
+				{
+					"id": "go-to-layout",
+					"objectClass": "System",
+					"sid": 391685637909342,
+					"parameters": {
+						"layout": "Menu"
+					}
+				}
+			],
+			"sid": 693533178482451
+		}
+	],
+	"sid": 975590867680658
+}

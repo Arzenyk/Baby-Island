@@ -1,0 +1,27 @@
+{
+	"name": "Menu_sheet",
+	"events": [
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-clicked",
+					"objectClass": "btnjugar",
+					"sid": 502714133128882
+				}
+			],
+			"actions": [
+				{
+					"id": "go-to-layout",
+					"objectClass": "System",
+					"sid": 400705900980798,
+					"parameters": {
+						"layout": "Nivel1"
+					}
+				}
+			],
+			"sid": 980873899264879
+		}
+	],
+	"sid": 117445633287180
+}
