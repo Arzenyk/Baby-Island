@@ -164,7 +164,8 @@
 			"txt_menu",
 			"txt_controles",
 			"btnjugar",
-			"btn_menu_moriste"
+			"btn_menu_moriste",
+			"txt_nombres"
 		],
 		"subfolders": []
 	},
@@ -176,9 +177,9 @@
 	},
 	"layouts": {
 		"items": [
+			"Menu",
 			"Nivel1",
 			"Ganaste",
-			"Menu",
 			"Moriste"
 		],
 		"subfolders": []
