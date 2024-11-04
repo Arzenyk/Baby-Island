@@ -1536,6 +1536,19 @@
 								"variable": "Monedas",
 								"value": "1"
 							}
+						},
+						{
+							"id": "set-text",
+							"objectClass": "txt_monedas",
+							"sid": 208351484464259,
+							"parameters": {
+								"text": "Monedas"
+							}
+						},
+						{
+							"id": "destroy",
+							"objectClass": "spr_moneda",
+							"sid": 316893202366724
 						}
 					],
 					"sid": 171481532629740,
@@ -1686,6 +1699,36 @@
 					"behaviorType": "Pin",
 					"parameters": {
 						"pin-to": "spr_enemigo",
+						"x": true,
+						"y": true,
+						"angle": false,
+						"width-type": "no",
+						"height-type": "no",
+						"z": false
+					}
+				},
+				{
+					"id": "pin-to-object-properties",
+					"objectClass": "hud_moneda",
+					"sid": 785510395913500,
+					"behaviorType": "Pin",
+					"parameters": {
+						"pin-to": "spr_hud",
+						"x": true,
+						"y": true,
+						"angle": false,
+						"width-type": "no",
+						"height-type": "no",
+						"z": false
+					}
+				},
+				{
+					"id": "pin-to-object-properties",
+					"objectClass": "txt_monedas",
+					"sid": 694086489693238,
+					"behaviorType": "Pin",
+					"parameters": {
+						"pin-to": "spr_hud",
 						"x": true,
 						"y": true,
 						"angle": false,

@@ -138,7 +138,8 @@
 			"spr_moriste",
 			"pbar_vida_enemigo",
 			"spr_moneda",
-			"txt_monedas"
+			"txt_monedas",
+			"hud_moneda"
 		],
 		"subfolders": []
 	},
