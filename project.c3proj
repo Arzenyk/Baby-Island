@@ -92,6 +92,13 @@
 		},
 		{
 			"type": "behavior",
+			"id": "bound",
+			"name": "Bound to layout",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "behavior",
 			"id": "scrollto",
 			"name": "Scroll To",
 			"author": "Scirra",
@@ -139,7 +146,11 @@
 			"pbar_vida_enemigo",
 			"spr_moneda",
 			"txt_monedas",
-			"hud_moneda"
+			"hud_moneda",
+			"spr_puerta",
+			"spr_llave",
+			"hud_llave",
+			"spr_cofre_monedas"
 		],
 		"subfolders": []
 	},

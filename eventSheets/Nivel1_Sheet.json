@@ -122,6 +122,26 @@
 			"sid": 102848022093317
 		},
 		{
+			"eventType": "variable",
+			"name": "tieneLlave",
+			"type": "boolean",
+			"initialValue": "false",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 522683119642378
+		},
+		{
+			"eventType": "variable",
+			"name": "Llave",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 192877526492609
+		},
+		{
 			"eventType": "group",
 			"disabled": false,
 			"title": "Enemigo",
@@ -524,6 +544,128 @@
 			"description": "",
 			"isActiveOnStart": true,
 			"children": [
+				{
+					"eventType": "group",
+					"disabled": false,
+					"title": "Llaves",
+					"description": "",
+					"isActiveOnStart": true,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "on-collision-with-another-object",
+									"objectClass": "spr_player",
+									"sid": 169754665981184,
+									"parameters": {
+										"object": "spr_puerta"
+									}
+								},
+								{
+									"id": "compare-boolean-eventvar",
+									"objectClass": "System",
+									"sid": 712876096800555,
+									"parameters": {
+										"variable": "tieneLlave"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "destroy",
+									"objectClass": "spr_puerta",
+									"sid": 703960328954725
+								},
+								{
+									"id": "subtract-from-eventvar",
+									"objectClass": "System",
+									"sid": 905807198730756,
+									"parameters": {
+										"variable": "Llave",
+										"value": "1"
+									}
+								},
+								{
+									"id": "set-visible",
+									"objectClass": "hud_llave",
+									"sid": 261021017394012,
+									"parameters": {
+										"visibility": "invisible"
+									}
+								}
+							],
+							"sid": 125450665316244
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "is-overlapping-another-object",
+									"objectClass": "spr_player",
+									"sid": 292077805798998,
+									"parameters": {
+										"object": "spr_llave"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "destroy",
+									"objectClass": "spr_llave",
+									"sid": 944225009931257
+								},
+								{
+									"id": "add-to-eventvar",
+									"objectClass": "System",
+									"sid": 373603746033860,
+									"parameters": {
+										"variable": "Llave",
+										"value": "1"
+									}
+								}
+							],
+							"sid": 576722458756140,
+							"isOrBlock": true
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 217528801017716,
+									"parameters": {
+										"variable": "Llave",
+										"comparison": 4,
+										"value": "0"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-boolean-eventvar",
+									"objectClass": "System",
+									"sid": 613825302383937,
+									"parameters": {
+										"variable": "tieneLlave",
+										"value": "true"
+									}
+								},
+								{
+									"id": "set-visible",
+									"objectClass": "hud_llave",
+									"sid": 916956194764174,
+									"parameters": {
+										"visibility": "visible"
+									}
+								}
+							],
+							"sid": 538829749585436
+						}
+					],
+					"sid": 813655390306273
+				},
 				{
 					"eventType": "group",
 					"disabled": false,
@@ -1738,6 +1880,21 @@
 					}
 				},
 				{
+					"id": "pin-to-object-properties",
+					"objectClass": "hud_llave",
+					"sid": 566135269129950,
+					"behaviorType": "Pin",
+					"parameters": {
+						"pin-to": "spr_hud",
+						"x": true,
+						"y": true,
+						"angle": false,
+						"width-type": "no",
+						"height-type": "no",
+						"z": false
+					}
+				},
+				{
 					"id": "set-position",
 					"objectClass": "spr_hud",
 					"sid": 884427902706603,
@@ -2000,6 +2157,40 @@
 				}
 			],
 			"sid": 946165384005402
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-key-pressed",
+					"objectClass": "Keyboard",
+					"sid": 418164137967849,
+					"parameters": {
+						"key": 83
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 930332046953741,
+					"parameters": {
+						"variable": "Arco",
+						"value": "false"
+					}
+				},
+				{
+					"id": "set-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 477950532955066,
+					"parameters": {
+						"variable": "Cuchillo",
+						"value": "false"
+					}
+				}
+			],
+			"sid": 666210882466238
 		}
 	],
 	"sid": 953197778318877

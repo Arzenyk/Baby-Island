@@ -1,19 +1,14 @@
 {
-	"name": "spr_hud",
+	"name": "spr_puerta",
 	"plugin-id": "Sprite",
-	"sid": 683430847714320,
+	"sid": 943594309220632,
 	"isGlobal": false,
 	"instanceVariables": [],
 	"behaviorTypes": [
 		{
-			"behaviorId": "Pin",
-			"name": "Pin",
-			"sid": 175580784854583
-		},
-		{
-			"behaviorId": "bound",
-			"name": "BoundToLayout",
-			"sid": 429551210968272
+			"behaviorId": "solid",
+			"name": "Solid",
+			"sid": 979400910930808
 		}
 	],
 	"effectTypes": [],
@@ -30,13 +25,25 @@
 						"exportFormat": "lossless",
 						"exportQuality": 0.8,
 						"fileType": "image/png",
-						"imageSpriteId": 9566261,
+						"imageSpriteId": 930487,
+						"collisionPoly": {
+							"points": [
+								0,
+								0.28400000000000003,
+								1,
+								0.284,
+								1,
+								0.7179999999999997,
+								0,
+								0.7259999999999998
+							]
+						},
 						"useCollisionPoly": true,
 						"duration": 1,
 						"tag": ""
 					}
 				],
-				"sid": 621096159080340,
+				"sid": 929071999295937,
 				"name": "Animation 1",
 				"isLooping": false,
 				"isPingPong": false,

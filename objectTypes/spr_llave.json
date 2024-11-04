@@ -1,21 +1,10 @@
 {
-	"name": "spr_hud",
+	"name": "spr_llave",
 	"plugin-id": "Sprite",
-	"sid": 683430847714320,
+	"sid": 504873211917801,
 	"isGlobal": false,
 	"instanceVariables": [],
-	"behaviorTypes": [
-		{
-			"behaviorId": "Pin",
-			"name": "Pin",
-			"sid": 175580784854583
-		},
-		{
-			"behaviorId": "bound",
-			"name": "BoundToLayout",
-			"sid": 429551210968272
-		}
-	],
+	"behaviorTypes": [],
 	"effectTypes": [],
 	"animations": {
 		"items": [
@@ -30,13 +19,13 @@
 						"exportFormat": "lossless",
 						"exportQuality": 0.8,
 						"fileType": "image/png",
-						"imageSpriteId": 9566261,
+						"imageSpriteId": 8180632,
 						"useCollisionPoly": true,
 						"duration": 1,
 						"tag": ""
 					}
 				],
-				"sid": 621096159080340,
+				"sid": 458635470440770,
 				"name": "Animation 1",
 				"isLooping": false,
 				"isPingPong": false,
