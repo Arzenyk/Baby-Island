@@ -136,7 +136,9 @@
 			"txt_cantflechas",
 			"spr_item_flechas",
 			"spr_moriste",
-			"pbar_vida_enemigo"
+			"pbar_vida_enemigo",
+			"spr_moneda",
+			"txt_monedas"
 		],
 		"subfolders": []
 	},
