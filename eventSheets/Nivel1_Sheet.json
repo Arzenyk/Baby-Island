@@ -143,7 +143,7 @@
 		},
 		{
 			"eventType": "variable",
-			"name": "Cofre_moneda",
+			"name": "Cofre_rand",
 			"type": "boolean",
 			"initialValue": "false",
 			"comment": "",
@@ -160,6 +160,26 @@
 			"isStatic": false,
 			"isConstant": false,
 			"sid": 425646720912519
+		},
+		{
+			"eventType": "variable",
+			"name": "NumerorRandom",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 436516466298306
+		},
+		{
+			"eventType": "variable",
+			"name": "GenerarNumero",
+			"type": "boolean",
+			"initialValue": "false",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 696299590347402
 		},
 		{
 			"eventType": "group",
@@ -1991,7 +2011,7 @@
 									"objectClass": "spr_player",
 									"sid": 686621628927181,
 									"parameters": {
-										"object": "spr_cofre_monedas"
+										"object": "spr_cofre_rand"
 									}
 								}
 							],
@@ -2010,7 +2030,7 @@
 									"objectClass": "System",
 									"sid": 519923492107174,
 									"parameters": {
-										"variable": "Cofre_moneda",
+										"variable": "Cofre_rand",
 										"value": "true"
 									}
 								}
@@ -2043,7 +2063,7 @@
 									"objectClass": "spr_player",
 									"sid": 806850017822677,
 									"parameters": {
-										"object": "spr_cofre_monedas"
+										"object": "spr_cofre_rand"
 									},
 									"isInverted": true
 								}
@@ -2090,7 +2110,16 @@
 									"objectClass": "System",
 									"sid": 899901461150461,
 									"parameters": {
-										"variable": "Cofre_moneda",
+										"variable": "Cofre_rand",
+										"value": "false"
+									}
+								},
+								{
+									"id": "set-boolean-eventvar",
+									"objectClass": "System",
+									"sid": 836230534562445,
+									"parameters": {
+										"variable": "GenerarNumero",
 										"value": "false"
 									}
 								}
@@ -2199,7 +2228,7 @@
 									"objectClass": "System",
 									"sid": 590433272544253,
 									"parameters": {
-										"variable": "Cofre_moneda"
+										"variable": "Cofre_rand"
 									}
 								},
 								{
@@ -2213,14 +2242,101 @@
 							],
 							"actions": [
 								{
-									"id": "destroy",
-									"objectClass": "spr_cofre_monedas",
-									"sid": 400099298307359
+									"id": "createPermutationTable",
+									"objectClass": "AdvancedRandom",
+									"sid": 865582752971440,
+									"parameters": {
+										"length": "5",
+										"offset": "0"
+									}
 								},
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 375022797754597,
+									"parameters": {
+										"variable": "NumerorRandom",
+										"value": "AdvancedRandom.Permutation(5)"
+									}
+								},
+								{
+									"id": "set-text",
+									"objectClass": "txt_seed",
+									"sid": 890925829334432,
+									"parameters": {
+										"text": "NumerorRandom"
+									}
+								},
+								{
+									"id": "set-boolean-eventvar",
+									"objectClass": "System",
+									"sid": 133289110164464,
+									"parameters": {
+										"variable": "GenerarNumero",
+										"value": "true"
+									}
+								},
+								{
+									"id": "set-collisions-enabled",
+									"objectClass": "spr_cofre_rand",
+									"sid": 485503287757089,
+									"parameters": {
+										"collisions": "disabled"
+									}
+								}
+							],
+							"sid": 694065383156883
+						},
+						{
+							"eventType": "comment",
+							"text": "Randomness",
+							"background-color": [
+								0.6901960784313725,
+								1,
+								0.5803921568627451,
+								1
+							]
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-boolean-eventvar",
+									"objectClass": "System",
+									"sid": 541077888336072,
+									"parameters": {
+										"variable": "GenerarNumero"
+									}
+								},
+								{
+									"id": "compare-boolean-eventvar",
+									"objectClass": "System",
+									"sid": 101084772941877,
+									"parameters": {
+										"variable": "Cofre_rand"
+									}
+								},
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 550484896871884,
+									"parameters": {
+										"variable": "NumerorRandom",
+										"comparison": 2,
+										"value": "4"
+									}
+								},
+								{
+									"id": "trigger-once-while-true",
+									"objectClass": "System",
+									"sid": 304683794013799
+								}
+							],
+							"actions": [
 								{
 									"id": "add-to-eventvar",
 									"objectClass": "System",
-									"sid": 717592962921386,
+									"sid": 549499979855160,
 									"parameters": {
 										"variable": "Monedas",
 										"value": "3"
@@ -2229,7 +2345,7 @@
 								{
 									"id": "set-text",
 									"objectClass": "txt_monedas",
-									"sid": 539726177034710,
+									"sid": 341962621723355,
 									"parameters": {
 										"text": "Monedas"
 									}
@@ -2237,7 +2353,7 @@
 								{
 									"id": "flash",
 									"objectClass": "hud_moneda",
-									"sid": 148287526329741,
+									"sid": 244637010892081,
 									"behaviorType": "Flash",
 									"parameters": {
 										"on-time": "0.1",
@@ -2246,7 +2362,74 @@
 									}
 								}
 							],
-							"sid": 694065383156883
+							"sid": 911934398946052
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-boolean-eventvar",
+									"objectClass": "System",
+									"sid": 126275206444165,
+									"parameters": {
+										"variable": "GenerarNumero"
+									}
+								},
+								{
+									"id": "compare-boolean-eventvar",
+									"objectClass": "System",
+									"sid": 367614335239598,
+									"parameters": {
+										"variable": "Cofre_rand"
+									}
+								},
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 877166162665249,
+									"parameters": {
+										"variable": "NumerorRandom",
+										"comparison": 5,
+										"value": "4"
+									}
+								},
+								{
+									"id": "trigger-once-while-true",
+									"objectClass": "System",
+									"sid": 234832331854643
+								}
+							],
+							"actions": [
+								{
+									"id": "add-to-eventvar",
+									"objectClass": "System",
+									"sid": 207054917700375,
+									"parameters": {
+										"variable": "cant_flechas",
+										"value": "3"
+									}
+								},
+								{
+									"id": "set-text",
+									"objectClass": "txt_cantflechas",
+									"sid": 175502948349586,
+									"parameters": {
+										"text": "\"X\" & cant_flechas"
+									}
+								},
+								{
+									"id": "flash",
+									"objectClass": "spr_cantflechas",
+									"sid": 151028234559966,
+									"behaviorType": "Flash",
+									"parameters": {
+										"on-time": "0.1",
+										"off-time": "0.1",
+										"duration": "0.5"
+									}
+								}
+							],
+							"sid": 289399020572360
 						}
 					],
 					"sid": 818325178420812
@@ -2388,15 +2571,6 @@
 							}
 						},
 						{
-							"id": "set-position",
-							"objectClass": "pbar_vida_enemigo",
-							"sid": 871692789400825,
-							"parameters": {
-								"x": "spr_enemigo.X-20",
-								"y": "spr_enemigo.Y-50"
-							}
-						},
-						{
 							"id": "pin-to-object-properties",
 							"objectClass": "pbar_vida_enemigo",
 							"sid": 803706313621082,
@@ -2454,6 +2628,60 @@
 								"width-type": "no",
 								"height-type": "no",
 								"z": false
+							}
+						},
+						{
+							"id": "pin-to-object-properties",
+							"objectClass": "txt_seed",
+							"sid": 322382641448641,
+							"behaviorType": "Pin",
+							"parameters": {
+								"pin-to": "spr_hud",
+								"x": true,
+								"y": true,
+								"angle": false,
+								"width-type": "no",
+								"height-type": "no",
+								"z": false
+							}
+						},
+						{
+							"id": "pin-to-object-properties",
+							"objectClass": "spr_arco",
+							"sid": 193826939315672,
+							"behaviorType": "Pin",
+							"parameters": {
+								"pin-to": "spr_hud",
+								"x": true,
+								"y": true,
+								"angle": false,
+								"width-type": "no",
+								"height-type": "no",
+								"z": false
+							}
+						},
+						{
+							"id": "pin-to-object-properties",
+							"objectClass": "Cuchillo",
+							"sid": 712107494045170,
+							"behaviorType": "Pin",
+							"parameters": {
+								"pin-to": "spr_hud",
+								"x": true,
+								"y": true,
+								"angle": false,
+								"width-type": "no",
+								"height-type": "no",
+								"z": false
+							}
+						},
+						{
+							"id": "set-position",
+							"objectClass": "pbar_vida_enemigo",
+							"sid": 259602410869918,
+							"parameters": {
+								"x": "spr_enemigo.X-20",
+								"y": "spr_enemigo.Y-50"
 							}
 						},
 						{
@@ -2787,6 +3015,15 @@
 				}
 			],
 			"sid": 434352812834349
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "Random",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [],
+			"sid": 396914604990107
 		}
 	],
 	"sid": 953197778318877

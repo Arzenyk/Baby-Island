@@ -171,7 +171,7 @@
 			"spr_puerta",
 			"spr_llave",
 			"hud_llave",
-			"spr_cofre_monedas",
+			"spr_cofre_rand",
 			"spr_salida",
 			"txt_Ganaste",
 			"Button",
@@ -186,7 +186,8 @@
 			"spr_spawn2",
 			"spr_spawn3",
 			"lightTest",
-			"AdvancedRandom"
+			"AdvancedRandom",
+			"txt_seed"
 		],
 		"subfolders": []
 	},

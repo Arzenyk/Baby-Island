@@ -1,5 +1,5 @@
 {
-	"name": "spr_cofre_monedas",
+	"name": "spr_cofre_rand",
 	"plugin-id": "Sprite",
 	"sid": 127065992150106,
 	"isGlobal": false,
@@ -221,7 +221,7 @@
 				],
 				"sid": 250235645256010,
 				"name": "Animation 1",
-				"isLooping": false,
+				"isLooping": true,
 				"isPingPong": false,
 				"repeatCount": 1,
 				"repeatTo": 0,
