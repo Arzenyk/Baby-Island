@@ -43,7 +43,7 @@
 		},
 		{
 			"eventType": "variable",
-			"name": "VidaEnemigo",
+			"name": "VidaEnemigoJefe",
 			"type": "number",
 			"initialValue": "20",
 			"comment": "",
@@ -152,9 +152,19 @@
 			"sid": 155109899845991
 		},
 		{
+			"eventType": "variable",
+			"name": "Spawn",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 425646720912519
+		},
+		{
 			"eventType": "group",
 			"disabled": false,
-			"title": "Enemigo",
+			"title": "Enemigo Jefe",
 			"description": "",
 			"isActiveOnStart": true,
 			"children": [
@@ -479,7 +489,7 @@
 									"objectClass": "System",
 									"sid": 661513594592701,
 									"parameters": {
-										"variable": "VidaEnemigo",
+										"variable": "VidaEnemigoJefe",
 										"value": "0.1"
 									}
 								},
@@ -488,7 +498,7 @@
 									"objectClass": "pbar_vida_enemigo",
 									"sid": 923210315173782,
 									"parameters": {
-										"value": "VidaEnemigo"
+										"value": "VidaEnemigoJefe"
 									}
 								}
 							],
@@ -523,7 +533,7 @@
 							"objectClass": "System",
 							"sid": 328883453175651,
 							"parameters": {
-								"variable": "VidaEnemigo",
+								"variable": "VidaEnemigoJefe",
 								"value": "0.1"
 							}
 						},
@@ -532,7 +542,7 @@
 							"objectClass": "pbar_vida_enemigo",
 							"sid": 333378509008787,
 							"parameters": {
-								"value": "VidaEnemigo"
+								"value": "VidaEnemigoJefe"
 							}
 						},
 						{
@@ -550,10 +560,452 @@
 		{
 			"eventType": "group",
 			"disabled": false,
+			"title": "Enemigo Normal",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "comment",
+					"text": "Si ve al jugador = correr y seguirlo",
+					"text-color": [
+						0,
+						0,
+						0,
+						0
+					],
+					"background-color": [
+						0.5215686274509804,
+						0.9568627450980393,
+						0.6078431372549019,
+						1
+					]
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "has-los-to-object",
+							"objectClass": "spr_enemigo_normal",
+							"sid": 786192701349614,
+							"behaviorType": "LineOfSight",
+							"parameters": {
+								"object": "spr_player",
+								"image-point": "0"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "move-to-object",
+							"objectClass": "spr_enemigo_normal",
+							"sid": 256713422236105,
+							"behaviorType": "MoveTo",
+							"parameters": {
+								"object": "spr_player",
+								"image-point": "0",
+								"mode": "direct"
+							}
+						},
+						{
+							"id": "set-speed",
+							"objectClass": "spr_enemigo_normal",
+							"sid": 266272050427881,
+							"behaviorType": "MoveTo",
+							"parameters": {
+								"speed": "200"
+							}
+						},
+						{
+							"id": "set-boolean-instvar",
+							"objectClass": "spr_enemigo_normal",
+							"sid": 460920364709897,
+							"parameters": {
+								"instance-variable": "VioAlJugador",
+								"value": "true"
+							}
+						}
+					],
+					"sid": 480615393538914
+				},
+				{
+					"eventType": "comment",
+					"text": "Si pierde al jugador = caminar",
+					"text-color": [
+						0,
+						0,
+						0,
+						0
+					],
+					"background-color": [
+						0.5215686274509804,
+						0.9568627450980393,
+						0.6078431372549019,
+						1
+					]
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "has-los-to-object",
+							"objectClass": "spr_enemigo_normal",
+							"sid": 622878152923119,
+							"behaviorType": "LineOfSight",
+							"parameters": {
+								"object": "spr_player",
+								"image-point": "0"
+							},
+							"isInverted": true
+						},
+						{
+							"id": "is-boolean-instance-variable-set",
+							"objectClass": "spr_enemigo_normal",
+							"sid": 211802401705129,
+							"parameters": {
+								"instance-variable": "VioAlJugador"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "move-to-object",
+							"objectClass": "spr_enemigo_normal",
+							"sid": 977531551523419,
+							"behaviorType": "MoveTo",
+							"parameters": {
+								"object": "spr_player",
+								"image-point": "0",
+								"mode": "add-waypoint"
+							}
+						},
+						{
+							"id": "set-speed",
+							"objectClass": "spr_enemigo_normal",
+							"sid": 407190245403413,
+							"behaviorType": "MoveTo",
+							"parameters": {
+								"speed": "100"
+							}
+						}
+					],
+					"sid": 875998087944674
+				},
+				{
+					"eventType": "comment",
+					"text": "Si vio al jugador = volver",
+					"text-color": [
+						0,
+						0,
+						0,
+						0
+					],
+					"background-color": [
+						0.5215686274509804,
+						0.9568627450980393,
+						0.6078431372549019,
+						1
+					]
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "ray-intersected",
+							"objectClass": "spr_enemigo_normal",
+							"sid": 119181487065958,
+							"behaviorType": "LineOfSight"
+						},
+						{
+							"id": "is-boolean-instance-variable-set",
+							"objectClass": "spr_enemigo_normal",
+							"sid": 957805834606042,
+							"parameters": {
+								"instance-variable": "VioAlJugador"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-boolean-instvar",
+							"objectClass": "spr_enemigo_normal",
+							"sid": 785378913271731,
+							"parameters": {
+								"instance-variable": "VioAlJugador",
+								"value": "false"
+							}
+						},
+						{
+							"id": "wait",
+							"objectClass": "System",
+							"sid": 740358124214360,
+							"parameters": {
+								"seconds": "1.0"
+							}
+						},
+						{
+							"id": "stop",
+							"objectClass": "spr_enemigo_normal",
+							"sid": 700236041394661,
+							"behaviorType": "MoveTo"
+						}
+					],
+					"sid": 750197160158101
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-collision-with-another-object",
+							"objectClass": "spr_enemigo_normal",
+							"sid": 594894433911257,
+							"parameters": {
+								"object": "spr_player"
+							}
+						},
+						{
+							"id": "is-overlapping-another-object",
+							"objectClass": "spr_enemigo_normal",
+							"sid": 141638263807101,
+							"parameters": {
+								"object": "spr_player"
+							}
+						}
+					],
+					"actions": [],
+					"sid": 779591603577052,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "is-animation-playing",
+									"objectClass": "spr_player",
+									"sid": 418780766498767,
+									"parameters": {
+										"animation": "\"Ataca.Cuchillo\""
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-default-color",
+									"objectClass": "spr_enemigo_normal",
+									"sid": 103398376453760,
+									"parameters": {
+										"color": "rgbEx(100,0,0)"
+									}
+								},
+								{
+									"id": "wait",
+									"objectClass": "System",
+									"sid": 892642756545912,
+									"parameters": {
+										"seconds": "0.3"
+									}
+								},
+								{
+									"id": "set-default-color",
+									"objectClass": "spr_enemigo_normal",
+									"sid": 269857290632019,
+									"parameters": {
+										"color": "-281492157629439"
+									}
+								},
+								{
+									"id": "destroy",
+									"objectClass": "spr_enemigo_normal",
+									"sid": 182192848048210
+								}
+							],
+							"sid": 772471462216505
+						}
+					],
+					"isOrBlock": true
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-collision-with-another-object",
+							"objectClass": "spr_enemigo_normal",
+							"sid": 844202960743752,
+							"parameters": {
+								"object": "spr_flecha"
+							}
+						},
+						{
+							"id": "is-overlapping-another-object",
+							"objectClass": "spr_enemigo_normal",
+							"sid": 222220262644630,
+							"parameters": {
+								"object": "spr_flecha"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "destroy",
+							"objectClass": "spr_flecha",
+							"sid": 956603167164225
+						},
+						{
+							"id": "destroy",
+							"objectClass": "spr_enemigo_normal",
+							"sid": 883341876824983
+						}
+					],
+					"sid": 578026372845544,
+					"isOrBlock": true
+				}
+			],
+			"sid": 619021369518218
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
 			"title": "Jugador",
 			"description": "",
 			"isActiveOnStart": true,
 			"children": [
+				{
+					"eventType": "group",
+					"disabled": false,
+					"title": "Salida",
+					"description": "",
+					"isActiveOnStart": true,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "is-overlapping-another-object",
+									"objectClass": "spr_player",
+									"sid": 260062352501961,
+									"parameters": {
+										"object": "spr_salida"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "go-to-layout-by-name",
+									"objectClass": "System",
+									"sid": 112142432642933,
+									"parameters": {
+										"layout": "\"Ganaste\""
+									}
+								}
+							],
+							"sid": 727373787371321
+						}
+					],
+					"sid": 821609317885900
+				},
+				{
+					"eventType": "group",
+					"disabled": false,
+					"title": "Flechas",
+					"description": "",
+					"isActiveOnStart": true,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "on-collision-with-another-object",
+									"objectClass": "spr_player",
+									"sid": 353529179695473,
+									"parameters": {
+										"object": "spr_item_flechas"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "add-to-eventvar",
+									"objectClass": "System",
+									"sid": 232662933716758,
+									"parameters": {
+										"variable": "cant_flechas",
+										"value": "3"
+									}
+								},
+								{
+									"id": "destroy",
+									"objectClass": "spr_item_flechas",
+									"sid": 302422394991500
+								},
+								{
+									"id": "set-text",
+									"objectClass": "txt_cantflechas",
+									"sid": 411015007220131,
+									"parameters": {
+										"text": "\"X\" & cant_flechas"
+									}
+								}
+							],
+							"sid": 435173809894273
+						}
+					],
+					"sid": 139356432111999
+				},
+				{
+					"eventType": "group",
+					"disabled": false,
+					"title": "Monedas",
+					"description": "",
+					"isActiveOnStart": true,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "on-collision-with-another-object",
+									"objectClass": "spr_player",
+									"sid": 364968618295081,
+									"parameters": {
+										"object": "spr_moneda"
+									}
+								},
+								{
+									"id": "is-overlapping-another-object",
+									"objectClass": "spr_player",
+									"sid": 397957513818577,
+									"parameters": {
+										"object": "spr_moneda"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "add-to-eventvar",
+									"objectClass": "System",
+									"sid": 605319994712456,
+									"parameters": {
+										"variable": "Monedas",
+										"value": "1"
+									}
+								},
+								{
+									"id": "set-text",
+									"objectClass": "txt_monedas",
+									"sid": 936402075652372,
+									"parameters": {
+										"text": "Monedas"
+									}
+								},
+								{
+									"id": "destroy",
+									"objectClass": "spr_moneda",
+									"sid": 458598029910082
+								}
+							],
+							"sid": 765477667991510,
+							"isOrBlock": true
+						}
+					],
+					"sid": 208848840459299
+				},
 				{
 					"eventType": "group",
 					"disabled": false,
@@ -790,6 +1242,144 @@
 								}
 							],
 							"sid": 388651814042892
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "is-overlapping-another-object",
+									"objectClass": "spr_player",
+									"sid": 711567812082527,
+									"parameters": {
+										"object": "spr_enemigo"
+									}
+								},
+								{
+									"id": "is-animation-playing",
+									"objectClass": "spr_player",
+									"sid": 199867804951426,
+									"parameters": {
+										"animation": "\"Ataca.Cuchillo\""
+									},
+									"isInverted": true
+								}
+							],
+							"actions": [
+								{
+									"id": "subtract-from-eventvar",
+									"objectClass": "System",
+									"sid": 253598848936062,
+									"parameters": {
+										"variable": "VidaJugador",
+										"value": "0.1"
+									}
+								},
+								{
+									"id": "shake",
+									"objectClass": "spr_player",
+									"sid": 652186268343586,
+									"behaviorType": "ScrollTo",
+									"parameters": {
+										"magnitude": "2",
+										"duration": "0.1",
+										"mode": "reducing-magnitude"
+									}
+								},
+								{
+									"id": "set-default-color",
+									"objectClass": "spr_player",
+									"sid": 397119028056410,
+									"parameters": {
+										"color": "rgbEx(100,0,0)"
+									}
+								},
+								{
+									"id": "wait",
+									"objectClass": "System",
+									"sid": 699151123554301,
+									"parameters": {
+										"seconds": "0.3"
+									}
+								},
+								{
+									"id": "set-default-color",
+									"objectClass": "spr_player",
+									"sid": 265772656542461,
+									"parameters": {
+										"color": "-281492157629439"
+									}
+								}
+							],
+							"sid": 316749731496782
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "is-overlapping-another-object",
+									"objectClass": "spr_player",
+									"sid": 559121603771712,
+									"parameters": {
+										"object": "spr_enemigo_normal"
+									}
+								},
+								{
+									"id": "is-animation-playing",
+									"objectClass": "spr_player",
+									"sid": 784179465576013,
+									"parameters": {
+										"animation": "\"Ataca.Cuchillo\""
+									},
+									"isInverted": true
+								}
+							],
+							"actions": [
+								{
+									"id": "subtract-from-eventvar",
+									"objectClass": "System",
+									"sid": 863216167893281,
+									"parameters": {
+										"variable": "VidaJugador",
+										"value": "0.1"
+									}
+								},
+								{
+									"id": "shake",
+									"objectClass": "spr_player",
+									"sid": 446299311264164,
+									"behaviorType": "ScrollTo",
+									"parameters": {
+										"magnitude": "2",
+										"duration": "0.1",
+										"mode": "reducing-magnitude"
+									}
+								},
+								{
+									"id": "set-default-color",
+									"objectClass": "spr_player",
+									"sid": 164835527569901,
+									"parameters": {
+										"color": "rgbEx(100,0,0)"
+									}
+								},
+								{
+									"id": "wait",
+									"objectClass": "System",
+									"sid": 988360014660289,
+									"parameters": {
+										"seconds": "0.3"
+									}
+								},
+								{
+									"id": "set-default-color",
+									"objectClass": "spr_player",
+									"sid": 385509844986654,
+									"parameters": {
+										"color": "-281492157629439"
+									}
+								}
+							],
+							"sid": 432390385832690
 						}
 					],
 					"sid": 646221990355175
@@ -1660,689 +2250,543 @@
 						}
 					],
 					"sid": 818325178420812
+				}
+			],
+			"sid": 222920941293229
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "System",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "comment",
+					"text": "On \"R\" key pressed resetear nivel",
+					"text-color": [
+						0,
+						0,
+						0,
+						0
+					],
+					"background-color": [
+						0.5215686274509804,
+						0.9568627450980393,
+						0.6078431372549019,
+						1
+					]
 				},
 				{
 					"eventType": "block",
 					"conditions": [
 						{
-							"id": "is-overlapping-another-object",
-							"objectClass": "spr_player",
-							"sid": 236473725040052,
+							"id": "on-key-pressed",
+							"objectClass": "Keyboard",
+							"sid": 242059490495652,
 							"parameters": {
-								"object": "spr_enemigo"
+								"key": 82
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 846217904372702,
+							"parameters": {
+								"variable": "Reset",
+								"value": "true"
+							}
+						}
+					],
+					"sid": 596943752501995
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-start-of-layout",
+							"objectClass": "System",
+							"sid": 829299345492689
+						}
+					],
+					"actions": [
+						{
+							"id": "pin-to-object-properties",
+							"objectClass": "PopUp_text",
+							"sid": 267905744314830,
+							"behaviorType": "Pin",
+							"parameters": {
+								"pin-to": "PopUp",
+								"x": true,
+								"y": true,
+								"angle": false,
+								"width-type": "no",
+								"height-type": "no",
+								"z": false
 							}
 						},
 						{
-							"id": "is-animation-playing",
-							"objectClass": "spr_player",
-							"sid": 846121313555333,
+							"id": "pin-to-object-properties",
+							"objectClass": "txt_cantflechas",
+							"sid": 894661429019773,
+							"behaviorType": "Pin",
 							"parameters": {
-								"animation": "\"Ataca.Cuchillo\""
+								"pin-to": "spr_cantflechas",
+								"x": true,
+								"y": true,
+								"angle": false,
+								"width-type": "no",
+								"height-type": "no",
+								"z": false
+							}
+						},
+						{
+							"id": "pin-to-object-properties",
+							"objectClass": "spr_vida",
+							"sid": 202589814644028,
+							"behaviorType": "Pin",
+							"parameters": {
+								"pin-to": "spr_hud",
+								"x": true,
+								"y": true,
+								"angle": false,
+								"width-type": "no",
+								"height-type": "no",
+								"z": false
+							}
+						},
+						{
+							"id": "pin-to-object-properties",
+							"objectClass": "spr_cantflechas",
+							"sid": 804604891384474,
+							"behaviorType": "Pin",
+							"parameters": {
+								"pin-to": "spr_hud",
+								"x": true,
+								"y": true,
+								"angle": false,
+								"width-type": "no",
+								"height-type": "no",
+								"z": false
+							}
+						},
+						{
+							"id": "pin-to-object-properties",
+							"objectClass": "spr_moriste",
+							"sid": 667108429407046,
+							"behaviorType": "Pin",
+							"parameters": {
+								"pin-to": "spr_hud",
+								"x": true,
+								"y": true,
+								"angle": false,
+								"width-type": "no",
+								"height-type": "no",
+								"z": false
+							}
+						},
+						{
+							"id": "set-position",
+							"objectClass": "pbar_vida_enemigo",
+							"sid": 871692789400825,
+							"parameters": {
+								"x": "spr_enemigo.X-20",
+								"y": "spr_enemigo.Y-50"
+							}
+						},
+						{
+							"id": "pin-to-object-properties",
+							"objectClass": "pbar_vida_enemigo",
+							"sid": 803706313621082,
+							"behaviorType": "Pin",
+							"parameters": {
+								"pin-to": "spr_enemigo",
+								"x": true,
+								"y": true,
+								"angle": false,
+								"width-type": "no",
+								"height-type": "no",
+								"z": false
+							}
+						},
+						{
+							"id": "pin-to-object-properties",
+							"objectClass": "hud_moneda",
+							"sid": 996898844548039,
+							"behaviorType": "Pin",
+							"parameters": {
+								"pin-to": "spr_hud",
+								"x": true,
+								"y": true,
+								"angle": false,
+								"width-type": "no",
+								"height-type": "no",
+								"z": false
+							}
+						},
+						{
+							"id": "pin-to-object-properties",
+							"objectClass": "txt_monedas",
+							"sid": 318135418417370,
+							"behaviorType": "Pin",
+							"parameters": {
+								"pin-to": "spr_hud",
+								"x": true,
+								"y": true,
+								"angle": false,
+								"width-type": "no",
+								"height-type": "no",
+								"z": false
+							}
+						},
+						{
+							"id": "pin-to-object-properties",
+							"objectClass": "hud_llave",
+							"sid": 689638951707522,
+							"behaviorType": "Pin",
+							"parameters": {
+								"pin-to": "spr_hud",
+								"x": true,
+								"y": true,
+								"angle": false,
+								"width-type": "no",
+								"height-type": "no",
+								"z": false
+							}
+						},
+						{
+							"id": "set-position",
+							"objectClass": "spr_hud",
+							"sid": 177915080192797,
+							"parameters": {
+								"x": "spr_player.X",
+								"y": "spr_player.Y"
+							}
+						},
+						{
+							"id": "set-text",
+							"objectClass": "txt_cantflechas",
+							"sid": 173251134974112,
+							"parameters": {
+								"text": "\"X\" & cant_flechas"
+							}
+						},
+						{
+							"id": "pin-to-object-properties",
+							"objectClass": "spr_hud",
+							"sid": 458897096891223,
+							"behaviorType": "Pin",
+							"parameters": {
+								"pin-to": "spr_player",
+								"x": true,
+								"y": true,
+								"angle": false,
+								"width-type": "no",
+								"height-type": "no",
+								"z": false
+							}
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 529789715065863,
+							"parameters": {
+								"variable": "cant_flechas",
+								"value": "0"
+							}
+						}
+					],
+					"sid": 918492312928960
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 549669303409603,
+							"parameters": {
+								"variable": "PopUp"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-visible",
+							"objectClass": "PopUp",
+							"sid": 160176958876970,
+							"parameters": {
+								"visibility": "visible"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "PopUp_text",
+							"sid": 638365983929182,
+							"parameters": {
+								"visibility": "visible"
+							}
+						}
+					],
+					"sid": 619100652319724
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 946003366934805,
+							"parameters": {
+								"variable": "PopUp"
 							},
 							"isInverted": true
 						}
 					],
 					"actions": [
 						{
-							"id": "subtract-from-eventvar",
+							"id": "set-visible",
+							"objectClass": "PopUp",
+							"sid": 829855312892282,
+							"parameters": {
+								"visibility": "invisible"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "PopUp_text",
+							"sid": 368654595220152,
+							"parameters": {
+								"visibility": "invisible"
+							}
+						}
+					],
+					"sid": 504086685213244
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-eventvar",
 							"objectClass": "System",
-							"sid": 294529042909226,
+							"sid": 964663967832478,
+							"parameters": {
+								"variable": "VidaEnemigoJefe",
+								"comparison": 3,
+								"value": "0"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "destroy",
+							"objectClass": "spr_enemigo",
+							"sid": 989550771159239
+						}
+					],
+					"sid": 158895607506989
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 556591927527941,
 							"parameters": {
 								"variable": "VidaJugador",
-								"value": "0.1"
-							}
-						},
-						{
-							"id": "shake",
-							"objectClass": "spr_player",
-							"sid": 114134813298442,
-							"behaviorType": "ScrollTo",
-							"parameters": {
-								"magnitude": "2",
-								"duration": "0.1",
-								"mode": "reducing-magnitude"
-							}
-						},
-						{
-							"id": "set-default-color",
-							"objectClass": "spr_player",
-							"sid": 185283697258296,
-							"parameters": {
-								"color": "rgbEx(100,0,0)"
-							}
-						},
-						{
-							"id": "wait",
-							"objectClass": "System",
-							"sid": 688268955811609,
-							"parameters": {
-								"seconds": "0.3"
-							}
-						},
-						{
-							"id": "set-default-color",
-							"objectClass": "spr_player",
-							"sid": 557971542778003,
-							"parameters": {
-								"color": "-281492157629439"
-							}
-						}
-					],
-					"sid": 665285808175998
-				},
-				{
-					"eventType": "block",
-					"conditions": [
-						{
-							"id": "on-collision-with-another-object",
-							"objectClass": "spr_player",
-							"sid": 811188984462167,
-							"parameters": {
-								"object": "spr_item_flechas"
+								"comparison": 3,
+								"value": "0"
 							}
 						}
 					],
 					"actions": [
 						{
-							"id": "add-to-eventvar",
-							"objectClass": "System",
-							"sid": 236410608877176,
+							"id": "set-visible",
+							"objectClass": "spr_moriste",
+							"sid": 857741091642223,
+							"disabled": true,
 							"parameters": {
-								"variable": "cant_flechas",
-								"value": "3"
+								"visibility": "visible"
 							}
 						},
 						{
-							"id": "destroy",
-							"objectClass": "spr_item_flechas",
-							"sid": 979148877052106
+							"id": "set-ignoring-input",
+							"objectClass": "spr_player",
+							"sid": 882207651935717,
+							"behaviorType": "8Direction",
+							"parameters": {
+								"input": "start-ignoring"
+							}
 						},
 						{
-							"id": "set-text",
-							"objectClass": "txt_cantflechas",
-							"sid": 570539731069591,
+							"id": "set-time-scale",
+							"objectClass": "System",
+							"sid": 971588900222351,
+							"disabled": true,
 							"parameters": {
-								"text": "\"X\" & cant_flechas"
+								"time-scale": "0"
+							}
+						},
+						{
+							"id": "go-to-layout",
+							"objectClass": "System",
+							"sid": 688516464592540,
+							"parameters": {
+								"layout": "Moriste"
 							}
 						}
 					],
-					"sid": 853153418414491
+					"sid": 503534057039528
 				},
 				{
 					"eventType": "block",
 					"conditions": [
 						{
-							"id": "on-collision-with-another-object",
-							"objectClass": "spr_player",
-							"sid": 570653300338346,
+							"id": "compare-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 165672763260571,
 							"parameters": {
-								"object": "spr_moneda"
-							}
-						},
-						{
-							"id": "is-overlapping-another-object",
-							"objectClass": "spr_player",
-							"sid": 924084456035419,
-							"parameters": {
-								"object": "spr_moneda"
+								"variable": "Reset"
 							}
 						}
 					],
 					"actions": [
 						{
-							"id": "add-to-eventvar",
+							"id": "restart-layout",
 							"objectClass": "System",
-							"sid": 421552471435336,
+							"sid": 399552506217630
+						},
+						{
+							"id": "reset-global-variables",
+							"objectClass": "System",
+							"sid": 613269228076466,
 							"parameters": {
-								"variable": "Monedas",
-								"value": "1"
+								"reset-static": false
+							}
+						},
+						{
+							"id": "set-time-scale",
+							"objectClass": "System",
+							"sid": 773816417160003,
+							"parameters": {
+								"time-scale": "1"
+							}
+						}
+					],
+					"sid": 474796293278453
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 206643978324560,
+							"parameters": {
+								"variable": "Cofre"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 314626066761359,
+							"parameters": {
+								"variable": "PopUp",
+								"value": "true"
 							}
 						},
 						{
 							"id": "set-text",
-							"objectClass": "txt_monedas",
-							"sid": 208351484464259,
+							"objectClass": "PopUp_text",
+							"sid": 241290278806392,
 							"parameters": {
-								"text": "Monedas"
+								"text": "\"'E' abrir\""
 							}
 						},
 						{
-							"id": "destroy",
-							"objectClass": "spr_moneda",
-							"sid": 316893202366724
+							"id": "set-position",
+							"objectClass": "PopUp",
+							"sid": 399299788078582,
+							"parameters": {
+								"x": "spr_player.X",
+								"y": "spr_player.Y - 150"
+							}
 						}
 					],
-					"sid": 171481532629740,
-					"isOrBlock": true
+					"sid": 386823688999083
 				},
 				{
 					"eventType": "block",
 					"conditions": [
 						{
-							"id": "is-overlapping-another-object",
-							"objectClass": "spr_player",
-							"sid": 325198644701277,
+							"id": "on-key-pressed",
+							"objectClass": "Keyboard",
+							"sid": 818114370130731,
 							"parameters": {
-								"object": "spr_salida"
+								"key": 83
 							}
 						}
 					],
 					"actions": [
 						{
-							"id": "go-to-layout-by-name",
+							"id": "set-boolean-eventvar",
 							"objectClass": "System",
-							"sid": 486818351839362,
+							"sid": 231497054986658,
 							"parameters": {
-								"layout": "\"Ganaste\""
+								"variable": "Arco",
+								"value": "false"
+							}
+						},
+						{
+							"id": "set-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 415242882165829,
+							"parameters": {
+								"variable": "Cuchillo",
+								"value": "false"
 							}
 						}
 					],
-					"sid": 483990144353032
+					"sid": 626388984154438
 				}
 			],
-			"sid": 222920941293229
+			"sid": 794891254663739
 		},
 		{
-			"eventType": "comment",
-			"text": "On \"R\" key pressed resetear nivel",
-			"text-color": [
-				0,
-				0,
-				0,
-				0
-			],
-			"background-color": [
-				0.5215686274509804,
-				0.9568627450980393,
-				0.6078431372549019,
-				1
-			]
-		},
-		{
-			"eventType": "block",
-			"conditions": [
+			"eventType": "group",
+			"disabled": false,
+			"title": "Light",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
 				{
-					"id": "on-key-pressed",
-					"objectClass": "Keyboard",
-					"sid": 902326275749851,
-					"parameters": {
-						"key": 82
-					}
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-created",
+							"objectClass": "lightTest",
+							"sid": 894968743970492
+						}
+					],
+					"actions": [
+						{
+							"id": "set-opacity",
+							"objectClass": "lightTest",
+							"sid": 223535310246049,
+							"parameters": {
+								"opacity": "92"
+							}
+						}
+					],
+					"sid": 905414677869842
 				}
 			],
-			"actions": [
-				{
-					"id": "set-boolean-eventvar",
-					"objectClass": "System",
-					"sid": 534014930440215,
-					"parameters": {
-						"variable": "Reset",
-						"value": "true"
-					}
-				}
-			],
-			"sid": 159649833795236
-		},
-		{
-			"eventType": "block",
-			"conditions": [
-				{
-					"id": "on-start-of-layout",
-					"objectClass": "System",
-					"sid": 874190376559646
-				}
-			],
-			"actions": [
-				{
-					"id": "pin-to-object-properties",
-					"objectClass": "PopUp_text",
-					"sid": 709325011423795,
-					"behaviorType": "Pin",
-					"parameters": {
-						"pin-to": "PopUp",
-						"x": true,
-						"y": true,
-						"angle": false,
-						"width-type": "no",
-						"height-type": "no",
-						"z": false
-					}
-				},
-				{
-					"id": "pin-to-object-properties",
-					"objectClass": "txt_cantflechas",
-					"sid": 459515717685341,
-					"behaviorType": "Pin",
-					"parameters": {
-						"pin-to": "spr_cantflechas",
-						"x": true,
-						"y": true,
-						"angle": false,
-						"width-type": "no",
-						"height-type": "no",
-						"z": false
-					}
-				},
-				{
-					"id": "pin-to-object-properties",
-					"objectClass": "spr_vida",
-					"sid": 983679188369291,
-					"behaviorType": "Pin",
-					"parameters": {
-						"pin-to": "spr_hud",
-						"x": true,
-						"y": true,
-						"angle": false,
-						"width-type": "no",
-						"height-type": "no",
-						"z": false
-					}
-				},
-				{
-					"id": "pin-to-object-properties",
-					"objectClass": "spr_cantflechas",
-					"sid": 277255662565341,
-					"behaviorType": "Pin",
-					"parameters": {
-						"pin-to": "spr_hud",
-						"x": true,
-						"y": true,
-						"angle": false,
-						"width-type": "no",
-						"height-type": "no",
-						"z": false
-					}
-				},
-				{
-					"id": "pin-to-object-properties",
-					"objectClass": "spr_moriste",
-					"sid": 131866996597118,
-					"behaviorType": "Pin",
-					"parameters": {
-						"pin-to": "spr_hud",
-						"x": true,
-						"y": true,
-						"angle": false,
-						"width-type": "no",
-						"height-type": "no",
-						"z": false
-					}
-				},
-				{
-					"id": "set-position",
-					"objectClass": "pbar_vida_enemigo",
-					"sid": 386669038093021,
-					"parameters": {
-						"x": "spr_enemigo.X-20",
-						"y": "spr_enemigo.Y-50"
-					}
-				},
-				{
-					"id": "pin-to-object-properties",
-					"objectClass": "pbar_vida_enemigo",
-					"sid": 161345506107159,
-					"behaviorType": "Pin",
-					"parameters": {
-						"pin-to": "spr_enemigo",
-						"x": true,
-						"y": true,
-						"angle": false,
-						"width-type": "no",
-						"height-type": "no",
-						"z": false
-					}
-				},
-				{
-					"id": "pin-to-object-properties",
-					"objectClass": "hud_moneda",
-					"sid": 785510395913500,
-					"behaviorType": "Pin",
-					"parameters": {
-						"pin-to": "spr_hud",
-						"x": true,
-						"y": true,
-						"angle": false,
-						"width-type": "no",
-						"height-type": "no",
-						"z": false
-					}
-				},
-				{
-					"id": "pin-to-object-properties",
-					"objectClass": "txt_monedas",
-					"sid": 694086489693238,
-					"behaviorType": "Pin",
-					"parameters": {
-						"pin-to": "spr_hud",
-						"x": true,
-						"y": true,
-						"angle": false,
-						"width-type": "no",
-						"height-type": "no",
-						"z": false
-					}
-				},
-				{
-					"id": "pin-to-object-properties",
-					"objectClass": "hud_llave",
-					"sid": 566135269129950,
-					"behaviorType": "Pin",
-					"parameters": {
-						"pin-to": "spr_hud",
-						"x": true,
-						"y": true,
-						"angle": false,
-						"width-type": "no",
-						"height-type": "no",
-						"z": false
-					}
-				},
-				{
-					"id": "set-position",
-					"objectClass": "spr_hud",
-					"sid": 884427902706603,
-					"parameters": {
-						"x": "spr_player.X",
-						"y": "spr_player.Y"
-					}
-				},
-				{
-					"id": "set-text",
-					"objectClass": "txt_cantflechas",
-					"sid": 380767239035215,
-					"parameters": {
-						"text": "\"X\" & cant_flechas"
-					}
-				},
-				{
-					"id": "pin-to-object-properties",
-					"objectClass": "spr_hud",
-					"sid": 829181667215724,
-					"behaviorType": "Pin",
-					"parameters": {
-						"pin-to": "spr_player",
-						"x": true,
-						"y": true,
-						"angle": false,
-						"width-type": "no",
-						"height-type": "no",
-						"z": false
-					}
-				},
-				{
-					"id": "set-eventvar-value",
-					"objectClass": "System",
-					"sid": 971429252186390,
-					"parameters": {
-						"variable": "cant_flechas",
-						"value": "0"
-					}
-				},
-				{
-					"id": "set-ignoring-input",
-					"objectClass": "spr_player",
-					"sid": 406989794410956,
-					"behaviorType": "8Direction",
-					"parameters": {
-						"input": "stop-ignoring"
-					}
-				}
-			],
-			"sid": 558174566772353
-		},
-		{
-			"eventType": "block",
-			"conditions": [
-				{
-					"id": "compare-boolean-eventvar",
-					"objectClass": "System",
-					"sid": 446177281376704,
-					"parameters": {
-						"variable": "PopUp"
-					}
-				}
-			],
-			"actions": [
-				{
-					"id": "set-visible",
-					"objectClass": "PopUp",
-					"sid": 127987645022996,
-					"parameters": {
-						"visibility": "visible"
-					}
-				},
-				{
-					"id": "set-visible",
-					"objectClass": "PopUp_text",
-					"sid": 552348932165480,
-					"parameters": {
-						"visibility": "visible"
-					}
-				}
-			],
-			"sid": 930486086051864
-		},
-		{
-			"eventType": "block",
-			"conditions": [
-				{
-					"id": "compare-boolean-eventvar",
-					"objectClass": "System",
-					"sid": 868927738045010,
-					"parameters": {
-						"variable": "PopUp"
-					},
-					"isInverted": true
-				}
-			],
-			"actions": [
-				{
-					"id": "set-visible",
-					"objectClass": "PopUp",
-					"sid": 491864560848822,
-					"parameters": {
-						"visibility": "invisible"
-					}
-				},
-				{
-					"id": "set-visible",
-					"objectClass": "PopUp_text",
-					"sid": 664092693548855,
-					"parameters": {
-						"visibility": "invisible"
-					}
-				}
-			],
-			"sid": 560347607447233
-		},
-		{
-			"eventType": "block",
-			"conditions": [
-				{
-					"id": "compare-eventvar",
-					"objectClass": "System",
-					"sid": 181697400393588,
-					"parameters": {
-						"variable": "VidaEnemigo",
-						"comparison": 3,
-						"value": "0"
-					}
-				}
-			],
-			"actions": [
-				{
-					"id": "destroy",
-					"objectClass": "spr_enemigo",
-					"sid": 109215541471006
-				}
-			],
-			"sid": 212037245953809
-		},
-		{
-			"eventType": "block",
-			"conditions": [
-				{
-					"id": "compare-eventvar",
-					"objectClass": "System",
-					"sid": 739763721158700,
-					"parameters": {
-						"variable": "VidaJugador",
-						"comparison": 3,
-						"value": "0"
-					}
-				}
-			],
-			"actions": [
-				{
-					"id": "set-visible",
-					"objectClass": "spr_moriste",
-					"sid": 701874723927728,
-					"disabled": true,
-					"parameters": {
-						"visibility": "visible"
-					}
-				},
-				{
-					"id": "set-ignoring-input",
-					"objectClass": "spr_player",
-					"sid": 574797680767577,
-					"behaviorType": "8Direction",
-					"parameters": {
-						"input": "start-ignoring"
-					}
-				},
-				{
-					"id": "set-time-scale",
-					"objectClass": "System",
-					"sid": 477403834890551,
-					"disabled": true,
-					"parameters": {
-						"time-scale": "0"
-					}
-				},
-				{
-					"id": "go-to-layout",
-					"objectClass": "System",
-					"sid": 507354203761877,
-					"parameters": {
-						"layout": "Moriste"
-					}
-				}
-			],
-			"sid": 487084599246541
-		},
-		{
-			"eventType": "block",
-			"conditions": [
-				{
-					"id": "compare-boolean-eventvar",
-					"objectClass": "System",
-					"sid": 544004466248112,
-					"parameters": {
-						"variable": "Reset"
-					}
-				}
-			],
-			"actions": [
-				{
-					"id": "restart-layout",
-					"objectClass": "System",
-					"sid": 595398511828165
-				},
-				{
-					"id": "reset-global-variables",
-					"objectClass": "System",
-					"sid": 444373593693256,
-					"parameters": {
-						"reset-static": false
-					}
-				},
-				{
-					"id": "set-time-scale",
-					"objectClass": "System",
-					"sid": 961655606699871,
-					"parameters": {
-						"time-scale": "1"
-					}
-				}
-			],
-			"sid": 184387158238480
-		},
-		{
-			"eventType": "block",
-			"conditions": [
-				{
-					"id": "compare-boolean-eventvar",
-					"objectClass": "System",
-					"sid": 176675047220106,
-					"parameters": {
-						"variable": "Cofre"
-					}
-				}
-			],
-			"actions": [
-				{
-					"id": "set-boolean-eventvar",
-					"objectClass": "System",
-					"sid": 790445759253283,
-					"parameters": {
-						"variable": "PopUp",
-						"value": "true"
-					}
-				},
-				{
-					"id": "set-text",
-					"objectClass": "PopUp_text",
-					"sid": 873225969880549,
-					"parameters": {
-						"text": "\"'E' abrir\""
-					}
-				},
-				{
-					"id": "set-position",
-					"objectClass": "PopUp",
-					"sid": 388645794003229,
-					"parameters": {
-						"x": "spr_player.X",
-						"y": "spr_player.Y - 150"
-					}
-				}
-			],
-			"sid": 946165384005402
-		},
-		{
-			"eventType": "block",
-			"conditions": [
-				{
-					"id": "on-key-pressed",
-					"objectClass": "Keyboard",
-					"sid": 418164137967849,
-					"parameters": {
-						"key": 83
-					}
-				}
-			],
-			"actions": [
-				{
-					"id": "set-boolean-eventvar",
-					"objectClass": "System",
-					"sid": 930332046953741,
-					"parameters": {
-						"variable": "Arco",
-						"value": "false"
-					}
-				},
-				{
-					"id": "set-boolean-eventvar",
-					"objectClass": "System",
-					"sid": 477950532955066,
-					"parameters": {
-						"variable": "Cuchillo",
-						"value": "false"
-					}
-				}
-			],
-			"sid": 666210882466238
+			"sid": 434352812834349
 		}
 	],
 	"sid": 953197778318877

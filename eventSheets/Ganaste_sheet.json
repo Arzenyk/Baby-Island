@@ -18,6 +18,14 @@
 					"parameters": {
 						"layout": "Menu"
 					}
+				},
+				{
+					"id": "reset-global-variables",
+					"objectClass": "System",
+					"sid": 743163988040720,
+					"parameters": {
+						"reset-static": false
+					}
 				}
 			],
 			"sid": 467994589078317

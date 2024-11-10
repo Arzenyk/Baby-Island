@@ -108,7 +108,7 @@
 						},
 						"ShadowCaster": {
 							"properties": {
-								"height": 100000,
+								"height": 1,
 								"tag": "",
 								"enabled": true
 							}
@@ -157,7 +157,7 @@
 						},
 						"ShadowCaster": {
 							"properties": {
-								"height": 100000,
+								"height": 1,
 								"tag": "",
 								"enabled": true
 							}
@@ -206,7 +206,7 @@
 						},
 						"ShadowCaster": {
 							"properties": {
-								"height": 100000,
+								"height": 1,
 								"tag": "",
 								"enabled": true
 							}
@@ -255,7 +255,7 @@
 						},
 						"ShadowCaster": {
 							"properties": {
-								"height": 100000,
+								"height": 1,
 								"tag": "",
 								"enabled": true
 							}
@@ -304,7 +304,7 @@
 						},
 						"ShadowCaster": {
 							"properties": {
-								"height": 100000,
+								"height": 1,
 								"tag": "",
 								"enabled": true
 							}
@@ -353,7 +353,7 @@
 						},
 						"ShadowCaster": {
 							"properties": {
-								"height": 100000,
+								"height": 1,
 								"tag": "",
 								"enabled": true
 							}
@@ -402,7 +402,7 @@
 						},
 						"ShadowCaster": {
 							"properties": {
-								"height": 100000,
+								"height": 1,
 								"tag": "",
 								"enabled": true
 							}
@@ -451,7 +451,7 @@
 						},
 						"ShadowCaster": {
 							"properties": {
-								"height": 100000,
+								"height": 1,
 								"tag": "",
 								"enabled": true
 							}
@@ -500,7 +500,7 @@
 						},
 						"ShadowCaster": {
 							"properties": {
-								"height": 100000,
+								"height": 1,
 								"tag": "",
 								"enabled": true
 							}
@@ -549,7 +549,7 @@
 						},
 						"ShadowCaster": {
 							"properties": {
-								"height": 100000,
+								"height": 1,
 								"tag": "",
 								"enabled": true
 							}
@@ -598,7 +598,7 @@
 						},
 						"ShadowCaster": {
 							"properties": {
-								"height": 100000,
+								"height": 1,
 								"tag": "",
 								"enabled": true
 							}
@@ -647,7 +647,7 @@
 						},
 						"ShadowCaster": {
 							"properties": {
-								"height": 100000,
+								"height": 1,
 								"tag": "",
 								"enabled": true
 							}
@@ -696,7 +696,7 @@
 						},
 						"ShadowCaster": {
 							"properties": {
-								"height": 100000,
+								"height": 1,
 								"tag": "",
 								"enabled": true
 							}
@@ -745,7 +745,7 @@
 						},
 						"ShadowCaster": {
 							"properties": {
-								"height": 100000,
+								"height": 1,
 								"tag": "",
 								"enabled": true
 							}
@@ -794,7 +794,7 @@
 						},
 						"ShadowCaster": {
 							"properties": {
-								"height": 100000,
+								"height": 1,
 								"tag": "",
 								"enabled": true
 							}
@@ -843,7 +843,7 @@
 						},
 						"ShadowCaster": {
 							"properties": {
-								"height": 100000,
+								"height": 1,
 								"tag": "",
 								"enabled": true
 							}
@@ -892,7 +892,7 @@
 						},
 						"ShadowCaster": {
 							"properties": {
-								"height": 100000,
+								"height": 1,
 								"tag": "",
 								"enabled": true
 							}
@@ -941,7 +941,7 @@
 						},
 						"ShadowCaster": {
 							"properties": {
-								"height": 100000,
+								"height": 1,
 								"tag": "",
 								"enabled": true
 							}
@@ -990,7 +990,7 @@
 						},
 						"ShadowCaster": {
 							"properties": {
-								"height": 100000,
+								"height": 1,
 								"tag": "",
 								"enabled": true
 							}
@@ -1039,7 +1039,7 @@
 						},
 						"ShadowCaster": {
 							"properties": {
-								"height": 100000,
+								"height": 1,
 								"tag": "",
 								"enabled": true
 							}
@@ -1088,7 +1088,7 @@
 						},
 						"ShadowCaster": {
 							"properties": {
-								"height": 100000,
+								"height": 1,
 								"tag": "",
 								"enabled": true
 							}
@@ -1137,7 +1137,7 @@
 						},
 						"ShadowCaster": {
 							"properties": {
-								"height": 100000,
+								"height": 1,
 								"tag": "",
 								"enabled": true
 							}
@@ -1186,7 +1186,7 @@
 						},
 						"ShadowCaster": {
 							"properties": {
-								"height": 100000,
+								"height": 1,
 								"tag": "",
 								"enabled": true
 							}
@@ -1235,7 +1235,7 @@
 						},
 						"ShadowCaster": {
 							"properties": {
-								"height": 100000,
+								"height": 1,
 								"tag": "",
 								"enabled": true
 							}
@@ -1284,7 +1284,7 @@
 						},
 						"ShadowCaster": {
 							"properties": {
-								"height": 100000,
+								"height": 1,
 								"tag": "",
 								"enabled": true
 							}
@@ -1333,7 +1333,7 @@
 						},
 						"ShadowCaster": {
 							"properties": {
-								"height": 100000,
+								"height": 1,
 								"tag": "",
 								"enabled": true
 							}
@@ -1382,7 +1382,7 @@
 						},
 						"ShadowCaster": {
 							"properties": {
-								"height": 100000,
+								"height": 1,
 								"tag": "",
 								"enabled": true
 							}
@@ -1431,7 +1431,7 @@
 						},
 						"ShadowCaster": {
 							"properties": {
-								"height": 100000,
+								"height": 1,
 								"tag": "",
 								"enabled": true
 							}
@@ -1480,7 +1480,7 @@
 						},
 						"ShadowCaster": {
 							"properties": {
-								"height": 100000,
+								"height": 1,
 								"tag": "",
 								"enabled": true
 							}
@@ -1529,7 +1529,7 @@
 						},
 						"ShadowCaster": {
 							"properties": {
-								"height": 100000,
+								"height": 1,
 								"tag": "",
 								"enabled": true
 							}
@@ -1578,7 +1578,7 @@
 						},
 						"ShadowCaster": {
 							"properties": {
-								"height": 100000,
+								"height": 1,
 								"tag": "",
 								"enabled": true
 							}
@@ -1627,7 +1627,7 @@
 						},
 						"ShadowCaster": {
 							"properties": {
-								"height": 100000,
+								"height": 1,
 								"tag": "",
 								"enabled": true
 							}
@@ -1676,7 +1676,7 @@
 						},
 						"ShadowCaster": {
 							"properties": {
-								"height": 100000,
+								"height": 1,
 								"tag": "",
 								"enabled": true
 							}
@@ -1725,7 +1725,7 @@
 						},
 						"ShadowCaster": {
 							"properties": {
-								"height": 100000,
+								"height": 1,
 								"tag": "",
 								"enabled": true
 							}
@@ -1774,7 +1774,7 @@
 						},
 						"ShadowCaster": {
 							"properties": {
-								"height": 100000,
+								"height": 1,
 								"tag": "",
 								"enabled": true
 							}
@@ -1823,7 +1823,7 @@
 						},
 						"ShadowCaster": {
 							"properties": {
-								"height": 100000,
+								"height": 1,
 								"tag": "",
 								"enabled": true
 							}
@@ -1872,7 +1872,7 @@
 						},
 						"ShadowCaster": {
 							"properties": {
-								"height": 100000,
+								"height": 1,
 								"tag": "",
 								"enabled": true
 							}
@@ -1921,7 +1921,7 @@
 						},
 						"ShadowCaster": {
 							"properties": {
-								"height": 100000,
+								"height": 1,
 								"tag": "",
 								"enabled": true
 							}
@@ -1970,7 +1970,7 @@
 						},
 						"ShadowCaster": {
 							"properties": {
-								"height": 100000,
+								"height": 1,
 								"tag": "",
 								"enabled": true
 							}
@@ -2019,7 +2019,7 @@
 						},
 						"ShadowCaster": {
 							"properties": {
-								"height": 100000,
+								"height": 1,
 								"tag": "",
 								"enabled": true
 							}
@@ -2068,7 +2068,7 @@
 						},
 						"ShadowCaster": {
 							"properties": {
-								"height": 100000,
+								"height": 1,
 								"tag": "",
 								"enabled": true
 							}
@@ -2117,7 +2117,7 @@
 						},
 						"ShadowCaster": {
 							"properties": {
-								"height": 100000,
+								"height": 1,
 								"tag": "",
 								"enabled": true
 							}
@@ -2166,7 +2166,7 @@
 						},
 						"ShadowCaster": {
 							"properties": {
-								"height": 100000,
+								"height": 1,
 								"tag": "",
 								"enabled": true
 							}
@@ -2215,7 +2215,7 @@
 						},
 						"ShadowCaster": {
 							"properties": {
-								"height": 100000,
+								"height": 1,
 								"tag": "",
 								"enabled": true
 							}
@@ -2264,7 +2264,7 @@
 						},
 						"ShadowCaster": {
 							"properties": {
-								"height": 100000,
+								"height": 1,
 								"tag": "",
 								"enabled": true
 							}
@@ -2313,7 +2313,7 @@
 						},
 						"ShadowCaster": {
 							"properties": {
-								"height": 100000,
+								"height": 1,
 								"tag": "",
 								"enabled": true
 							}
@@ -2362,7 +2362,7 @@
 						},
 						"ShadowCaster": {
 							"properties": {
-								"height": 100000,
+								"height": 1,
 								"tag": "",
 								"enabled": true
 							}
@@ -2411,7 +2411,7 @@
 						},
 						"ShadowCaster": {
 							"properties": {
-								"height": 100000,
+								"height": 1,
 								"tag": "",
 								"enabled": true
 							}
@@ -2460,7 +2460,7 @@
 						},
 						"ShadowCaster": {
 							"properties": {
-								"height": 100000,
+								"height": 1,
 								"tag": "",
 								"enabled": true
 							}
@@ -2509,7 +2509,7 @@
 						},
 						"ShadowCaster": {
 							"properties": {
-								"height": 100000,
+								"height": 1,
 								"tag": "",
 								"enabled": true
 							}
@@ -2558,7 +2558,7 @@
 						},
 						"ShadowCaster": {
 							"properties": {
-								"height": 100000,
+								"height": 1,
 								"tag": "",
 								"enabled": true
 							}
@@ -2607,7 +2607,7 @@
 						},
 						"ShadowCaster": {
 							"properties": {
-								"height": 100000,
+								"height": 1,
 								"tag": "",
 								"enabled": true
 							}
@@ -2656,7 +2656,7 @@
 						},
 						"ShadowCaster": {
 							"properties": {
-								"height": 100000,
+								"height": 1,
 								"tag": "",
 								"enabled": true
 							}
@@ -2705,7 +2705,7 @@
 						},
 						"ShadowCaster": {
 							"properties": {
-								"height": 100000,
+								"height": 1,
 								"tag": "",
 								"enabled": true
 							}
@@ -2754,7 +2754,7 @@
 						},
 						"ShadowCaster": {
 							"properties": {
-								"height": 100000,
+								"height": 1,
 								"tag": "",
 								"enabled": true
 							}
@@ -2803,7 +2803,7 @@
 						},
 						"ShadowCaster": {
 							"properties": {
-								"height": 100000,
+								"height": 1,
 								"tag": "",
 								"enabled": true
 							}
@@ -2852,7 +2852,7 @@
 						},
 						"ShadowCaster": {
 							"properties": {
-								"height": 100000,
+								"height": 1,
 								"tag": "",
 								"enabled": true
 							}
@@ -2901,7 +2901,7 @@
 						},
 						"ShadowCaster": {
 							"properties": {
-								"height": 100000,
+								"height": 1,
 								"tag": "",
 								"enabled": true
 							}
@@ -2950,7 +2950,7 @@
 						},
 						"ShadowCaster": {
 							"properties": {
-								"height": 100000,
+								"height": 1,
 								"tag": "",
 								"enabled": true
 							}
@@ -2999,7 +2999,7 @@
 						},
 						"ShadowCaster": {
 							"properties": {
-								"height": 100000,
+								"height": 1,
 								"tag": "",
 								"enabled": true
 							}
@@ -3048,7 +3048,7 @@
 						},
 						"ShadowCaster": {
 							"properties": {
-								"height": 100000,
+								"height": 1,
 								"tag": "",
 								"enabled": true
 							}
@@ -3097,7 +3097,7 @@
 						},
 						"ShadowCaster": {
 							"properties": {
-								"height": 100000,
+								"height": 1,
 								"tag": "",
 								"enabled": true
 							}
@@ -3146,7 +3146,7 @@
 						},
 						"ShadowCaster": {
 							"properties": {
-								"height": 100000,
+								"height": 1,
 								"tag": "",
 								"enabled": true
 							}
@@ -3195,7 +3195,7 @@
 						},
 						"ShadowCaster": {
 							"properties": {
-								"height": 100000,
+								"height": 1,
 								"tag": "",
 								"enabled": true
 							}
@@ -3244,7 +3244,7 @@
 						},
 						"ShadowCaster": {
 							"properties": {
-								"height": 100000,
+								"height": 1,
 								"tag": "",
 								"enabled": true
 							}
@@ -3293,7 +3293,7 @@
 						},
 						"ShadowCaster": {
 							"properties": {
-								"height": 100000,
+								"height": 1,
 								"tag": "",
 								"enabled": true
 							}
@@ -3342,7 +3342,7 @@
 						},
 						"ShadowCaster": {
 							"properties": {
-								"height": 100000,
+								"height": 1,
 								"tag": "",
 								"enabled": true
 							}
@@ -3426,7 +3426,7 @@
 						},
 						"ShadowCaster": {
 							"properties": {
-								"height": 100000,
+								"height": 1,
 								"tag": "",
 								"enabled": true
 							}
@@ -3475,7 +3475,7 @@
 						},
 						"ShadowCaster": {
 							"properties": {
-								"height": 100000,
+								"height": 1,
 								"tag": "",
 								"enabled": true
 							}
@@ -3524,7 +3524,7 @@
 						},
 						"ShadowCaster": {
 							"properties": {
-								"height": 100000,
+								"height": 1,
 								"tag": "",
 								"enabled": true
 							}
@@ -3573,7 +3573,7 @@
 						},
 						"ShadowCaster": {
 							"properties": {
-								"height": 100000,
+								"height": 1,
 								"tag": "",
 								"enabled": true
 							}
@@ -3622,7 +3622,7 @@
 						},
 						"ShadowCaster": {
 							"properties": {
-								"height": 100000,
+								"height": 1,
 								"tag": "",
 								"enabled": true
 							}
@@ -3671,7 +3671,7 @@
 						},
 						"ShadowCaster": {
 							"properties": {
-								"height": 100000,
+								"height": 1,
 								"tag": "",
 								"enabled": true
 							}
@@ -3720,7 +3720,7 @@
 						},
 						"ShadowCaster": {
 							"properties": {
-								"height": 100000,
+								"height": 1,
 								"tag": "",
 								"enabled": true
 							}
@@ -3769,7 +3769,7 @@
 						},
 						"ShadowCaster": {
 							"properties": {
-								"height": 100000,
+								"height": 1,
 								"tag": "",
 								"enabled": true
 							}
@@ -3818,7 +3818,7 @@
 						},
 						"ShadowCaster": {
 							"properties": {
-								"height": 100000,
+								"height": 1,
 								"tag": "",
 								"enabled": true
 							}
@@ -3867,7 +3867,7 @@
 						},
 						"ShadowCaster": {
 							"properties": {
-								"height": 100000,
+								"height": 1,
 								"tag": "",
 								"enabled": true
 							}
@@ -3916,7 +3916,7 @@
 						},
 						"ShadowCaster": {
 							"properties": {
-								"height": 100000,
+								"height": 1,
 								"tag": "",
 								"enabled": true
 							}
@@ -3965,7 +3965,7 @@
 						},
 						"ShadowCaster": {
 							"properties": {
-								"height": 100000,
+								"height": 1,
 								"tag": "",
 								"enabled": true
 							}
@@ -4014,7 +4014,7 @@
 						},
 						"ShadowCaster": {
 							"properties": {
-								"height": 100000,
+								"height": 1,
 								"tag": "",
 								"enabled": true
 							}
@@ -4063,7 +4063,7 @@
 						},
 						"ShadowCaster": {
 							"properties": {
-								"height": 100000,
+								"height": 1,
 								"tag": "",
 								"enabled": true
 							}
@@ -4112,7 +4112,7 @@
 						},
 						"ShadowCaster": {
 							"properties": {
-								"height": 100000,
+								"height": 1,
 								"tag": "",
 								"enabled": true
 							}
@@ -4161,7 +4161,7 @@
 						},
 						"ShadowCaster": {
 							"properties": {
-								"height": 100000,
+								"height": 1,
 								"tag": "",
 								"enabled": true
 							}
@@ -4210,7 +4210,7 @@
 						},
 						"ShadowCaster": {
 							"properties": {
-								"height": 100000,
+								"height": 1,
 								"tag": "",
 								"enabled": true
 							}
@@ -4259,7 +4259,7 @@
 						},
 						"ShadowCaster": {
 							"properties": {
-								"height": 100000,
+								"height": 1,
 								"tag": "",
 								"enabled": true
 							}
@@ -4308,7 +4308,7 @@
 						},
 						"ShadowCaster": {
 							"properties": {
-								"height": 100000,
+								"height": 1,
 								"tag": "",
 								"enabled": true
 							}
@@ -4357,7 +4357,7 @@
 						},
 						"ShadowCaster": {
 							"properties": {
-								"height": 100000,
+								"height": 1,
 								"tag": "",
 								"enabled": true
 							}
@@ -4406,7 +4406,7 @@
 						},
 						"ShadowCaster": {
 							"properties": {
-								"height": 100000,
+								"height": 1,
 								"tag": "",
 								"enabled": true
 							}
@@ -4455,7 +4455,7 @@
 						},
 						"ShadowCaster": {
 							"properties": {
-								"height": 100000,
+								"height": 1,
 								"tag": "",
 								"enabled": true
 							}
@@ -4504,7 +4504,7 @@
 						},
 						"ShadowCaster": {
 							"properties": {
-								"height": 100000,
+								"height": 1,
 								"tag": "",
 								"enabled": true
 							}
@@ -4553,7 +4553,7 @@
 						},
 						"ShadowCaster": {
 							"properties": {
-								"height": 100000,
+								"height": 1,
 								"tag": "",
 								"enabled": true
 							}
@@ -4602,7 +4602,7 @@
 						},
 						"ShadowCaster": {
 							"properties": {
-								"height": 100000,
+								"height": 1,
 								"tag": "",
 								"enabled": true
 							}
@@ -4651,7 +4651,7 @@
 						},
 						"ShadowCaster": {
 							"properties": {
-								"height": 100000,
+								"height": 1,
 								"tag": "",
 								"enabled": true
 							}
@@ -4700,7 +4700,7 @@
 						},
 						"ShadowCaster": {
 							"properties": {
-								"height": 100000,
+								"height": 1,
 								"tag": "",
 								"enabled": true
 							}
@@ -4749,7 +4749,7 @@
 						},
 						"ShadowCaster": {
 							"properties": {
-								"height": 100000,
+								"height": 1,
 								"tag": "",
 								"enabled": true
 							}
@@ -4798,7 +4798,7 @@
 						},
 						"ShadowCaster": {
 							"properties": {
-								"height": 100000,
+								"height": 1,
 								"tag": "",
 								"enabled": true
 							}
@@ -4847,7 +4847,7 @@
 						},
 						"ShadowCaster": {
 							"properties": {
-								"height": 100000,
+								"height": 1,
 								"tag": "",
 								"enabled": true
 							}
@@ -4896,7 +4896,7 @@
 						},
 						"ShadowCaster": {
 							"properties": {
-								"height": 100000,
+								"height": 1,
 								"tag": "",
 								"enabled": true
 							}
@@ -4945,7 +4945,7 @@
 						},
 						"ShadowCaster": {
 							"properties": {
-								"height": 100000,
+								"height": 1,
 								"tag": "",
 								"enabled": true
 							}
@@ -4994,7 +4994,7 @@
 						},
 						"ShadowCaster": {
 							"properties": {
-								"height": 100000,
+								"height": 1,
 								"tag": "",
 								"enabled": true
 							}
@@ -5043,7 +5043,7 @@
 						},
 						"ShadowCaster": {
 							"properties": {
-								"height": 100000,
+								"height": 1,
 								"tag": "",
 								"enabled": true
 							}
@@ -5092,7 +5092,7 @@
 						},
 						"ShadowCaster": {
 							"properties": {
-								"height": 100000,
+								"height": 1,
 								"tag": "",
 								"enabled": true
 							}
@@ -5141,7 +5141,7 @@
 						},
 						"ShadowCaster": {
 							"properties": {
-								"height": 100000,
+								"height": 1,
 								"tag": "",
 								"enabled": true
 							}
@@ -5190,7 +5190,7 @@
 						},
 						"ShadowCaster": {
 							"properties": {
-								"height": 100000,
+								"height": 1,
 								"tag": "",
 								"enabled": true
 							}
@@ -5239,7 +5239,7 @@
 						},
 						"ShadowCaster": {
 							"properties": {
-								"height": 100000,
+								"height": 1,
 								"tag": "",
 								"enabled": true
 							}
@@ -5288,7 +5288,7 @@
 						},
 						"ShadowCaster": {
 							"properties": {
-								"height": 100000,
+								"height": 1,
 								"tag": "",
 								"enabled": true
 							}
@@ -5337,7 +5337,7 @@
 						},
 						"ShadowCaster": {
 							"properties": {
-								"height": 100000,
+								"height": 1,
 								"tag": "",
 								"enabled": true
 							}
@@ -5386,7 +5386,7 @@
 						},
 						"ShadowCaster": {
 							"properties": {
-								"height": 100000,
+								"height": 1,
 								"tag": "",
 								"enabled": true
 							}
@@ -5435,7 +5435,7 @@
 						},
 						"ShadowCaster": {
 							"properties": {
-								"height": 100000,
+								"height": 1,
 								"tag": "",
 								"enabled": true
 							}
@@ -5484,7 +5484,7 @@
 						},
 						"ShadowCaster": {
 							"properties": {
-								"height": 100000,
+								"height": 1,
 								"tag": "",
 								"enabled": true
 							}
@@ -5533,7 +5533,7 @@
 						},
 						"ShadowCaster": {
 							"properties": {
-								"height": 100000,
+								"height": 1,
 								"tag": "",
 								"enabled": true
 							}
@@ -5582,7 +5582,7 @@
 						},
 						"ShadowCaster": {
 							"properties": {
-								"height": 100000,
+								"height": 1,
 								"tag": "",
 								"enabled": true
 							}
@@ -5631,7 +5631,7 @@
 						},
 						"ShadowCaster": {
 							"properties": {
-								"height": 100000,
+								"height": 1,
 								"tag": "",
 								"enabled": true
 							}
@@ -5680,7 +5680,7 @@
 						},
 						"ShadowCaster": {
 							"properties": {
-								"height": 100000,
+								"height": 1,
 								"tag": "",
 								"enabled": true
 							}
@@ -5729,7 +5729,7 @@
 						},
 						"ShadowCaster": {
 							"properties": {
-								"height": 100000,
+								"height": 1,
 								"tag": "",
 								"enabled": true
 							}
@@ -5759,7 +5759,7 @@
 				{
 					"type": "Spawn1",
 					"properties": {
-						"initially-visible": true,
+						"initially-visible": false,
 						"initial-animation": "Animation 1",
 						"initial-frame": 0,
 						"enable-collisions": true,
@@ -5826,59 +5826,6 @@
 			"overriden": 0,
 			"subLayers": [],
 			"instances": [
-				{
-					"type": "spr_player",
-					"properties": {
-						"initially-visible": true,
-						"initial-animation": "Parado",
-						"initial-frame": 0,
-						"enable-collisions": true,
-						"live-preview": false
-					},
-					"uid": 4,
-					"sid": 975268319334724,
-					"tags": "",
-					"instanceVariables": {},
-					"behaviors": {
-						"ScrollTo": {
-							"properties": {
-								"enabled": true
-							}
-						},
-						"8Direction": {
-							"properties": {
-								"max-speed": 400,
-								"acceleration": 600,
-								"deceleration": 500,
-								"directions": "dir-8",
-								"set-angle": "smooth",
-								"allow-sliding": false,
-								"default-controls": true,
-								"enabled": true
-							}
-						}
-					},
-					"instanceFolderItem": {
-						"sid": 975268319334724,
-						"expanded": true
-					},
-					"world": {
-						"x": 3974,
-						"y": 3237,
-						"width": 128,
-						"height": 128,
-						"originX": 0.5,
-						"originY": 0.5,
-						"color": [
-							1,
-							1,
-							1,
-							1
-						],
-						"angle": 0,
-						"zElevation": 0
-					}
-				},
 				{
 					"type": "spr_enemigo",
 					"properties": {
@@ -6937,6 +6884,711 @@
 							1
 						],
 						"angle": 5.3803951362856015,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "spr_merchant",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 173,
+					"sid": 384390341396087,
+					"tags": "",
+					"instanceVariables": {},
+					"behaviors": {},
+					"instanceFolderItem": {
+						"sid": 384390341396087,
+						"expanded": true
+					},
+					"world": {
+						"x": 926,
+						"y": -193,
+						"width": 250,
+						"height": 250,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "spr_enemigo_normal",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 174,
+					"sid": 327133813206590,
+					"tags": "",
+					"instanceVariables": {
+						"VioAlJugador": false
+					},
+					"behaviors": {
+						"LineOfSight": {
+							"properties": {
+								"obstacles": "solids",
+								"range": 10000,
+								"cone-of-view": 360,
+								"use-collision-cells": true
+							}
+						},
+						"MoveTo": {
+							"properties": {
+								"max-speed": 200,
+								"acceleration": 600,
+								"deceleration": 600,
+								"rotate-speed": 0,
+								"set-angle": true,
+								"stop-on-solids": false,
+								"enabled": true
+							}
+						}
+					},
+					"instanceFolderItem": {
+						"sid": 327133813206590,
+						"expanded": true
+					},
+					"world": {
+						"x": 3021,
+						"y": 2445,
+						"width": 141,
+						"height": 147,
+						"originX": 0.784,
+						"originY": 0.52,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "Spawn1",
+					"properties": {
+						"initially-visible": false,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 175,
+					"sid": 519498426917295,
+					"tags": "",
+					"instanceVariables": {},
+					"behaviors": {},
+					"instanceFolderItem": {
+						"sid": 519498426917295,
+						"expanded": true
+					},
+					"world": {
+						"x": 2894,
+						"y": 1244,
+						"width": 77,
+						"height": 82,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "Spawn1",
+					"properties": {
+						"initially-visible": false,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 176,
+					"sid": 775043311539389,
+					"tags": "",
+					"instanceVariables": {},
+					"behaviors": {},
+					"instanceFolderItem": {
+						"sid": 775043311539389,
+						"expanded": true
+					},
+					"world": {
+						"x": 1886,
+						"y": 3065,
+						"width": 77,
+						"height": 82,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "Spawn1",
+					"properties": {
+						"initially-visible": false,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 177,
+					"sid": 120312067215203,
+					"tags": "",
+					"instanceVariables": {},
+					"behaviors": {},
+					"instanceFolderItem": {
+						"sid": 120312067215203,
+						"expanded": true
+					},
+					"world": {
+						"x": 2570,
+						"y": 3580,
+						"width": 77,
+						"height": 82,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "spr_player",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Parado",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 4,
+					"sid": 975268319334724,
+					"tags": "",
+					"instanceVariables": {},
+					"behaviors": {
+						"ScrollTo": {
+							"properties": {
+								"enabled": true
+							}
+						},
+						"8Direction": {
+							"properties": {
+								"max-speed": 400,
+								"acceleration": 600,
+								"deceleration": 500,
+								"directions": "dir-8",
+								"set-angle": "smooth",
+								"allow-sliding": false,
+								"default-controls": true,
+								"enabled": true
+							}
+						},
+						"ShadowCaster": {
+							"properties": {
+								"height": 1,
+								"tag": "",
+								"enabled": true
+							}
+						}
+					},
+					"instanceFolderItem": {
+						"sid": 975268319334724,
+						"expanded": true
+					},
+					"world": {
+						"x": 3974,
+						"y": 3237,
+						"width": 128,
+						"height": 128,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "spr_enemigo_normal",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 178,
+					"sid": 800617260787292,
+					"tags": "",
+					"instanceVariables": {
+						"VioAlJugador": false
+					},
+					"behaviors": {
+						"LineOfSight": {
+							"properties": {
+								"obstacles": "solids",
+								"range": 10000,
+								"cone-of-view": 360,
+								"use-collision-cells": true
+							}
+						},
+						"MoveTo": {
+							"properties": {
+								"max-speed": 200,
+								"acceleration": 600,
+								"deceleration": 600,
+								"rotate-speed": 0,
+								"set-angle": true,
+								"stop-on-solids": false,
+								"enabled": true
+							}
+						}
+					},
+					"instanceFolderItem": {
+						"sid": 800617260787292,
+						"expanded": true
+					},
+					"world": {
+						"x": 3142,
+						"y": 3896,
+						"width": 141,
+						"height": 147,
+						"originX": 0.784,
+						"originY": 0.52,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "spr_enemigo_normal",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 179,
+					"sid": 646415609677879,
+					"tags": "",
+					"instanceVariables": {
+						"VioAlJugador": false
+					},
+					"behaviors": {
+						"LineOfSight": {
+							"properties": {
+								"obstacles": "solids",
+								"range": 10000,
+								"cone-of-view": 360,
+								"use-collision-cells": true
+							}
+						},
+						"MoveTo": {
+							"properties": {
+								"max-speed": 200,
+								"acceleration": 600,
+								"deceleration": 600,
+								"rotate-speed": 0,
+								"set-angle": true,
+								"stop-on-solids": false,
+								"enabled": true
+							}
+						}
+					},
+					"instanceFolderItem": {
+						"sid": 646415609677879,
+						"expanded": true
+					},
+					"world": {
+						"x": 1592,
+						"y": 3543,
+						"width": 141,
+						"height": 147,
+						"originX": 0.784,
+						"originY": 0.52,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "spr_enemigo_normal",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 180,
+					"sid": 871493942643396,
+					"tags": "",
+					"instanceVariables": {
+						"VioAlJugador": false
+					},
+					"behaviors": {
+						"LineOfSight": {
+							"properties": {
+								"obstacles": "solids",
+								"range": 10000,
+								"cone-of-view": 360,
+								"use-collision-cells": true
+							}
+						},
+						"MoveTo": {
+							"properties": {
+								"max-speed": 200,
+								"acceleration": 600,
+								"deceleration": 600,
+								"rotate-speed": 0,
+								"set-angle": true,
+								"stop-on-solids": false,
+								"enabled": true
+							}
+						}
+					},
+					"instanceFolderItem": {
+						"sid": 871493942643396,
+						"expanded": true
+					},
+					"world": {
+						"x": 1454,
+						"y": 2287,
+						"width": 141,
+						"height": 147,
+						"originX": 0.784,
+						"originY": 0.52,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "spr_enemigo_normal",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 181,
+					"sid": 620559001243425,
+					"tags": "",
+					"instanceVariables": {
+						"VioAlJugador": false
+					},
+					"behaviors": {
+						"LineOfSight": {
+							"properties": {
+								"obstacles": "solids",
+								"range": 10000,
+								"cone-of-view": 360,
+								"use-collision-cells": true
+							}
+						},
+						"MoveTo": {
+							"properties": {
+								"max-speed": 200,
+								"acceleration": 600,
+								"deceleration": 600,
+								"rotate-speed": 0,
+								"set-angle": true,
+								"stop-on-solids": false,
+								"enabled": true
+							}
+						}
+					},
+					"instanceFolderItem": {
+						"sid": 620559001243425,
+						"expanded": true
+					},
+					"world": {
+						"x": 1008,
+						"y": 2495,
+						"width": 141,
+						"height": 147,
+						"originX": 0.784,
+						"originY": 0.52,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "spr_enemigo_normal",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 182,
+					"sid": 335747133776041,
+					"tags": "",
+					"instanceVariables": {
+						"VioAlJugador": false
+					},
+					"behaviors": {
+						"LineOfSight": {
+							"properties": {
+								"obstacles": "solids",
+								"range": 10000,
+								"cone-of-view": 360,
+								"use-collision-cells": true
+							}
+						},
+						"MoveTo": {
+							"properties": {
+								"max-speed": 200,
+								"acceleration": 600,
+								"deceleration": 600,
+								"rotate-speed": 0,
+								"set-angle": true,
+								"stop-on-solids": false,
+								"enabled": true
+							}
+						}
+					},
+					"instanceFolderItem": {
+						"sid": 335747133776041,
+						"expanded": true
+					},
+					"world": {
+						"x": 833,
+						"y": 782,
+						"width": 141,
+						"height": 147,
+						"originX": 0.784,
+						"originY": 0.52,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "spr_enemigo_normal",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 183,
+					"sid": 537449042951703,
+					"tags": "",
+					"instanceVariables": {
+						"VioAlJugador": false
+					},
+					"behaviors": {
+						"LineOfSight": {
+							"properties": {
+								"obstacles": "solids",
+								"range": 10000,
+								"cone-of-view": 360,
+								"use-collision-cells": true
+							}
+						},
+						"MoveTo": {
+							"properties": {
+								"max-speed": 200,
+								"acceleration": 600,
+								"deceleration": 600,
+								"rotate-speed": 0,
+								"set-angle": true,
+								"stop-on-solids": false,
+								"enabled": true
+							}
+						}
+					},
+					"instanceFolderItem": {
+						"sid": 537449042951703,
+						"expanded": true
+					},
+					"world": {
+						"x": 661,
+						"y": 3694,
+						"width": 141,
+						"height": 147,
+						"originX": 0.784,
+						"originY": 0.52,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "spr_enemigo_normal",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 184,
+					"sid": 256655084582240,
+					"tags": "",
+					"instanceVariables": {
+						"VioAlJugador": false
+					},
+					"behaviors": {
+						"LineOfSight": {
+							"properties": {
+								"obstacles": "solids",
+								"range": 10000,
+								"cone-of-view": 360,
+								"use-collision-cells": true
+							}
+						},
+						"MoveTo": {
+							"properties": {
+								"max-speed": 200,
+								"acceleration": 600,
+								"deceleration": 600,
+								"rotate-speed": 0,
+								"set-angle": true,
+								"stop-on-solids": false,
+								"enabled": true
+							}
+						}
+					},
+					"instanceFolderItem": {
+						"sid": 256655084582240,
+						"expanded": true
+					},
+					"world": {
+						"x": 3381,
+						"y": 609,
+						"width": 141,
+						"height": 147,
+						"originX": 0.784,
+						"originY": 0.52,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "lightTest",
+					"properties": {
+						"light-height": 0,
+						"light-radius": 0,
+						"shadow-color": [
+							0.10196078431372549,
+							0.10196078431372549,
+							0.10196078431372549,
+							1
+						],
+						"cast-from": "all",
+						"tag": "",
+						"live-preview": false
+					},
+					"uid": 185,
+					"sid": 676034643230521,
+					"tags": "",
+					"instanceVariables": {},
+					"behaviors": {
+						"Pin": {
+							"properties": {
+								"destroy": false
+							}
+						},
+						"Flash": {
+							"properties": {}
+						}
+					},
+					"instanceFolderItem": {
+						"sid": 676034643230521,
+						"expanded": true
+					},
+					"world": {
+						"x": 2861,
+						"y": 3878,
+						"width": 50,
+						"height": 50,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
 						"zElevation": 0
 					}
 				}

@@ -18,6 +18,14 @@
 					"parameters": {
 						"layout": "Nivel1"
 					}
+				},
+				{
+					"id": "reset-global-variables",
+					"objectClass": "System",
+					"sid": 842201835978072,
+					"parameters": {
+						"reset-static": false
+					}
 				}
 			],
 			"sid": 980873899264879

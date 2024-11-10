@@ -1,0 +1,70 @@
+{
+	"name": "spr_enemigo_normal",
+	"plugin-id": "Sprite",
+	"sid": 195664192298102,
+	"isGlobal": false,
+	"instanceVariables": [
+		{
+			"name": "VioAlJugador",
+			"type": "boolean",
+			"desc": "",
+			"show": true,
+			"sid": 599645845717904
+		}
+	],
+	"behaviorTypes": [
+		{
+			"behaviorId": "LOS",
+			"name": "LineOfSight",
+			"sid": 924931860749920
+		},
+		{
+			"behaviorId": "MoveTo",
+			"name": "MoveTo",
+			"sid": 725864448658330
+		}
+	],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 250,
+						"height": 250,
+						"originX": 0.784,
+						"originY": 0.52,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"fileType": "image/png",
+						"imageSpriteId": 448969,
+						"collisionPoly": {
+							"points": [
+								0.055999999999999994,
+								0.29000000000000004,
+								0.8339999999999999,
+								0.28400000000000003,
+								0.7939999999999998,
+								0.7619999999999998,
+								0.054000000000000006,
+								0.7639999999999998
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1,
+						"tag": ""
+					}
+				],
+				"sid": 641491442507168,
+				"name": "Animation 1",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}

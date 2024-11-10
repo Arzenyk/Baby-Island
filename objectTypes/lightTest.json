@@ -1,0 +1,20 @@
+{
+	"name": "lightTest",
+	"plugin-id": "shadowlight",
+	"sid": 928321445237156,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [
+		{
+			"behaviorId": "Pin",
+			"name": "Pin",
+			"sid": 143440401965851
+		},
+		{
+			"behaviorId": "Flash",
+			"name": "Flash",
+			"sid": 797084328844343
+		}
+	],
+	"effectTypes": []
+}

@@ -14,6 +14,11 @@
 			"behaviorId": "EightDir",
 			"name": "8Direction",
 			"sid": 986045638141085
+		},
+		{
+			"behaviorId": "shadowcaster",
+			"name": "ShadowCaster",
+			"sid": 535622180837608
 		}
 	],
 	"effectTypes": [],
