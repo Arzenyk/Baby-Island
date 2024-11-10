@@ -5902,6 +5902,41 @@
 					}
 				},
 				{
+					"type": "spr_buscar",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 194,
+					"sid": 175322703714942,
+					"tags": "",
+					"instanceVariables": {},
+					"behaviors": {},
+					"instanceFolderItem": {
+						"sid": 175322703714942,
+						"expanded": true
+					},
+					"world": {
+						"x": 1377.5,
+						"y": 1969,
+						"width": 117,
+						"height": 92,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
 					"type": "cofre_cuchillo",
 					"properties": {
 						"initially-visible": true,
@@ -6868,66 +6903,6 @@
 					}
 				},
 				{
-					"type": "spr_player",
-					"properties": {
-						"initially-visible": true,
-						"initial-animation": "Parado",
-						"initial-frame": 0,
-						"enable-collisions": true,
-						"live-preview": false
-					},
-					"uid": 4,
-					"sid": 975268319334724,
-					"tags": "",
-					"instanceVariables": {},
-					"behaviors": {
-						"ScrollTo": {
-							"properties": {
-								"enabled": true
-							}
-						},
-						"8Direction": {
-							"properties": {
-								"max-speed": 400,
-								"acceleration": 600,
-								"deceleration": 500,
-								"directions": "dir-8",
-								"set-angle": "smooth",
-								"allow-sliding": false,
-								"default-controls": true,
-								"enabled": true
-							}
-						},
-						"ShadowCaster": {
-							"properties": {
-								"height": 1,
-								"tag": "",
-								"enabled": true
-							}
-						}
-					},
-					"instanceFolderItem": {
-						"sid": 975268319334724,
-						"expanded": true
-					},
-					"world": {
-						"x": 1612,
-						"y": 2295,
-						"width": 128,
-						"height": 128,
-						"originX": 0.5,
-						"originY": 0.5,
-						"color": [
-							1,
-							1,
-							1,
-							1
-						],
-						"angle": 0,
-						"zElevation": 0
-					}
-				},
-				{
 					"type": "spr_enemigo_normal",
 					"properties": {
 						"initially-visible": true,
@@ -7608,6 +7583,66 @@
 						"y": 1072.3907405762582,
 						"width": 53.76091664922751,
 						"height": 52.804342594530226,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "spr_player",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Parado",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 4,
+					"sid": 975268319334724,
+					"tags": "",
+					"instanceVariables": {},
+					"behaviors": {
+						"ScrollTo": {
+							"properties": {
+								"enabled": true
+							}
+						},
+						"8Direction": {
+							"properties": {
+								"max-speed": 400,
+								"acceleration": 600,
+								"deceleration": 500,
+								"directions": "dir-8",
+								"set-angle": "smooth",
+								"allow-sliding": false,
+								"default-controls": true,
+								"enabled": true
+							}
+						},
+						"ShadowCaster": {
+							"properties": {
+								"height": 1,
+								"tag": "",
+								"enabled": true
+							}
+						}
+					},
+					"instanceFolderItem": {
+						"sid": 975268319334724,
+						"expanded": true
+					},
+					"world": {
+						"x": 1612,
+						"y": 2295,
+						"width": 128,
+						"height": 128,
 						"originX": 0.5,
 						"originY": 0.5,
 						"color": [
@@ -8584,41 +8619,6 @@
 						"y": 1235,
 						"width": 76,
 						"height": 87,
-						"originX": 0.5,
-						"originY": 0.5,
-						"color": [
-							1,
-							1,
-							1,
-							1
-						],
-						"angle": 0,
-						"zElevation": 0
-					}
-				},
-				{
-					"type": "spr_buscar",
-					"properties": {
-						"initially-visible": true,
-						"initial-animation": "Animation 1",
-						"initial-frame": 0,
-						"enable-collisions": true,
-						"live-preview": false
-					},
-					"uid": 194,
-					"sid": 175322703714942,
-					"tags": "",
-					"instanceVariables": {},
-					"behaviors": {},
-					"instanceFolderItem": {
-						"sid": 175322703714942,
-						"expanded": true
-					},
-					"world": {
-						"x": 1377.5,
-						"y": 1980,
-						"width": 106,
-						"height": 98,
 						"originX": 0.5,
 						"originY": 0.5,
 						"color": [

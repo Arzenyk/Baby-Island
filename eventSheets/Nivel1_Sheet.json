@@ -3409,6 +3409,91 @@
 				}
 			],
 			"sid": 434352812834349
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "Buscar",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-collision-with-another-object",
+							"objectClass": "spr_player",
+							"sid": 367273973033507,
+							"parameters": {
+								"object": "spr_buscar"
+							}
+						},
+						{
+							"id": "is-overlapping-another-object",
+							"objectClass": "spr_player",
+							"sid": 344826471261826,
+							"parameters": {
+								"object": "spr_buscar"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-position",
+							"objectClass": "PopUp",
+							"sid": 700370874450862,
+							"parameters": {
+								"x": "spr_player.X",
+								"y": "spr_player.Y - 150"
+							}
+						},
+						{
+							"id": "set-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 150883567648812,
+							"parameters": {
+								"variable": "PopUp",
+								"value": "true"
+							}
+						},
+						{
+							"id": "set-text",
+							"objectClass": "PopUp_text",
+							"sid": 566342317022568,
+							"parameters": {
+								"text": "\"'E' buscar\""
+							}
+						},
+						{
+							"id": "set-text",
+							"objectClass": "txt_seed",
+							"sid": 464234844966656,
+							"parameters": {
+								"text": "PopUp"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "PopUp",
+							"sid": 811224138709983,
+							"parameters": {
+								"visibility": "visible"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "PopUp_text",
+							"sid": 502324383342688,
+							"parameters": {
+								"visibility": "visible"
+							}
+						}
+					],
+					"sid": 255671744090778,
+					"isOrBlock": true
+				}
+			],
+			"sid": 105166268792908
 		}
 	],
 	"sid": 953197778318877

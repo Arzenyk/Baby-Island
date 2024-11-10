@@ -19,7 +19,7 @@
 						"exportFormat": "lossless",
 						"exportQuality": 0.8,
 						"fileType": "image/png",
-						"imageSpriteId": 1777782,
+						"imageSpriteId": 4343874,
 						"useCollisionPoly": true,
 						"duration": 1,
 						"tag": ""
@@ -27,11 +27,11 @@
 				],
 				"sid": 222197661339182,
 				"name": "Animation 1",
-				"isLooping": false,
+				"isLooping": true,
 				"isPingPong": false,
 				"repeatCount": 1,
 				"repeatTo": 0,
-				"speed": 5
+				"speed": 2
 			}
 		],
 		"subfolders": []
