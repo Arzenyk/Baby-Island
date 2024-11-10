@@ -187,7 +187,13 @@
 			"spr_spawn3",
 			"lightTest",
 			"AdvancedRandom",
-			"txt_seed"
+			"txt_seed",
+			"spr_key_spawn1",
+			"spr_piedra",
+			"spr_key_spawn2",
+			"spr_key_spawn3",
+			"spr_key_spawn4",
+			"spr_buscar"
 		],
 		"subfolders": []
 	},

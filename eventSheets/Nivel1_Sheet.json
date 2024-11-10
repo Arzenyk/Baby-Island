@@ -182,6 +182,36 @@
 			"sid": 696299590347402
 		},
 		{
+			"eventType": "variable",
+			"name": "InvCuchillo",
+			"type": "boolean",
+			"initialValue": "false",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 374515991927953
+		},
+		{
+			"eventType": "variable",
+			"name": "InvArco",
+			"type": "boolean",
+			"initialValue": "false",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 489846230198713
+		},
+		{
+			"eventType": "variable",
+			"name": "CantEnemigos",
+			"type": "number",
+			"initialValue": "8",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 762596425758803
+		},
+		{
 			"eventType": "group",
 			"disabled": false,
 			"title": "Enemigo Jefe",
@@ -872,10 +902,181 @@
 							"id": "destroy",
 							"objectClass": "spr_enemigo_normal",
 							"sid": 883341876824983
+						},
+						{
+							"id": "subtract-from-eventvar",
+							"objectClass": "System",
+							"sid": 964590663480759,
+							"parameters": {
+								"variable": "CantEnemigos",
+								"value": "1"
+							}
 						}
 					],
 					"sid": 578026372845544,
 					"isOrBlock": true
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 436721642741490,
+							"parameters": {
+								"variable": "CantEnemigos",
+								"comparison": 0,
+								"value": "7"
+							}
+						},
+						{
+							"id": "trigger-once-while-true",
+							"objectClass": "System",
+							"sid": 675077507215059
+						}
+					],
+					"actions": [
+						{
+							"id": "spawn-another-object",
+							"objectClass": "spr_key_spawn1",
+							"sid": 173270162333983,
+							"parameters": {
+								"object": "spr_llave",
+								"layer": "2",
+								"image-point": "0",
+								"create-hierarchy": false,
+								"template-name": "\"\""
+							}
+						}
+					],
+					"sid": 876235168853677
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 861216295889686,
+							"parameters": {
+								"variable": "CantEnemigos",
+								"comparison": 0,
+								"value": "5"
+							}
+						},
+						{
+							"id": "trigger-once-while-true",
+							"objectClass": "System",
+							"sid": 540174810282154
+						}
+					],
+					"actions": [
+						{
+							"id": "spawn-another-object",
+							"objectClass": "spr_key_spawn2",
+							"sid": 156234241831585,
+							"parameters": {
+								"object": "spr_llave",
+								"layer": "2",
+								"image-point": "0",
+								"create-hierarchy": false,
+								"template-name": "\"\""
+							}
+						}
+					],
+					"sid": 423411111862061
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 366909200282912,
+							"parameters": {
+								"variable": "CantEnemigos",
+								"comparison": 0,
+								"value": "3"
+							}
+						},
+						{
+							"id": "trigger-once-while-true",
+							"objectClass": "System",
+							"sid": 741438637744388
+						}
+					],
+					"actions": [
+						{
+							"id": "spawn-another-object",
+							"objectClass": "spr_key_spawn3",
+							"sid": 970935802436209,
+							"parameters": {
+								"object": "spr_llave",
+								"layer": "2",
+								"image-point": "0",
+								"create-hierarchy": false,
+								"template-name": "\"\""
+							}
+						}
+					],
+					"sid": 268287119082752
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 825181680233002,
+							"parameters": {
+								"variable": "CantEnemigos",
+								"comparison": 0,
+								"value": "1"
+							}
+						},
+						{
+							"id": "trigger-once-while-true",
+							"objectClass": "System",
+							"sid": 709815004990503
+						}
+					],
+					"actions": [
+						{
+							"id": "spawn-another-object",
+							"objectClass": "spr_key_spawn4",
+							"sid": 464499032009754,
+							"parameters": {
+								"object": "spr_llave",
+								"layer": "2",
+								"image-point": "0",
+								"create-hierarchy": false,
+								"template-name": "\"\""
+							}
+						}
+					],
+					"sid": 663074240483363
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-destroyed",
+							"objectClass": "spr_enemigo_normal",
+							"sid": 566052853765447
+						}
+					],
+					"actions": [
+						{
+							"id": "subtract-from-eventvar",
+							"objectClass": "System",
+							"sid": 568072404328160,
+							"parameters": {
+								"variable": "CantEnemigos",
+								"value": "1"
+							}
+						}
+					],
+					"sid": 706835140234861
 				}
 			],
 			"sid": 619021369518218
@@ -1050,6 +1251,16 @@
 									"sid": 712876096800555,
 									"parameters": {
 										"variable": "tieneLlave"
+									}
+								},
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 997667959784654,
+									"parameters": {
+										"variable": "Llave",
+										"comparison": 4,
+										"value": "0"
 									}
 								}
 							],
@@ -1440,6 +1651,7 @@
 									"id": "compare-boolean-eventvar",
 									"objectClass": "System",
 									"sid": 886476189069056,
+									"disabled": true,
 									"parameters": {
 										"variable": "Cuchillo"
 									},
@@ -1497,6 +1709,7 @@
 									"id": "compare-boolean-eventvar",
 									"objectClass": "System",
 									"sid": 977310180527442,
+									"disabled": true,
 									"parameters": {
 										"variable": "Cuchillo"
 									},
@@ -1568,6 +1781,15 @@
 										"comparison": 5,
 										"value": "1"
 									}
+								},
+								{
+									"id": "compare-boolean-eventvar",
+									"objectClass": "System",
+									"sid": 652817374930724,
+									"parameters": {
+										"variable": "Cuchillo"
+									},
+									"isInverted": true
 								}
 							],
 							"actions": [
@@ -1659,6 +1881,7 @@
 									"id": "compare-boolean-eventvar",
 									"objectClass": "System",
 									"sid": 460732768718264,
+									"disabled": true,
 									"parameters": {
 										"variable": "Arco"
 									},
@@ -1716,6 +1939,7 @@
 									"id": "compare-boolean-eventvar",
 									"objectClass": "System",
 									"sid": 465228335780732,
+									"disabled": true,
 									"parameters": {
 										"variable": "Arco"
 									},
@@ -1769,6 +1993,15 @@
 									"parameters": {
 										"variable": "Cuchillo"
 									}
+								},
+								{
+									"id": "compare-boolean-eventvar",
+									"objectClass": "System",
+									"sid": 320399223719150,
+									"parameters": {
+										"variable": "Arco"
+									},
+									"isInverted": true
 								}
 							],
 							"actions": [
@@ -2149,6 +2382,7 @@
 									"id": "compare-boolean-eventvar",
 									"objectClass": "System",
 									"sid": 924814838835749,
+									"disabled": true,
 									"parameters": {
 										"variable": "Arco"
 									},
@@ -2169,6 +2403,23 @@
 									"id": "destroy",
 									"objectClass": "cofre_cuchillo",
 									"sid": 718055598208078
+								},
+								{
+									"id": "set-visible",
+									"objectClass": "Cuchillo",
+									"sid": 642482381086990,
+									"parameters": {
+										"visibility": "visible"
+									}
+								},
+								{
+									"id": "set-boolean-eventvar",
+									"objectClass": "System",
+									"sid": 673685481156620,
+									"parameters": {
+										"variable": "InvCuchillo",
+										"value": "true"
+									}
 								}
 							],
 							"sid": 658072832906304
@@ -2196,6 +2447,7 @@
 									"id": "compare-boolean-eventvar",
 									"objectClass": "System",
 									"sid": 221770133028708,
+									"disabled": true,
 									"parameters": {
 										"variable": "Cuchillo"
 									},
@@ -2216,6 +2468,23 @@
 									"id": "destroy",
 									"objectClass": "cofre_arco",
 									"sid": 754162579214439
+								},
+								{
+									"id": "set-visible",
+									"objectClass": "spr_arco",
+									"sid": 576913875450575,
+									"parameters": {
+										"visibility": "visible"
+									}
+								},
+								{
+									"id": "set-boolean-eventvar",
+									"objectClass": "System",
+									"sid": 366418724265499,
+									"parameters": {
+										"variable": "InvArco",
+										"value": "true"
+									}
 								}
 							],
 							"sid": 125449415949998
@@ -2223,6 +2492,14 @@
 						{
 							"eventType": "block",
 							"conditions": [
+								{
+									"id": "is-overlapping-another-object",
+									"objectClass": "spr_player",
+									"sid": 196089423363682,
+									"parameters": {
+										"object": "spr_cofre_rand"
+									}
+								},
 								{
 									"id": "compare-boolean-eventvar",
 									"objectClass": "System",
@@ -2277,12 +2554,9 @@
 									}
 								},
 								{
-									"id": "set-collisions-enabled",
+									"id": "destroy",
 									"objectClass": "spr_cofre_rand",
-									"sid": 485503287757089,
-									"parameters": {
-										"collisions": "disabled"
-									}
+									"sid": 301287138117175
 								}
 							],
 							"sid": 694065383156883
@@ -2981,6 +3255,126 @@
 						}
 					],
 					"sid": 626388984154438
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-key-pressed",
+							"objectClass": "Keyboard",
+							"sid": 891410254256149,
+							"parameters": {
+								"key": 49
+							}
+						},
+						{
+							"id": "compare-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 161218998453658,
+							"parameters": {
+								"variable": "InvCuchillo"
+							}
+						},
+						{
+							"id": "compare-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 175902214672412,
+							"parameters": {
+								"variable": "InvArco"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-animation",
+							"objectClass": "spr_player",
+							"sid": 209038417706231,
+							"disabled": true,
+							"parameters": {
+								"animation": "\"parado.cuchillo\"",
+								"from": "beginning"
+							}
+						},
+						{
+							"id": "set-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 759605247720394,
+							"parameters": {
+								"variable": "Cuchillo",
+								"value": "true"
+							}
+						},
+						{
+							"id": "set-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 404690131445275,
+							"parameters": {
+								"variable": "Arco",
+								"value": "false"
+							}
+						}
+					],
+					"sid": 727552963970169
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-key-pressed",
+							"objectClass": "Keyboard",
+							"sid": 681850666532366,
+							"parameters": {
+								"key": 50
+							}
+						},
+						{
+							"id": "compare-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 370626706579632,
+							"parameters": {
+								"variable": "InvCuchillo"
+							}
+						},
+						{
+							"id": "compare-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 363773049260092,
+							"parameters": {
+								"variable": "InvArco"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-animation",
+							"objectClass": "spr_player",
+							"sid": 655254344592300,
+							"disabled": true,
+							"parameters": {
+								"animation": "\"parado.arco\"",
+								"from": "beginning"
+							}
+						},
+						{
+							"id": "set-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 148738354454324,
+							"parameters": {
+								"variable": "Arco",
+								"value": "true"
+							}
+						},
+						{
+							"id": "set-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 154328511510506,
+							"parameters": {
+								"variable": "Cuchillo",
+								"value": "false"
+							}
+						}
+					],
+					"sid": 767690816170808
 				}
 			],
 			"sid": 794891254663739
@@ -3015,15 +3409,6 @@
 				}
 			],
 			"sid": 434352812834349
-		},
-		{
-			"eventType": "group",
-			"disabled": false,
-			"title": "Random",
-			"description": "",
-			"isActiveOnStart": true,
-			"children": [],
-			"sid": 396914604990107
 		}
 	],
 	"sid": 953197778318877
