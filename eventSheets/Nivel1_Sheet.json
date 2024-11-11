@@ -212,6 +212,26 @@
 			"sid": 762596425758803
 		},
 		{
+			"eventType": "variable",
+			"name": "Buscar",
+			"type": "boolean",
+			"initialValue": "false",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 777882509480863
+		},
+		{
+			"eventType": "variable",
+			"name": "GenerarBuscar",
+			"type": "boolean",
+			"initialValue": "false",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 870588783259712
+		},
+		{
 			"eventType": "group",
 			"disabled": false,
 			"title": "Enemigo Jefe",
@@ -3465,14 +3485,6 @@
 							}
 						},
 						{
-							"id": "set-text",
-							"objectClass": "txt_seed",
-							"sid": 464234844966656,
-							"parameters": {
-								"text": "PopUp"
-							}
-						},
-						{
 							"id": "set-visible",
 							"objectClass": "PopUp",
 							"sid": 811224138709983,
@@ -3487,10 +3499,266 @@
 							"parameters": {
 								"visibility": "visible"
 							}
+						},
+						{
+							"id": "set-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 278084704581662,
+							"parameters": {
+								"variable": "Buscar",
+								"value": "true"
+							}
 						}
 					],
 					"sid": 255671744090778,
 					"isOrBlock": true
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-overlapping-another-object",
+							"objectClass": "spr_player",
+							"sid": 759092050428693,
+							"parameters": {
+								"object": "spr_buscar"
+							},
+							"isInverted": true
+						}
+					],
+					"actions": [
+						{
+							"id": "set-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 938175955076735,
+							"parameters": {
+								"variable": "Buscar",
+								"value": "false"
+							}
+						}
+					],
+					"sid": 192021522328466,
+					"disabled": true,
+					"isOrBlock": true
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-key-pressed",
+							"objectClass": "Keyboard",
+							"sid": 449104793589802,
+							"parameters": {
+								"key": 69
+							}
+						},
+						{
+							"id": "compare-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 880727246119129,
+							"parameters": {
+								"variable": "Buscar"
+							}
+						},
+						{
+							"id": "is-overlapping-another-object",
+							"objectClass": "spr_player",
+							"sid": 483410048694029,
+							"parameters": {
+								"object": "spr_buscar"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 865589289759614,
+							"parameters": {
+								"variable": "NumerorRandom",
+								"value": "random(0,10)"
+							}
+						},
+						{
+							"id": "set-text",
+							"objectClass": "txt_seed",
+							"sid": 920713972055092,
+							"parameters": {
+								"text": "NumerorRandom"
+							}
+						},
+						{
+							"id": "set-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 188305840581631,
+							"parameters": {
+								"variable": "GenerarNumero",
+								"value": "true"
+							}
+						},
+						{
+							"id": "destroy",
+							"objectClass": "spr_buscar",
+							"sid": 244897508054216
+						}
+					],
+					"sid": 996248839396154
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-destroyed",
+							"objectClass": "spr_buscar",
+							"sid": 942897498825948
+						}
+					],
+					"actions": [
+						{
+							"id": "set-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 355099688801781,
+							"parameters": {
+								"variable": "GenerarBuscar",
+								"value": "true"
+							}
+						}
+					],
+					"sid": 899797746277351
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 309840894622318,
+							"parameters": {
+								"variable": "GenerarBuscar"
+							}
+						},
+						{
+							"id": "compare-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 693223875682112,
+							"parameters": {
+								"variable": "Buscar"
+							}
+						},
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 210613047349317,
+							"parameters": {
+								"variable": "NumerorRandom",
+								"comparison": 2,
+								"value": "5"
+							}
+						},
+						{
+							"id": "trigger-once-while-true",
+							"objectClass": "System",
+							"sid": 357101275566819
+						}
+					],
+					"actions": [
+						{
+							"id": "add-to-eventvar",
+							"objectClass": "System",
+							"sid": 339384018927358,
+							"parameters": {
+								"variable": "Monedas",
+								"value": "3"
+							}
+						},
+						{
+							"id": "set-text",
+							"objectClass": "txt_monedas",
+							"sid": 700399919636824,
+							"parameters": {
+								"text": "Monedas"
+							}
+						},
+						{
+							"id": "flash",
+							"objectClass": "hud_moneda",
+							"sid": 669428544225599,
+							"behaviorType": "Flash",
+							"parameters": {
+								"on-time": "0.1",
+								"off-time": "0.1",
+								"duration": "0.5"
+							}
+						}
+					],
+					"sid": 991359662905303
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 705738881089043,
+							"parameters": {
+								"variable": "GenerarBuscar"
+							}
+						},
+						{
+							"id": "compare-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 843718344379842,
+							"parameters": {
+								"variable": "Buscar"
+							}
+						},
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 979005406362284,
+							"parameters": {
+								"variable": "NumerorRandom",
+								"comparison": 5,
+								"value": "5"
+							}
+						},
+						{
+							"id": "trigger-once-while-true",
+							"objectClass": "System",
+							"sid": 937759122866639
+						}
+					],
+					"actions": [
+						{
+							"id": "add-to-eventvar",
+							"objectClass": "System",
+							"sid": 638636388336594,
+							"parameters": {
+								"variable": "cant_flechas",
+								"value": "3"
+							}
+						},
+						{
+							"id": "set-text",
+							"objectClass": "txt_cantflechas",
+							"sid": 874264960456270,
+							"parameters": {
+								"text": "\"X\" & cant_flechas"
+							}
+						},
+						{
+							"id": "flash",
+							"objectClass": "spr_cantflechas",
+							"sid": 592504078759233,
+							"behaviorType": "Flash",
+							"parameters": {
+								"on-time": "0.1",
+								"off-time": "0.1",
+								"duration": "0.5"
+							}
+						}
+					],
+					"sid": 474932239333823
 				}
 			],
 			"sid": 105166268792908
