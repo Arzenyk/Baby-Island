@@ -7,6 +7,41 @@
 			"subLayers": [],
 			"instances": [
 				{
+					"type": "spr_foto",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 237,
+					"sid": 406851989931371,
+					"tags": "",
+					"instanceVariables": {},
+					"behaviors": {},
+					"instanceFolderItem": {
+						"sid": 406851989931371,
+						"expanded": true
+					},
+					"world": {
+						"x": 639,
+						"y": 359.5,
+						"width": 1300,
+						"height": 749,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
 					"type": "txt_menu",
 					"properties": {
 						"text": "Baby Island",
@@ -17,9 +52,9 @@
 						"bold": false,
 						"italic": false,
 						"color": [
-							0,
-							0,
-							0,
+							0.17647058823529413,
+							0.2,
+							0.18823529411764706,
 							1
 						],
 						"horizontal-alignment": "left",
@@ -105,7 +140,7 @@
 				{
 					"type": "txt_controles",
 					"properties": {
-						"text": "Controles:\nflechas = moverse.\n'E' = abrir cofres.\n'S' = soltar objetos.\n'Barra espaciadora' = disparar / atacar.",
+						"text": "Controles:\n'flechas' = moverse.\n'E' = abrir cofres.\n'Barra espaciadora' = disparar / atacar.\n'1' = cuchillo.\n'2' = arco.\n'R' resetear.",
 						"enable-bbcode": true,
 						"font": "Arial",
 						"size": 20,
@@ -113,9 +148,9 @@
 						"bold": false,
 						"italic": false,
 						"color": [
-							0,
-							0,
-							0,
+							1,
+							1,
+							1,
 							1
 						],
 						"horizontal-alignment": "left",
@@ -201,9 +236,9 @@
 						"bold": false,
 						"italic": false,
 						"color": [
-							0,
-							0,
-							0,
+							1,
+							1,
+							1,
 							1
 						],
 						"horizontal-alignment": "left",
@@ -229,6 +264,57 @@
 						"y": 573,
 						"width": 399,
 						"height": 130,
+						"originX": 0,
+						"originY": 0,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "txt_menu",
+					"properties": {
+						"text": "Baby Island",
+						"enable-bbcode": true,
+						"font": "Arial",
+						"size": 80,
+						"line-height": 0,
+						"bold": false,
+						"italic": false,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"horizontal-alignment": "left",
+						"vertical-alignment": "top",
+						"wrapping": "word",
+						"text-direction": "ltr",
+						"icon-set": -1,
+						"initially-visible": true,
+						"origin": "top-left",
+						"read-aloud": false
+					},
+					"uid": 238,
+					"sid": 415458585177649,
+					"tags": "",
+					"instanceVariables": {},
+					"behaviors": {},
+					"instanceFolderItem": {
+						"sid": 415458585177649,
+						"expanded": true
+					},
+					"world": {
+						"x": 375,
+						"y": 76,
+						"width": 705,
+						"height": 159,
 						"originX": 0,
 						"originY": 0,
 						"color": [

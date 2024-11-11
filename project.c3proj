@@ -199,7 +199,9 @@
 			"spr_barrera_merchant",
 			"txt_timer",
 			"txt_TimeOut",
-			"btn_menu"
+			"btn_menu",
+			"spr_foto",
+			"spr_teclas1y2"
 		],
 		"subfolders": []
 	},

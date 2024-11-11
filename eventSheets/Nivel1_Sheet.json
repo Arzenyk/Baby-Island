@@ -3013,6 +3013,21 @@
 							}
 						},
 						{
+							"id": "pin-to-object-properties",
+							"objectClass": "spr_teclas1y2",
+							"sid": 238619857699753,
+							"behaviorType": "Pin",
+							"parameters": {
+								"pin-to": "spr_hud",
+								"x": true,
+								"y": true,
+								"angle": false,
+								"width-type": "no",
+								"height-type": "no",
+								"z": false
+							}
+						},
+						{
 							"id": "set-position",
 							"objectClass": "spr_hud",
 							"sid": 177915080192797,
@@ -4165,9 +4180,12 @@
 					"eventType": "block",
 					"conditions": [
 						{
-							"id": "every-tick",
+							"id": "every-x-seconds",
 							"objectClass": "System",
-							"sid": 483413787967949
+							"sid": 477532082090467,
+							"parameters": {
+								"interval-seconds": "1.0"
+							}
 						}
 					],
 					"actions": [

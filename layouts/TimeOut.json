@@ -93,6 +93,51 @@
 							1
 						]
 					}
+				},
+				{
+					"type": "Piso",
+					"properties": {
+						"initially-visible": true,
+						"origin": "center",
+						"wrap-horizontal": "repeat",
+						"wrap-vertical": "repeat",
+						"image-offset-x": 0,
+						"image-offset-y": 0,
+						"image-scale-x": 1,
+						"image-scale-y": 1,
+						"image-angle": 0,
+						"enable-tile-randomization": true,
+						"x-random": 1,
+						"y-random": 1,
+						"angle-random": 0.5,
+						"blend-margin-x": 1,
+						"blend-margin-y": 1
+					},
+					"uid": 240,
+					"sid": 303603775802955,
+					"tags": "",
+					"instanceVariables": {},
+					"behaviors": {},
+					"instanceFolderItem": {
+						"sid": 303603775802955,
+						"expanded": true
+					},
+					"world": {
+						"x": 1131,
+						"y": 319,
+						"width": 4640,
+						"height": 5152,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							0.3
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
 				}
 			],
 			"sid": 360286250309457,
