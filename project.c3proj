@@ -193,7 +193,10 @@
 			"spr_key_spawn2",
 			"spr_key_spawn3",
 			"spr_key_spawn4",
-			"spr_buscar"
+			"spr_buscar",
+			"spr_killboss",
+			"spr_kill_enemy",
+			"spr_barrera_merchant"
 		],
 		"subfolders": []
 	},

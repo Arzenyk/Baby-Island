@@ -45,7 +45,7 @@
 			"eventType": "variable",
 			"name": "VidaEnemigoJefe",
 			"type": "number",
-			"initialValue": "20",
+			"initialValue": "10",
 			"comment": "",
 			"isStatic": false,
 			"isConstant": false,
@@ -557,10 +557,10 @@
 								{
 									"id": "subtract-from-eventvar",
 									"objectClass": "System",
-									"sid": 661513594592701,
+									"sid": 635160921539745,
 									"parameters": {
 										"variable": "VidaEnemigoJefe",
-										"value": "0.1"
+										"value": "1"
 									}
 								},
 								{
@@ -601,10 +601,10 @@
 						{
 							"id": "subtract-from-eventvar",
 							"objectClass": "System",
-							"sid": 328883453175651,
+							"sid": 462743107402966,
 							"parameters": {
 								"variable": "VidaEnemigoJefe",
-								"value": "0.1"
+								"value": "2"
 							}
 						},
 						{
@@ -623,6 +623,24 @@
 					],
 					"sid": 328245794910832,
 					"isOrBlock": true
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-destroyed",
+							"objectClass": "spr_enemigo",
+							"sid": 529509882228231
+						}
+					],
+					"actions": [
+						{
+							"id": "destroy",
+							"objectClass": "pbar_vida_enemigo",
+							"sid": 161404596772461
+						}
+					],
+					"sid": 158403600614438
 				}
 			],
 			"sid": 352392284844529
@@ -922,15 +940,6 @@
 							"id": "destroy",
 							"objectClass": "spr_enemigo_normal",
 							"sid": 883341876824983
-						},
-						{
-							"id": "subtract-from-eventvar",
-							"objectClass": "System",
-							"sid": 964590663480759,
-							"parameters": {
-								"variable": "CantEnemigos",
-								"value": "1"
-							}
 						}
 					],
 					"sid": 578026372845544,
@@ -2865,6 +2874,15 @@
 							}
 						},
 						{
+							"id": "set-position",
+							"objectClass": "pbar_vida_enemigo",
+							"sid": 388453036992410,
+							"parameters": {
+								"x": "spr_enemigo.X-20",
+								"y": "spr_enemigo.Y-50"
+							}
+						},
+						{
 							"id": "pin-to-object-properties",
 							"objectClass": "pbar_vida_enemigo",
 							"sid": 803706313621082,
@@ -2967,15 +2985,6 @@
 								"width-type": "no",
 								"height-type": "no",
 								"z": false
-							}
-						},
-						{
-							"id": "set-position",
-							"objectClass": "pbar_vida_enemigo",
-							"sid": 259602410869918,
-							"parameters": {
-								"x": "spr_enemigo.X-20",
-								"y": "spr_enemigo.Y-50"
 							}
 						},
 						{
@@ -3237,6 +3246,15 @@
 							"parameters": {
 								"x": "spr_player.X",
 								"y": "spr_player.Y - 150"
+							}
+						},
+						{
+							"id": "set-animation",
+							"objectClass": "PopUp",
+							"sid": 113925321555971,
+							"parameters": {
+								"animation": "\"blank\"",
+								"from": "beginning"
 							}
 						}
 					],
@@ -3762,6 +3780,345 @@
 				}
 			],
 			"sid": 105166268792908
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "Merchant",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-overlapping-another-object",
+							"objectClass": "spr_player",
+							"sid": 617702218042015,
+							"parameters": {
+								"object": "spr_merchant"
+							}
+						},
+						{
+							"id": "compare-two-values",
+							"objectClass": "System",
+							"sid": 336661203505849,
+							"parameters": {
+								"first-value": "spr_enemigo.Count",
+								"comparison": 4,
+								"second-value": "0"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-position",
+							"objectClass": "PopUp",
+							"sid": 325242693586351,
+							"parameters": {
+								"x": "spr_player.X",
+								"y": "spr_player.Y - 150"
+							}
+						},
+						{
+							"id": "set-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 663601521658148,
+							"parameters": {
+								"variable": "PopUp",
+								"value": "true"
+							}
+						},
+						{
+							"id": "set-text",
+							"objectClass": "PopUp_text",
+							"sid": 693473188882204,
+							"parameters": {
+								"text": "\"Kill the boss\""
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "PopUp",
+							"sid": 703212280717958,
+							"parameters": {
+								"visibility": "visible"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "PopUp_text",
+							"sid": 419177847215061,
+							"parameters": {
+								"visibility": "visible"
+							}
+						},
+						{
+							"id": "set-animation",
+							"objectClass": "PopUp",
+							"sid": 544654291948339,
+							"parameters": {
+								"animation": "\"boss\"",
+								"from": "beginning"
+							}
+						}
+					],
+					"sid": 164779552325758
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-overlapping-another-object",
+							"objectClass": "spr_player",
+							"sid": 866379251363385,
+							"parameters": {
+								"object": "spr_merchant"
+							}
+						},
+						{
+							"id": "compare-two-values",
+							"objectClass": "System",
+							"sid": 209062684116340,
+							"parameters": {
+								"first-value": "spr_enemigo_normal.Count",
+								"comparison": 4,
+								"second-value": "0"
+							}
+						},
+						{
+							"id": "compare-two-values",
+							"objectClass": "System",
+							"sid": 902433987385250,
+							"parameters": {
+								"first-value": "spr_enemigo.Count",
+								"comparison": 0,
+								"second-value": "0"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-position",
+							"objectClass": "PopUp",
+							"sid": 957049384821075,
+							"parameters": {
+								"x": "spr_player.X",
+								"y": "spr_player.Y - 150"
+							}
+						},
+						{
+							"id": "set-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 147102434106340,
+							"parameters": {
+								"variable": "PopUp",
+								"value": "true"
+							}
+						},
+						{
+							"id": "set-text",
+							"objectClass": "PopUp_text",
+							"sid": 842237746945651,
+							"parameters": {
+								"text": "\"Kill the baby\""
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "PopUp",
+							"sid": 464909162510172,
+							"parameters": {
+								"visibility": "visible"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "PopUp_text",
+							"sid": 805708959159728,
+							"parameters": {
+								"visibility": "visible"
+							}
+						},
+						{
+							"id": "set-animation",
+							"objectClass": "PopUp",
+							"sid": 844374115360820,
+							"parameters": {
+								"animation": "\"baby\"",
+								"from": "beginning"
+							}
+						}
+					],
+					"sid": 991179082577637
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-overlapping-another-object",
+							"objectClass": "spr_player",
+							"sid": 647348762626416,
+							"parameters": {
+								"object": "spr_merchant"
+							}
+						},
+						{
+							"id": "compare-two-values",
+							"objectClass": "System",
+							"sid": 406674855684706,
+							"parameters": {
+								"first-value": "spr_enemigo_normal.Count",
+								"comparison": 0,
+								"second-value": "0"
+							}
+						},
+						{
+							"id": "compare-two-values",
+							"objectClass": "System",
+							"sid": 732004872085297,
+							"parameters": {
+								"first-value": "spr_enemigo.Count",
+								"comparison": 0,
+								"second-value": "0"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-position",
+							"objectClass": "PopUp",
+							"sid": 989347304041382,
+							"parameters": {
+								"x": "spr_player.X",
+								"y": "spr_player.Y - 150"
+							}
+						},
+						{
+							"id": "set-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 499934205940015,
+							"parameters": {
+								"variable": "PopUp",
+								"value": "true"
+							}
+						},
+						{
+							"id": "set-text",
+							"objectClass": "PopUp_text",
+							"sid": 342999185976686,
+							"parameters": {
+								"text": "\"bring me money\""
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "PopUp",
+							"sid": 446330503225180,
+							"parameters": {
+								"visibility": "visible"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "PopUp_text",
+							"sid": 704337542529413,
+							"parameters": {
+								"visibility": "visible"
+							}
+						},
+						{
+							"id": "set-animation",
+							"objectClass": "PopUp",
+							"sid": 159157151322770,
+							"parameters": {
+								"animation": "\"money\"",
+								"from": "beginning"
+							}
+						}
+					],
+					"sid": 539390995608304
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-overlapping-another-object",
+							"objectClass": "spr_player",
+							"sid": 403601345650215,
+							"parameters": {
+								"object": "spr_merchant"
+							}
+						},
+						{
+							"id": "compare-two-values",
+							"objectClass": "System",
+							"sid": 767584539790343,
+							"parameters": {
+								"first-value": "spr_enemigo_normal.Count",
+								"comparison": 0,
+								"second-value": "0"
+							}
+						},
+						{
+							"id": "compare-two-values",
+							"objectClass": "System",
+							"sid": 506777075094643,
+							"parameters": {
+								"first-value": "spr_enemigo.Count",
+								"comparison": 0,
+								"second-value": "0"
+							}
+						},
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 481103441924244,
+							"parameters": {
+								"variable": "Monedas",
+								"comparison": 5,
+								"value": "30"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "destroy",
+							"objectClass": "spr_merchant",
+							"sid": 204637705143734
+						},
+						{
+							"id": "destroy",
+							"objectClass": "spr_barrera_merchant",
+							"sid": 329258251440333
+						}
+					],
+					"sid": 418801439751925
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-destroyed",
+							"objectClass": "spr_merchant",
+							"sid": 453745660603669
+						}
+					],
+					"actions": [
+						{
+							"id": "subtract-from-eventvar",
+							"objectClass": "System",
+							"sid": 844994786899486,
+							"parameters": {
+								"variable": "Monedas",
+								"value": "30"
+							}
+						}
+					],
+					"sid": 567349780458563
+				}
+			],
+			"sid": 293458448454160
 		}
 	],
 	"sid": 953197778318877
