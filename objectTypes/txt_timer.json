@@ -1,0 +1,15 @@
+{
+	"name": "txt_timer",
+	"plugin-id": "Text",
+	"sid": 110473430376429,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [
+		{
+			"behaviorId": "Pin",
+			"name": "Pin",
+			"sid": 878018980649253
+		}
+	],
+	"effectTypes": []
+}

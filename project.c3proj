@@ -196,7 +196,10 @@
 			"spr_buscar",
 			"spr_killboss",
 			"spr_kill_enemy",
-			"spr_barrera_merchant"
+			"spr_barrera_merchant",
+			"txt_timer",
+			"txt_TimeOut",
+			"btn_menu"
 		],
 		"subfolders": []
 	},
@@ -211,7 +214,8 @@
 			"Menu",
 			"Nivel1",
 			"Ganaste",
-			"Moriste"
+			"Moriste",
+			"TimeOut"
 		],
 		"subfolders": []
 	},
@@ -220,7 +224,8 @@
 			"Nivel1_sheet",
 			"Ganaste_sheet",
 			"Menu_sheet",
-			"moriste_sheet"
+			"moriste_sheet",
+			"TimeOutSheet"
 		],
 		"subfolders": []
 	},

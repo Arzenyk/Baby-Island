@@ -3,13 +3,23 @@
 	"events": [
 		{
 			"eventType": "variable",
+			"name": "Timer",
+			"type": "number",
+			"initialValue": "5000",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 193890831246622
+		},
+		{
+			"eventType": "variable",
 			"name": "PopUp",
 			"type": "boolean",
 			"initialValue": "false",
 			"comment": "",
 			"isStatic": false,
 			"isConstant": false,
-			"sid": 958002310877030
+			"sid": 524977481883528
 		},
 		{
 			"eventType": "variable",
@@ -19,7 +29,7 @@
 			"comment": "",
 			"isStatic": false,
 			"isConstant": false,
-			"sid": 979013970079060
+			"sid": 258547751811911
 		},
 		{
 			"eventType": "variable",
@@ -29,7 +39,7 @@
 			"comment": "",
 			"isStatic": false,
 			"isConstant": false,
-			"sid": 970871928074127
+			"sid": 119890288585512
 		},
 		{
 			"eventType": "variable",
@@ -39,7 +49,7 @@
 			"comment": "",
 			"isStatic": false,
 			"isConstant": false,
-			"sid": 758682811851259
+			"sid": 510107268794341
 		},
 		{
 			"eventType": "variable",
@@ -49,7 +59,7 @@
 			"comment": "",
 			"isStatic": false,
 			"isConstant": false,
-			"sid": 574336524665170
+			"sid": 251718072893045
 		},
 		{
 			"eventType": "variable",
@@ -59,7 +69,7 @@
 			"comment": "",
 			"isStatic": false,
 			"isConstant": false,
-			"sid": 636289332497081
+			"sid": 803382822256503
 		},
 		{
 			"eventType": "variable",
@@ -69,7 +79,7 @@
 			"comment": "",
 			"isStatic": false,
 			"isConstant": false,
-			"sid": 761317912386078
+			"sid": 584695884761741
 		},
 		{
 			"eventType": "variable",
@@ -79,7 +89,7 @@
 			"comment": "",
 			"isStatic": false,
 			"isConstant": false,
-			"sid": 360257939820974
+			"sid": 653387106780522
 		},
 		{
 			"eventType": "variable",
@@ -89,7 +99,7 @@
 			"comment": "",
 			"isStatic": false,
 			"isConstant": false,
-			"sid": 873749121785135
+			"sid": 172824155827645
 		},
 		{
 			"eventType": "variable",
@@ -99,7 +109,7 @@
 			"comment": "",
 			"isStatic": false,
 			"isConstant": false,
-			"sid": 569545986511250
+			"sid": 292949646906302
 		},
 		{
 			"eventType": "variable",
@@ -109,7 +119,7 @@
 			"comment": "",
 			"isStatic": false,
 			"isConstant": false,
-			"sid": 779792876393347
+			"sid": 635544552156300
 		},
 		{
 			"eventType": "variable",
@@ -119,7 +129,7 @@
 			"comment": "",
 			"isStatic": false,
 			"isConstant": false,
-			"sid": 102848022093317
+			"sid": 507159114231436
 		},
 		{
 			"eventType": "variable",
@@ -129,7 +139,7 @@
 			"comment": "",
 			"isStatic": false,
 			"isConstant": false,
-			"sid": 522683119642378
+			"sid": 838226305862310
 		},
 		{
 			"eventType": "variable",
@@ -139,7 +149,7 @@
 			"comment": "",
 			"isStatic": false,
 			"isConstant": false,
-			"sid": 192877526492609
+			"sid": 309467841557051
 		},
 		{
 			"eventType": "variable",
@@ -149,7 +159,7 @@
 			"comment": "",
 			"isStatic": false,
 			"isConstant": false,
-			"sid": 155109899845991
+			"sid": 866449299048166
 		},
 		{
 			"eventType": "variable",
@@ -159,7 +169,7 @@
 			"comment": "",
 			"isStatic": false,
 			"isConstant": false,
-			"sid": 425646720912519
+			"sid": 524357043065393
 		},
 		{
 			"eventType": "variable",
@@ -169,7 +179,7 @@
 			"comment": "",
 			"isStatic": false,
 			"isConstant": false,
-			"sid": 436516466298306
+			"sid": 743951752882353
 		},
 		{
 			"eventType": "variable",
@@ -179,7 +189,7 @@
 			"comment": "",
 			"isStatic": false,
 			"isConstant": false,
-			"sid": 696299590347402
+			"sid": 690339188348634
 		},
 		{
 			"eventType": "variable",
@@ -189,7 +199,7 @@
 			"comment": "",
 			"isStatic": false,
 			"isConstant": false,
-			"sid": 374515991927953
+			"sid": 821259211911645
 		},
 		{
 			"eventType": "variable",
@@ -199,7 +209,7 @@
 			"comment": "",
 			"isStatic": false,
 			"isConstant": false,
-			"sid": 489846230198713
+			"sid": 561475660502727
 		},
 		{
 			"eventType": "variable",
@@ -209,7 +219,7 @@
 			"comment": "",
 			"isStatic": false,
 			"isConstant": false,
-			"sid": 762596425758803
+			"sid": 640836886368817
 		},
 		{
 			"eventType": "variable",
@@ -219,7 +229,7 @@
 			"comment": "",
 			"isStatic": false,
 			"isConstant": false,
-			"sid": 777882509480863
+			"sid": 304439376528960
 		},
 		{
 			"eventType": "variable",
@@ -229,7 +239,7 @@
 			"comment": "",
 			"isStatic": false,
 			"isConstant": false,
-			"sid": 870588783259712
+			"sid": 349739070259421
 		},
 		{
 			"eventType": "group",
@@ -2874,6 +2884,21 @@
 							}
 						},
 						{
+							"id": "pin-to-object-properties",
+							"objectClass": "txt_timer",
+							"sid": 244866025159307,
+							"behaviorType": "Pin",
+							"parameters": {
+								"pin-to": "spr_hud",
+								"x": true,
+								"y": true,
+								"angle": false,
+								"width-type": "no",
+								"height-type": "no",
+								"z": false
+							}
+						},
+						{
 							"id": "set-position",
 							"objectClass": "pbar_vida_enemigo",
 							"sid": 388453036992410,
@@ -3519,6 +3544,15 @@
 							}
 						},
 						{
+							"id": "set-animation",
+							"objectClass": "PopUp",
+							"sid": 529975667912435,
+							"parameters": {
+								"animation": "\"blank\"",
+								"from": "beginning"
+							}
+						},
+						{
 							"id": "set-boolean-eventvar",
 							"objectClass": "System",
 							"sid": 278084704581662,
@@ -4119,6 +4153,72 @@
 				}
 			],
 			"sid": 293458448454160
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "Timer",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "every-tick",
+							"objectClass": "System",
+							"sid": 483413787967949
+						}
+					],
+					"actions": [
+						{
+							"id": "subtract-from-eventvar",
+							"objectClass": "System",
+							"sid": 183230035474364,
+							"parameters": {
+								"variable": "Timer",
+								"value": "1"
+							}
+						},
+						{
+							"id": "set-text",
+							"objectClass": "txt_timer",
+							"sid": 827098762907490,
+							"parameters": {
+								"text": "\"Timer: \" & Timer"
+							}
+						}
+					],
+					"sid": 955959317983863
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 165293229336356,
+							"parameters": {
+								"variable": "Timer",
+								"comparison": 3,
+								"value": "0"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "go-to-layout",
+							"objectClass": "System",
+							"sid": 659096147882143,
+							"parameters": {
+								"layout": "TimeOut"
+							}
+						}
+					],
+					"sid": 423303404363667
+				}
+			],
+			"sid": 452793743893345
 		}
 	],
 	"sid": 953197778318877

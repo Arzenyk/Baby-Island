@@ -1,0 +1,27 @@
+{
+	"name": "TimeOutSheet",
+	"events": [
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-clicked",
+					"objectClass": "btn_menu",
+					"sid": 419448625429275
+				}
+			],
+			"actions": [
+				{
+					"id": "go-to-layout",
+					"objectClass": "System",
+					"sid": 540884644630450,
+					"parameters": {
+						"layout": "Menu"
+					}
+				}
+			],
+			"sid": 591570074302818
+		}
+	],
+	"sid": 236035516312105
+}
