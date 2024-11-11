@@ -3881,9 +3881,9 @@
 						{
 							"id": "set-text",
 							"objectClass": "PopUp_text",
-							"sid": 693473188882204,
+							"sid": 976069786685273,
 							"parameters": {
-								"text": "\"Kill the boss\""
+								"text": "\"Asesina al jefe\""
 							}
 						},
 						{
@@ -3968,9 +3968,9 @@
 						{
 							"id": "set-text",
 							"objectClass": "PopUp_text",
-							"sid": 842237746945651,
+							"sid": 593930701720669,
 							"parameters": {
-								"text": "\"Kill the baby\""
+								"text": "\"Asesina a los bebés\""
 							}
 						},
 						{
@@ -4055,9 +4055,9 @@
 						{
 							"id": "set-text",
 							"objectClass": "PopUp_text",
-							"sid": 342999185976686,
+							"sid": 153005721542880,
 							"parameters": {
-								"text": "\"bring me money\""
+								"text": "\"Traeme dinero\""
 							}
 						},
 						{
@@ -4155,6 +4155,14 @@
 					],
 					"actions": [
 						{
+							"id": "set-visible",
+							"objectClass": "par_merchant",
+							"sid": 882611264787453,
+							"parameters": {
+								"visibility": "visible"
+							}
+						},
+						{
 							"id": "subtract-from-eventvar",
 							"objectClass": "System",
 							"sid": 844994786899486,
@@ -4237,6 +4245,111 @@
 				}
 			],
 			"sid": 452793743893345
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-key-pressed",
+					"objectClass": "Keyboard",
+					"sid": 860369734582005,
+					"parameters": {
+						"key": 75
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "destroy",
+					"objectClass": "spr_enemigo_normal",
+					"sid": 777648332646035
+				},
+				{
+					"id": "add-to-eventvar",
+					"objectClass": "System",
+					"sid": 642730360186285,
+					"parameters": {
+						"variable": "Llave",
+						"value": "10"
+					}
+				}
+			],
+			"sid": 353979717909775
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-key-pressed",
+					"objectClass": "Keyboard",
+					"sid": 301743540307989,
+					"parameters": {
+						"key": 77
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "add-to-eventvar",
+					"objectClass": "System",
+					"sid": 139610630521196,
+					"parameters": {
+						"variable": "Monedas",
+						"value": "30"
+					}
+				}
+			],
+			"sid": 130986772825469
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-key-pressed",
+					"objectClass": "Keyboard",
+					"sid": 916266324114405,
+					"parameters": {
+						"key": 70
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "add-to-eventvar",
+					"objectClass": "System",
+					"sid": 241848519137514,
+					"parameters": {
+						"variable": "cant_flechas",
+						"value": "30"
+					}
+				}
+			],
+			"sid": 961453601526714
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-key-pressed",
+					"objectClass": "Keyboard",
+					"sid": 101005604885830,
+					"parameters": {
+						"key": 71
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 738321064447666,
+					"parameters": {
+						"variable": "VidaJugador",
+						"value": "100000000"
+					}
+				}
+			],
+			"sid": 205295342364541
 		}
 	],
 	"sid": 953197778318877

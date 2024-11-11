@@ -1,0 +1,57 @@
+{
+	"name": "Historia_sheet",
+	"events": [
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-clicked",
+					"objectClass": "btn_jugar_historia",
+					"sid": 772741366140293
+				}
+			],
+			"actions": [
+				{
+					"id": "go-to-layout",
+					"objectClass": "System",
+					"sid": 361641712786006,
+					"parameters": {
+						"layout": "Nivel1"
+					}
+				},
+				{
+					"id": "reset-global-variables",
+					"objectClass": "System",
+					"sid": 842201835978072,
+					"parameters": {
+						"reset-static": false
+					}
+				}
+			],
+			"sid": 369350564696820
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-start-of-layout",
+					"objectClass": "System",
+					"sid": 779941419178839
+				}
+			],
+			"actions": [
+				{
+					"id": "set-effect-enabled",
+					"objectClass": "spr_foto",
+					"sid": 629960164902376,
+					"parameters": {
+						"mode": "enable",
+						"effect": "\"RadialBlur\""
+					}
+				}
+			],
+			"sid": 199572013995361
+		}
+	],
+	"sid": 983899912295617
+}

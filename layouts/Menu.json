@@ -20,6 +20,15 @@
 					"tags": "",
 					"instanceVariables": {},
 					"behaviors": {},
+					"effects": {
+						"RadialBlur": {
+							"isEnabled": false,
+							"parameters": {
+								"radius": 0.4,
+								"intensity": 1
+							}
+						}
+					},
 					"instanceFolderItem": {
 						"sid": 406851989931371,
 						"expanded": true
