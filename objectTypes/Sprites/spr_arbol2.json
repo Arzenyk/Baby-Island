@@ -1,0 +1,57 @@
+{
+	"name": "spr_arbol2",
+	"plugin-id": "Sprite",
+	"sid": 968459075497073,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [
+		{
+			"behaviorId": "solid",
+			"name": "Solid",
+			"sid": 748992845037407
+		}
+	],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 45,
+						"height": 47,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"fileType": "image/png",
+						"imageSpriteId": 451769,
+						"collisionPoly": {
+							"points": [
+								0.38888888888888873,
+								0.4441489361702129,
+								0.5500000000000003,
+								0.4760638297872342,
+								0.5694444444444448,
+								0.6010638297872344,
+								0.4,
+								0.5851063829787233
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1,
+						"tag": ""
+					}
+				],
+				"sid": 745589763324385,
+				"name": "Animation 1",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}

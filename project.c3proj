@@ -155,80 +155,158 @@
 		},
 		{
 			"type": "effect",
+			"id": "pixellate",
+			"name": "Pixellate",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "effect",
 			"id": "radialblur",
 			"name": "Radial blur",
 			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "effect",
+			"id": "vignette",
+			"name": "Vignette",
+			"author": "Brad Larson",
 			"bundled": false
 		}
 	],
 	"uniqueId": "1jmcxgk0cm6",
 	"objectTypes": {
-		"items": [
-			"Piso",
-			"Map",
-			"spr_player",
-			"Keyboard",
-			"Paredes",
-			"spr_enemigo",
-			"Spawn1",
-			"Sprite",
-			"PopUp",
-			"PopUp_text",
-			"cofre_cuchillo",
-			"Cuchillo",
-			"spr_arco",
-			"cofre_arco",
-			"spr_flecha",
-			"spr_vida",
-			"spr_hud",
-			"spr_cantflechas",
-			"txt_cantflechas",
-			"spr_item_flechas",
-			"spr_moriste",
-			"pbar_vida_enemigo",
-			"spr_moneda",
-			"txt_monedas",
-			"hud_moneda",
-			"spr_puerta",
-			"spr_llave",
-			"hud_llave",
-			"spr_cofre_rand",
-			"spr_salida",
-			"txt_Ganaste",
-			"Button",
-			"txt_menu",
-			"txt_controles",
-			"btnjugar",
-			"btn_menu_moriste",
-			"txt_nombres",
-			"spr_merchant",
-			"spr_enemigo_normal",
-			"spr_spawn1",
-			"spr_spawn2",
-			"spr_spawn3",
-			"lightTest",
-			"AdvancedRandom",
-			"txt_seed",
-			"spr_key_spawn1",
-			"spr_piedra",
-			"spr_key_spawn2",
-			"spr_key_spawn3",
-			"spr_key_spawn4",
-			"spr_buscar",
-			"spr_killboss",
-			"spr_kill_enemy",
-			"spr_barrera_merchant",
-			"txt_timer",
-			"txt_TimeOut",
-			"btn_menu",
-			"spr_foto",
-			"spr_teclas1y2",
-			"par_merchant",
-			"txt_titulohistoria",
-			"txt_historia",
-			"btn_jugar_historia"
-		],
-		"subfolders": []
+		"items": [],
+		"subfolders": [
+			{
+				"items": [
+					"btn_jugar_historia",
+					"btn_menu",
+					"btn_menu_moriste",
+					"btnjugar",
+					"Button",
+					"btn_tutorial"
+				],
+				"subfolders": [],
+				"name": "botones"
+			},
+			{
+				"items": [
+					"AdvancedRandom",
+					"Keyboard",
+					"lightTest",
+					"pbar_vida_enemigo",
+					"par_merchant",
+					"spr_cantflechas",
+					"spr_flecha",
+					"spr_foto",
+					"spr_moriste"
+				],
+				"subfolders": [],
+				"name": "Otros"
+			},
+			{
+				"items": [
+					"spr_arbol",
+					"spr_arbol2",
+					"spr_arbusto"
+				],
+				"subfolders": [
+					{
+						"items": [
+							"cofre_arco",
+							"cofre_cuchillo",
+							"spr_cofre_rand"
+						],
+						"subfolders": [],
+						"name": "Cofre"
+					},
+					{
+						"items": [
+							"Cuchillo",
+							"spr_arco",
+							"spr_item_flechas",
+							"spr_llave",
+							"spr_moneda"
+						],
+						"subfolders": [],
+						"name": "Items"
+					},
+					{
+						"items": [
+							"hud_llave",
+							"hud_moneda",
+							"spr_hud",
+							"spr_teclas1y2",
+							"spr_vida",
+							"PopUp",
+							"spr_buscar"
+						],
+						"subfolders": [],
+						"name": "HUD"
+					},
+					{
+						"items": [
+							"Map",
+							"Paredes",
+							"Piso",
+							"spr_barrera_merchant",
+							"spr_piedra",
+							"spr_puerta",
+							"spr_salida"
+						],
+						"subfolders": [],
+						"name": "Nivel"
+					},
+					{
+						"items": [
+							"Spawn1",
+							"spr_key_spawn1",
+							"spr_key_spawn2",
+							"spr_key_spawn3",
+							"spr_key_spawn4",
+							"spr_spawn1",
+							"spr_spawn2",
+							"spr_spawn3"
+						],
+						"subfolders": [],
+						"name": "Spawn"
+					},
+					{
+						"items": [
+							"spr_enemigo",
+							"spr_enemigo_normal",
+							"spr_kill_enemy",
+							"spr_killboss",
+							"spr_merchant",
+							"spr_player"
+						],
+						"subfolders": [],
+						"name": "Entitys"
+					}
+				],
+				"name": "Sprites"
+			},
+			{
+				"items": [
+					"PopUp_text",
+					"txt_cantflechas",
+					"txt_controles",
+					"txt_Ganaste",
+					"txt_historia",
+					"txt_menu",
+					"txt_monedas",
+					"txt_nombres",
+					"txt_seed",
+					"txt_TimeOut",
+					"txt_timer",
+					"txt_titulohistoria"
+				],
+				"subfolders": [],
+				"name": "Text"
+			}
+		]
 	},
 	"autosaveData": null,
 	"containers": [],
@@ -243,7 +321,8 @@
 			"Ganaste",
 			"Moriste",
 			"TimeOut",
-			"Historia"
+			"Historia",
+			"Tutorial"
 		],
 		"subfolders": []
 	},
@@ -254,7 +333,8 @@
 			"Menu_sheet",
 			"moriste_sheet",
 			"TimeOutSheet",
-			"Historia_sheet"
+			"Historia_sheet",
+			"Event sheet 1"
 		],
 		"subfolders": []
 	},

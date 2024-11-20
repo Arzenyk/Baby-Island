@@ -10,34 +10,47 @@
 					"type": "spr_foto",
 					"properties": {
 						"initially-visible": true,
-						"initial-animation": "Animation 1",
+						"initial-animation": "Animation 2",
 						"initial-frame": 0,
 						"enable-collisions": true,
 						"live-preview": false
 					},
-					"uid": 237,
-					"sid": 406851989931371,
+					"uid": 247,
+					"sid": 824501844573063,
 					"tags": "",
 					"instanceVariables": {},
 					"behaviors": {},
 					"effects": {
 						"RadialBlur": {
-							"isEnabled": false,
+							"isEnabled": true,
 							"parameters": {
-								"radius": 0.4,
-								"intensity": 1
+								"radius": 1,
+								"intensity": 0.2
+							}
+						},
+						"Pixellate": {
+							"isEnabled": true,
+							"parameters": {
+								"size": 5
+							}
+						},
+						"Vignette": {
+							"isEnabled": true,
+							"parameters": {
+								"start-radius": 0.1,
+								"end-radius": 0.75
 							}
 						}
 					},
 					"instanceFolderItem": {
-						"sid": 406851989931371,
+						"sid": 824501844573063,
 						"expanded": true
 					},
 					"world": {
-						"x": 639,
-						"y": 359.5,
-						"width": 1300,
-						"height": 749,
+						"x": 663,
+						"y": 354,
+						"width": 2537,
+						"height": 2016,
 						"originX": 0.5,
 						"originY": 0.5,
 						"color": [
@@ -55,7 +68,7 @@
 					"properties": {
 						"text": "Baby Island",
 						"enable-bbcode": true,
-						"font": "Arial",
+						"font": "Ink Free",
 						"size": 80,
 						"line-height": 0,
 						"bold": false,
@@ -181,8 +194,8 @@
 						"expanded": true
 					},
 					"world": {
-						"x": 34,
-						"y": 464,
+						"x": 40,
+						"y": 842,
 						"width": 488,
 						"height": 342,
 						"originX": 0,
@@ -220,8 +233,8 @@
 						"expanded": true
 					},
 					"world": {
-						"x": 580,
-						"y": 321,
+						"x": 586,
+						"y": 573,
 						"width": 72,
 						"height": 24,
 						"originX": 0,
@@ -239,7 +252,7 @@
 					"properties": {
 						"text": "Pereda Guillermo\nMauro Perugini",
 						"enable-bbcode": true,
-						"font": "Arial",
+						"font": "Ink Free",
 						"size": 12,
 						"line-height": 0,
 						"bold": false,
@@ -269,8 +282,8 @@
 						"expanded": true
 					},
 					"world": {
-						"x": 947,
-						"y": 573,
+						"x": 1127,
+						"y": 662,
 						"width": 399,
 						"height": 130,
 						"originX": 0,
@@ -290,7 +303,7 @@
 					"properties": {
 						"text": "Baby Island",
 						"enable-bbcode": true,
-						"font": "Arial",
+						"font": "Ink Free",
 						"size": 80,
 						"line-height": 0,
 						"bold": false,
@@ -320,8 +333,8 @@
 						"expanded": true
 					},
 					"world": {
-						"x": 375,
-						"y": 76,
+						"x": 371,
+						"y": 75,
 						"width": 705,
 						"height": 159,
 						"originX": 0,
@@ -334,6 +347,43 @@
 						],
 						"angle": 0,
 						"zElevation": 0
+					}
+				},
+				{
+					"type": "btn_tutorial",
+					"properties": {
+						"type": "button",
+						"text": "Tutorial",
+						"tooltip": "",
+						"initially-visible": true,
+						"enabled": true,
+						"auto-font-size": true,
+						"checked": false,
+						"id": "",
+						"class": ""
+					},
+					"uid": 237,
+					"sid": 947945804640705,
+					"tags": "",
+					"instanceVariables": {},
+					"behaviors": {},
+					"instanceFolderItem": {
+						"sid": 947945804640705,
+						"expanded": true
+					},
+					"world": {
+						"x": 586,
+						"y": 641,
+						"width": 72,
+						"height": 24,
+						"originX": 0,
+						"originY": 0,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						]
 					}
 				}
 			],

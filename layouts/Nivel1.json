@@ -5822,6 +5822,83 @@
 			"global": false
 		},
 		{
+			"name": "Arbustos",
+			"overriden": 0,
+			"subLayers": [],
+			"instances": [
+				{
+					"type": "spr_arbusto",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 2",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 249,
+					"sid": 105996721195438,
+					"tags": "",
+					"instanceVariables": {},
+					"behaviors": {
+						"Solid": {
+							"properties": {
+								"enabled": true,
+								"tags": ""
+							}
+						}
+					},
+					"instanceFolderItem": {
+						"sid": 105996721195438,
+						"expanded": true
+					},
+					"world": {
+						"x": 1702,
+						"y": 2502,
+						"width": 155.38715440152492,
+						"height": 151.0122950180813,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				}
+			],
+			"sid": 859044814449433,
+			"effectTypes": [],
+			"isInitiallyVisible": true,
+			"isInitiallyInteractive": true,
+			"isHTMLElementsLayer": false,
+			"color": [
+				1,
+				1,
+				1,
+				1
+			],
+			"backgroundColor": [
+				0.5019607843137255,
+				0.5019607843137255,
+				0.5019607843137255,
+				1
+			],
+			"isTransparent": true,
+			"parallaxX": 1,
+			"parallaxY": 1,
+			"scaleRate": 1,
+			"forceOwnTexture": false,
+			"renderingMode": "3d",
+			"drawOrder": "z-order",
+			"useRenderCells": false,
+			"blendMode": "normal",
+			"zElevation": 0,
+			"global": false
+		},
+		{
 			"name": "normal",
 			"overriden": 0,
 			"subLayers": [],
@@ -7728,6 +7805,83 @@
 			"global": false
 		},
 		{
+			"name": "Arboles",
+			"overriden": 0,
+			"subLayers": [],
+			"instances": [
+				{
+					"type": "spr_arbol2",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 250,
+					"sid": 161301190248177,
+					"tags": "",
+					"instanceVariables": {},
+					"behaviors": {
+						"Solid": {
+							"properties": {
+								"enabled": true,
+								"tags": ""
+							}
+						}
+					},
+					"instanceFolderItem": {
+						"sid": 161301190248177,
+						"expanded": true
+					},
+					"world": {
+						"x": 2011,
+						"y": 2259,
+						"width": 187,
+						"height": 175,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				}
+			],
+			"sid": 839893864529585,
+			"effectTypes": [],
+			"isInitiallyVisible": true,
+			"isInitiallyInteractive": true,
+			"isHTMLElementsLayer": false,
+			"color": [
+				1,
+				1,
+				1,
+				1
+			],
+			"backgroundColor": [
+				0.5019607843137255,
+				0.5019607843137255,
+				0.5019607843137255,
+				1
+			],
+			"isTransparent": true,
+			"parallaxX": 1,
+			"parallaxY": 1,
+			"scaleRate": 1,
+			"forceOwnTexture": false,
+			"renderingMode": "3d",
+			"drawOrder": "z-order",
+			"useRenderCells": false,
+			"blendMode": "normal",
+			"zElevation": 0,
+			"global": false
+		},
+		{
 			"name": "PopUp",
 			"overriden": 0,
 			"subLayers": [],
@@ -7778,7 +7932,7 @@
 					"properties": {
 						"text": "PopUp",
 						"enable-bbcode": true,
-						"font": "Comic Sans MS",
+						"font": "Ink Free",
 						"size": 20,
 						"line-height": 0,
 						"bold": true,
@@ -9405,8 +9559,8 @@
 						"expanded": true
 					},
 					"world": {
-						"x": 1042,
-						"y": 1903,
+						"x": 1044.1298680914254,
+						"y": 1906.2957272737285,
 						"width": 116.19947333556001,
 						"height": 84.79526002004081,
 						"originX": 0.5,
@@ -9993,7 +10147,7 @@
 					"properties": {
 						"text": "Timer: 5000",
 						"enable-bbcode": true,
-						"font": "Comic Sans MS",
+						"font": "Ink Free",
 						"size": 12,
 						"line-height": 0,
 						"bold": true,
@@ -10137,6 +10291,48 @@
 						"angle": 3.125630287849538,
 						"zElevation": 0
 					}
+				},
+				{
+					"type": "spr_arbol",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 2",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 248,
+					"sid": 968137682813721,
+					"tags": "",
+					"instanceVariables": {},
+					"behaviors": {
+						"Solid": {
+							"properties": {
+								"enabled": true,
+								"tags": ""
+							}
+						}
+					},
+					"instanceFolderItem": {
+						"sid": 968137682813721,
+						"expanded": true
+					},
+					"world": {
+						"x": 1396.5,
+						"y": 2231,
+						"width": 221.29014779910034,
+						"height": 216.29830810294368,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
 				}
 			],
 			"sid": 155550305479838,
@@ -10183,6 +10379,17 @@
 				"isEnabled": true,
 				"parameters": {
 					"intensity": 0.8
+				}
+			}
+		},
+		{
+			"effectId": "vignette",
+			"name": "Vignette",
+			"instance": {
+				"isEnabled": true,
+				"parameters": {
+					"start-radius": 0.2,
+					"end-radius": 0.9
 				}
 			}
 		}
