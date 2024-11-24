@@ -177,7 +177,21 @@
 	],
 	"uniqueId": "1jmcxgk0cm6",
 	"objectTypes": {
-		"items": [],
+		"items": [
+			"Teclas",
+			"Tecla1",
+			"Tecla2",
+			"Flecha1",
+			"Flecha2",
+			"Menu_tutorial",
+			"cuadro",
+			"txtCuchillo",
+			"TeclaE",
+			"TeclaArriba",
+			"TeclaIzq",
+			"TeclaAbajo",
+			"TeclaDere"
+		],
 		"subfolders": [
 			{
 				"items": [
@@ -334,7 +348,7 @@
 			"moriste_sheet",
 			"TimeOutSheet",
 			"Historia_sheet",
-			"Event sheet 1"
+			"Tutorial_sheet"
 		],
 		"subfolders": []
 	},

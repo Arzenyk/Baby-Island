@@ -21,6 +21,27 @@
 				}
 			],
 			"sid": 980873899264879
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-clicked",
+					"objectClass": "btn_tutorial",
+					"sid": 463180480377415
+				}
+			],
+			"actions": [
+				{
+					"id": "go-to-layout",
+					"objectClass": "System",
+					"sid": 765621195596028,
+					"parameters": {
+						"layout": "Tutorial"
+					}
+				}
+			],
+			"sid": 251007026256006
 		}
 	],
 	"sid": 117445633287180

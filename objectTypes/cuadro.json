@@ -1,7 +1,7 @@
 {
-	"name": "spr_llave",
+	"name": "cuadro",
 	"plugin-id": "Sprite",
-	"sid": 504873211917801,
+	"sid": 381342084839374,
 	"isGlobal": false,
 	"instanceVariables": [],
 	"behaviorTypes": [],
@@ -19,13 +19,13 @@
 						"exportFormat": "lossless",
 						"exportQuality": 0.8,
 						"fileType": "image/png",
-						"imageSpriteId": 8328593,
+						"imageSpriteId": 1885953,
 						"useCollisionPoly": true,
 						"duration": 1,
 						"tag": ""
 					}
 				],
-				"sid": 458635470440770,
+				"sid": 735651170684127,
 				"name": "Animation 1",
 				"isLooping": false,
 				"isPingPong": false,

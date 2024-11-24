@@ -5,7 +5,7 @@
 			"eventType": "variable",
 			"name": "Timer",
 			"type": "number",
-			"initialValue": "5000",
+			"initialValue": "2000",
 			"comment": "",
 			"isStatic": false,
 			"isConstant": false,
@@ -2433,6 +2433,7 @@
 									"id": "set-boolean-eventvar",
 									"objectClass": "System",
 									"sid": 196853995279549,
+									"disabled": true,
 									"parameters": {
 										"variable": "Cuchillo",
 										"value": "true"
@@ -2458,6 +2459,17 @@
 									"parameters": {
 										"variable": "InvCuchillo",
 										"value": "true"
+									}
+								},
+								{
+									"id": "flash",
+									"objectClass": "Flecha1",
+									"sid": 280930572663962,
+									"behaviorType": "Flash",
+									"parameters": {
+										"on-time": "0.5",
+										"off-time": "0.5",
+										"duration": "1000000000000000000000000000"
 									}
 								}
 							],
@@ -2498,6 +2510,7 @@
 									"id": "set-boolean-eventvar",
 									"objectClass": "System",
 									"sid": 996435318664312,
+									"disabled": true,
 									"parameters": {
 										"variable": "Arco",
 										"value": "true"
@@ -2523,6 +2536,17 @@
 									"parameters": {
 										"variable": "InvArco",
 										"value": "true"
+									}
+								},
+								{
+									"id": "flash",
+									"objectClass": "Flecha2",
+									"sid": 832065562557707,
+									"behaviorType": "Flash",
+									"parameters": {
+										"on-time": "0.5",
+										"off-time": "0.5",
+										"duration": "1000000000000000000000000000"
 									}
 								}
 							],
@@ -3014,8 +3038,69 @@
 						},
 						{
 							"id": "pin-to-object-properties",
+							"objectClass": "Tecla1",
+							"sid": 702426316904564,
+							"behaviorType": "Pin",
+							"parameters": {
+								"pin-to": "spr_hud",
+								"x": true,
+								"y": true,
+								"angle": false,
+								"width-type": "no",
+								"height-type": "no",
+								"z": false
+							}
+						},
+						{
+							"id": "pin-to-object-properties",
+							"objectClass": "Tecla2",
+							"sid": 849653243931022,
+							"behaviorType": "Pin",
+							"parameters": {
+								"pin-to": "spr_hud",
+								"x": true,
+								"y": true,
+								"angle": false,
+								"width-type": "no",
+								"height-type": "no",
+								"z": false
+							}
+						},
+						{
+							"id": "pin-to-object-properties",
+							"objectClass": "Flecha1",
+							"sid": 880478079047551,
+							"behaviorType": "Pin",
+							"parameters": {
+								"pin-to": "spr_hud",
+								"x": true,
+								"y": true,
+								"angle": false,
+								"width-type": "no",
+								"height-type": "no",
+								"z": false
+							}
+						},
+						{
+							"id": "pin-to-object-properties",
+							"objectClass": "Flecha2",
+							"sid": 603676938993242,
+							"behaviorType": "Pin",
+							"parameters": {
+								"pin-to": "spr_hud",
+								"x": true,
+								"y": true,
+								"angle": false,
+								"width-type": "no",
+								"height-type": "no",
+								"z": false
+							}
+						},
+						{
+							"id": "pin-to-object-properties",
 							"objectClass": "spr_teclas1y2",
 							"sid": 238619857699753,
+							"disabled": true,
 							"behaviorType": "Pin",
 							"parameters": {
 								"pin-to": "spr_hud",
@@ -3348,17 +3433,9 @@
 						{
 							"id": "compare-boolean-eventvar",
 							"objectClass": "System",
-							"sid": 161218998453658,
+							"sid": 679994633296761,
 							"parameters": {
 								"variable": "InvCuchillo"
-							}
-						},
-						{
-							"id": "compare-boolean-eventvar",
-							"objectClass": "System",
-							"sid": 175902214672412,
-							"parameters": {
-								"variable": "InvArco"
 							}
 						}
 					],
@@ -3376,7 +3453,7 @@
 						{
 							"id": "set-boolean-eventvar",
 							"objectClass": "System",
-							"sid": 759605247720394,
+							"sid": 717257838754854,
 							"parameters": {
 								"variable": "Cuchillo",
 								"value": "true"
@@ -3385,11 +3462,22 @@
 						{
 							"id": "set-boolean-eventvar",
 							"objectClass": "System",
-							"sid": 404690131445275,
+							"sid": 754161206068767,
 							"parameters": {
 								"variable": "Arco",
 								"value": "false"
 							}
+						},
+						{
+							"id": "stop-flashing",
+							"objectClass": "Flecha1",
+							"sid": 907221495539483,
+							"behaviorType": "Flash"
+						},
+						{
+							"id": "destroy",
+							"objectClass": "Flecha1",
+							"sid": 283873875232948
 						}
 					],
 					"sid": 727552963970169
@@ -3403,14 +3491,6 @@
 							"sid": 681850666532366,
 							"parameters": {
 								"key": 50
-							}
-						},
-						{
-							"id": "compare-boolean-eventvar",
-							"objectClass": "System",
-							"sid": 370626706579632,
-							"parameters": {
-								"variable": "InvCuchillo"
 							}
 						},
 						{
@@ -3450,6 +3530,17 @@
 								"variable": "Cuchillo",
 								"value": "false"
 							}
+						},
+						{
+							"id": "stop-flashing",
+							"objectClass": "Flecha2",
+							"sid": 592680846398594,
+							"behaviorType": "Flash"
+						},
+						{
+							"id": "destroy",
+							"objectClass": "Flecha2",
+							"sid": 125651483153415
 						}
 					],
 					"sid": 767690816170808

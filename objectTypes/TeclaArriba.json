@@ -1,10 +1,16 @@
 {
-	"name": "spr_llave",
+	"name": "TeclaArriba",
 	"plugin-id": "Sprite",
-	"sid": 504873211917801,
+	"sid": 848039240410495,
 	"isGlobal": false,
 	"instanceVariables": [],
-	"behaviorTypes": [],
+	"behaviorTypes": [
+		{
+			"behaviorId": "Pin",
+			"name": "Pin",
+			"sid": 724446965476949
+		}
+	],
 	"effectTypes": [],
 	"animations": {
 		"items": [
@@ -19,13 +25,13 @@
 						"exportFormat": "lossless",
 						"exportQuality": 0.8,
 						"fileType": "image/png",
-						"imageSpriteId": 8328593,
+						"imageSpriteId": 6132386,
 						"useCollisionPoly": true,
 						"duration": 1,
 						"tag": ""
 					}
 				],
-				"sid": 458635470440770,
+				"sid": 863000764263468,
 				"name": "Animation 1",
 				"isLooping": false,
 				"isPingPong": false,

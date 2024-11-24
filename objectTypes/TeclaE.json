@@ -1,10 +1,16 @@
 {
-	"name": "spr_llave",
+	"name": "TeclaE",
 	"plugin-id": "Sprite",
-	"sid": 504873211917801,
+	"sid": 878469935268028,
 	"isGlobal": false,
 	"instanceVariables": [],
-	"behaviorTypes": [],
+	"behaviorTypes": [
+		{
+			"behaviorId": "Pin",
+			"name": "Pin",
+			"sid": 559406258865215
+		}
+	],
 	"effectTypes": [],
 	"animations": {
 		"items": [
@@ -19,13 +25,13 @@
 						"exportFormat": "lossless",
 						"exportQuality": 0.8,
 						"fileType": "image/png",
-						"imageSpriteId": 8328593,
+						"imageSpriteId": 6993327,
 						"useCollisionPoly": true,
 						"duration": 1,
 						"tag": ""
 					}
 				],
-				"sid": 458635470440770,
+				"sid": 452973632577190,
 				"name": "Animation 1",
 				"isLooping": false,
 				"isPingPong": false,

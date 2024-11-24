@@ -1,0 +1,731 @@
+{
+	"name": "Tutorial_sheet",
+	"events": [
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-clicked",
+					"objectClass": "Menu_tutorial",
+					"sid": 574095799045473
+				}
+			],
+			"actions": [
+				{
+					"id": "go-to-layout",
+					"objectClass": "System",
+					"sid": 825064212193455,
+					"parameters": {
+						"layout": "Menu"
+					}
+				}
+			],
+			"sid": 258622226096196
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-key-pressed",
+					"objectClass": "Keyboard",
+					"sid": 122806483560152,
+					"parameters": {
+						"key": 49
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-opacity",
+					"objectClass": "Tecla1",
+					"sid": 782706208449270,
+					"parameters": {
+						"opacity": "100"
+					}
+				},
+				{
+					"id": "wait",
+					"objectClass": "System",
+					"sid": 727756189591631,
+					"parameters": {
+						"seconds": "0.5"
+					}
+				},
+				{
+					"id": "set-opacity",
+					"objectClass": "Tecla1",
+					"sid": 607781933621943,
+					"parameters": {
+						"opacity": "80"
+					}
+				},
+				{
+					"id": "wait",
+					"objectClass": "System",
+					"sid": 660940549166168,
+					"parameters": {
+						"seconds": "0.1"
+					}
+				},
+				{
+					"id": "set-opacity",
+					"objectClass": "Tecla1",
+					"sid": 902085844351110,
+					"parameters": {
+						"opacity": "60"
+					}
+				},
+				{
+					"id": "wait",
+					"objectClass": "System",
+					"sid": 919863401698331,
+					"parameters": {
+						"seconds": "0.1"
+					}
+				},
+				{
+					"id": "set-opacity",
+					"objectClass": "Tecla1",
+					"sid": 601691616328189,
+					"parameters": {
+						"opacity": "40"
+					}
+				},
+				{
+					"id": "wait",
+					"objectClass": "System",
+					"sid": 118913411800236,
+					"parameters": {
+						"seconds": "0.1"
+					}
+				},
+				{
+					"id": "set-opacity",
+					"objectClass": "Tecla1",
+					"sid": 560273676859156,
+					"parameters": {
+						"opacity": "20"
+					}
+				}
+			],
+			"sid": 381764625420650
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-key-pressed",
+					"objectClass": "Keyboard",
+					"sid": 326399025471009,
+					"parameters": {
+						"key": 50
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-opacity",
+					"objectClass": "Tecla2",
+					"sid": 134790708029613,
+					"parameters": {
+						"opacity": "100"
+					}
+				},
+				{
+					"id": "wait",
+					"objectClass": "System",
+					"sid": 115900008951030,
+					"parameters": {
+						"seconds": "0.5"
+					}
+				},
+				{
+					"id": "set-opacity",
+					"objectClass": "Tecla2",
+					"sid": 521863791508209,
+					"parameters": {
+						"opacity": "80"
+					}
+				},
+				{
+					"id": "wait",
+					"objectClass": "System",
+					"sid": 266259580159296,
+					"parameters": {
+						"seconds": "0.1"
+					}
+				},
+				{
+					"id": "set-opacity",
+					"objectClass": "Tecla2",
+					"sid": 451335391769324,
+					"parameters": {
+						"opacity": "60"
+					}
+				},
+				{
+					"id": "wait",
+					"objectClass": "System",
+					"sid": 126301971873229,
+					"parameters": {
+						"seconds": "0.1"
+					}
+				},
+				{
+					"id": "set-opacity",
+					"objectClass": "Tecla2",
+					"sid": 621344223503483,
+					"parameters": {
+						"opacity": "40"
+					}
+				},
+				{
+					"id": "wait",
+					"objectClass": "System",
+					"sid": 945235620829670,
+					"parameters": {
+						"seconds": "0.1"
+					}
+				},
+				{
+					"id": "set-opacity",
+					"objectClass": "Tecla2",
+					"sid": 837201178628925,
+					"parameters": {
+						"opacity": "20"
+					}
+				}
+			],
+			"sid": 583730113016791
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-key-pressed",
+					"objectClass": "Keyboard",
+					"sid": 553675714051194,
+					"parameters": {
+						"key": 69
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-opacity",
+					"objectClass": "TeclaE",
+					"sid": 101038948134373,
+					"parameters": {
+						"opacity": "100"
+					}
+				},
+				{
+					"id": "wait",
+					"objectClass": "System",
+					"sid": 456195679485622,
+					"parameters": {
+						"seconds": "0.5"
+					}
+				},
+				{
+					"id": "set-opacity",
+					"objectClass": "TeclaE",
+					"sid": 655936615808301,
+					"parameters": {
+						"opacity": "80"
+					}
+				},
+				{
+					"id": "wait",
+					"objectClass": "System",
+					"sid": 849938994108473,
+					"parameters": {
+						"seconds": "0.1"
+					}
+				},
+				{
+					"id": "set-opacity",
+					"objectClass": "TeclaE",
+					"sid": 547900308935080,
+					"parameters": {
+						"opacity": "60"
+					}
+				},
+				{
+					"id": "wait",
+					"objectClass": "System",
+					"sid": 926756871886286,
+					"parameters": {
+						"seconds": "0.1"
+					}
+				},
+				{
+					"id": "set-opacity",
+					"objectClass": "TeclaE",
+					"sid": 160752830931862,
+					"parameters": {
+						"opacity": "40"
+					}
+				},
+				{
+					"id": "wait",
+					"objectClass": "System",
+					"sid": 880225441414855,
+					"parameters": {
+						"seconds": "0.1"
+					}
+				},
+				{
+					"id": "set-opacity",
+					"objectClass": "TeclaE",
+					"sid": 700066007185762,
+					"parameters": {
+						"opacity": "20"
+					}
+				}
+			],
+			"sid": 183588935049928
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-key-pressed",
+					"objectClass": "Keyboard",
+					"sid": 595090877144704,
+					"parameters": {
+						"key": 38
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-opacity",
+					"objectClass": "TeclaArriba",
+					"sid": 257624219069853,
+					"parameters": {
+						"opacity": "100"
+					}
+				},
+				{
+					"id": "wait",
+					"objectClass": "System",
+					"sid": 263063667828270,
+					"parameters": {
+						"seconds": "0.5"
+					}
+				},
+				{
+					"id": "set-opacity",
+					"objectClass": "TeclaArriba",
+					"sid": 283089405399244,
+					"parameters": {
+						"opacity": "80"
+					}
+				},
+				{
+					"id": "wait",
+					"objectClass": "System",
+					"sid": 700884074042301,
+					"parameters": {
+						"seconds": "0.1"
+					}
+				},
+				{
+					"id": "set-opacity",
+					"objectClass": "TeclaArriba",
+					"sid": 804674401659765,
+					"parameters": {
+						"opacity": "60"
+					}
+				},
+				{
+					"id": "wait",
+					"objectClass": "System",
+					"sid": 126022802491666,
+					"parameters": {
+						"seconds": "0.1"
+					}
+				},
+				{
+					"id": "set-opacity",
+					"objectClass": "TeclaArriba",
+					"sid": 130358092004998,
+					"parameters": {
+						"opacity": "40"
+					}
+				},
+				{
+					"id": "wait",
+					"objectClass": "System",
+					"sid": 933888451318897,
+					"parameters": {
+						"seconds": "0.1"
+					}
+				},
+				{
+					"id": "set-opacity",
+					"objectClass": "TeclaArriba",
+					"sid": 837804118757538,
+					"parameters": {
+						"opacity": "20"
+					}
+				}
+			],
+			"sid": 913340916790480
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-key-pressed",
+					"objectClass": "Keyboard",
+					"sid": 957084304994318,
+					"parameters": {
+						"key": 37
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-opacity",
+					"objectClass": "TeclaIzq",
+					"sid": 437702918022997,
+					"parameters": {
+						"opacity": "100"
+					}
+				},
+				{
+					"id": "wait",
+					"objectClass": "System",
+					"sid": 267185908208548,
+					"parameters": {
+						"seconds": "0.5"
+					}
+				},
+				{
+					"id": "set-opacity",
+					"objectClass": "TeclaIzq",
+					"sid": 996045902521623,
+					"parameters": {
+						"opacity": "80"
+					}
+				},
+				{
+					"id": "wait",
+					"objectClass": "System",
+					"sid": 234831635524604,
+					"parameters": {
+						"seconds": "0.1"
+					}
+				},
+				{
+					"id": "set-opacity",
+					"objectClass": "TeclaIzq",
+					"sid": 710608742491305,
+					"parameters": {
+						"opacity": "60"
+					}
+				},
+				{
+					"id": "wait",
+					"objectClass": "System",
+					"sid": 223278885855902,
+					"parameters": {
+						"seconds": "0.1"
+					}
+				},
+				{
+					"id": "set-opacity",
+					"objectClass": "TeclaIzq",
+					"sid": 146297111619063,
+					"parameters": {
+						"opacity": "40"
+					}
+				},
+				{
+					"id": "wait",
+					"objectClass": "System",
+					"sid": 832543276241742,
+					"parameters": {
+						"seconds": "0.1"
+					}
+				},
+				{
+					"id": "set-opacity",
+					"objectClass": "TeclaIzq",
+					"sid": 806357942333112,
+					"parameters": {
+						"opacity": "20"
+					}
+				}
+			],
+			"sid": 958895832249881
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-key-pressed",
+					"objectClass": "Keyboard",
+					"sid": 607348167686939,
+					"parameters": {
+						"key": 40
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-opacity",
+					"objectClass": "TeclaAbajo",
+					"sid": 889526366443789,
+					"parameters": {
+						"opacity": "100"
+					}
+				},
+				{
+					"id": "wait",
+					"objectClass": "System",
+					"sid": 497856898537084,
+					"parameters": {
+						"seconds": "0.5"
+					}
+				},
+				{
+					"id": "set-opacity",
+					"objectClass": "TeclaAbajo",
+					"sid": 789627630869323,
+					"parameters": {
+						"opacity": "80"
+					}
+				},
+				{
+					"id": "wait",
+					"objectClass": "System",
+					"sid": 438193027147574,
+					"parameters": {
+						"seconds": "0.1"
+					}
+				},
+				{
+					"id": "set-opacity",
+					"objectClass": "TeclaAbajo",
+					"sid": 778114476908841,
+					"parameters": {
+						"opacity": "60"
+					}
+				},
+				{
+					"id": "wait",
+					"objectClass": "System",
+					"sid": 730740130332370,
+					"parameters": {
+						"seconds": "0.1"
+					}
+				},
+				{
+					"id": "set-opacity",
+					"objectClass": "TeclaAbajo",
+					"sid": 746161398793991,
+					"parameters": {
+						"opacity": "40"
+					}
+				},
+				{
+					"id": "wait",
+					"objectClass": "System",
+					"sid": 442694560682149,
+					"parameters": {
+						"seconds": "0.1"
+					}
+				},
+				{
+					"id": "set-opacity",
+					"objectClass": "TeclaAbajo",
+					"sid": 814554168346179,
+					"parameters": {
+						"opacity": "20"
+					}
+				}
+			],
+			"sid": 209612019704774
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-key-pressed",
+					"objectClass": "Keyboard",
+					"sid": 478686548937920,
+					"parameters": {
+						"key": 39
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-opacity",
+					"objectClass": "TeclaDere",
+					"sid": 245838629921075,
+					"parameters": {
+						"opacity": "100"
+					}
+				},
+				{
+					"id": "wait",
+					"objectClass": "System",
+					"sid": 805763544925579,
+					"parameters": {
+						"seconds": "0.5"
+					}
+				},
+				{
+					"id": "set-opacity",
+					"objectClass": "TeclaDere",
+					"sid": 527248467504924,
+					"parameters": {
+						"opacity": "80"
+					}
+				},
+				{
+					"id": "wait",
+					"objectClass": "System",
+					"sid": 939707917130761,
+					"parameters": {
+						"seconds": "0.1"
+					}
+				},
+				{
+					"id": "set-opacity",
+					"objectClass": "TeclaDere",
+					"sid": 110366739069511,
+					"parameters": {
+						"opacity": "60"
+					}
+				},
+				{
+					"id": "wait",
+					"objectClass": "System",
+					"sid": 787753366282006,
+					"parameters": {
+						"seconds": "0.1"
+					}
+				},
+				{
+					"id": "set-opacity",
+					"objectClass": "TeclaDere",
+					"sid": 601951117790918,
+					"parameters": {
+						"opacity": "40"
+					}
+				},
+				{
+					"id": "wait",
+					"objectClass": "System",
+					"sid": 915740382979507,
+					"parameters": {
+						"seconds": "0.1"
+					}
+				},
+				{
+					"id": "set-opacity",
+					"objectClass": "TeclaDere",
+					"sid": 373028428014702,
+					"parameters": {
+						"opacity": "20"
+					}
+				}
+			],
+			"sid": 234502269589672
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-key-pressed",
+					"objectClass": "Keyboard",
+					"sid": 841001018666791,
+					"parameters": {
+						"key": 32
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-opacity",
+					"objectClass": "Teclas",
+					"sid": 982995408470027,
+					"parameters": {
+						"opacity": "100"
+					}
+				},
+				{
+					"id": "wait",
+					"objectClass": "System",
+					"sid": 851097396723618,
+					"parameters": {
+						"seconds": "0.5"
+					}
+				},
+				{
+					"id": "set-opacity",
+					"objectClass": "Teclas",
+					"sid": 261684670534776,
+					"parameters": {
+						"opacity": "80"
+					}
+				},
+				{
+					"id": "wait",
+					"objectClass": "System",
+					"sid": 867525453662572,
+					"parameters": {
+						"seconds": "0.1"
+					}
+				},
+				{
+					"id": "set-opacity",
+					"objectClass": "Teclas",
+					"sid": 750332840074255,
+					"parameters": {
+						"opacity": "60"
+					}
+				},
+				{
+					"id": "wait",
+					"objectClass": "System",
+					"sid": 250708180469170,
+					"parameters": {
+						"seconds": "0.1"
+					}
+				},
+				{
+					"id": "set-opacity",
+					"objectClass": "Teclas",
+					"sid": 693110427741103,
+					"parameters": {
+						"opacity": "40"
+					}
+				},
+				{
+					"id": "wait",
+					"objectClass": "System",
+					"sid": 158905666762180,
+					"parameters": {
+						"seconds": "0.1"
+					}
+				},
+				{
+					"id": "set-opacity",
+					"objectClass": "Teclas",
+					"sid": 736240118808898,
+					"parameters": {
+						"opacity": "20"
+					}
+				}
+			],
+			"sid": 178537291257507
+		}
+	],
+	"sid": 663790178378976
+}

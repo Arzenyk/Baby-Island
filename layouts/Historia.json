@@ -64,11 +64,46 @@
 					}
 				},
 				{
+					"type": "cuadro",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 326,
+					"sid": 640961458900805,
+					"tags": "",
+					"instanceVariables": {},
+					"behaviors": {},
+					"instanceFolderItem": {
+						"sid": 640961458900805,
+						"expanded": true
+					},
+					"world": {
+						"x": 625,
+						"y": 575,
+						"width": 784,
+						"height": 272,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							0.3
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
 					"type": "txt_titulohistoria",
 					"properties": {
 						"text": "Historia",
 						"enable-bbcode": true,
-						"font": "Comic Sans MS",
+						"font": "Ink Free",
 						"size": 100,
 						"line-height": 0,
 						"bold": false,
@@ -98,8 +133,8 @@
 						"expanded": true
 					},
 					"world": {
-						"x": 373,
-						"y": 65,
+						"x": 400,
+						"y": 61,
 						"width": 518,
 						"height": 149,
 						"originX": 0,
@@ -119,15 +154,15 @@
 					"properties": {
 						"text": "En la época medieval, el ejército deja a los bebés en una isla con poca comida y armas para que solo sobrevivan los más hábiles.\n\nDebes encontrar una forma de sobrevivir y escapar para salvar tu vida.",
 						"enable-bbcode": true,
-						"font": "Comic Sans MS",
-						"size": 20,
+						"font": "Ink Free",
+						"size": 30,
 						"line-height": 0,
 						"bold": false,
 						"italic": false,
 						"color": [
-							0.9568627450980393,
-							0.44313725490196076,
-							0.44313725490196076,
+							0.8745098039215686,
+							0.8784313725490196,
+							0.7411764705882353,
 							1
 						],
 						"horizontal-alignment": "left",
@@ -149,10 +184,10 @@
 						"expanded": true
 					},
 					"world": {
-						"x": 261,
-						"y": 470,
+						"x": 267,
+						"y": 434,
 						"width": 764,
-						"height": 203,
+						"height": 301,
 						"originX": 0,
 						"originY": 0,
 						"color": [

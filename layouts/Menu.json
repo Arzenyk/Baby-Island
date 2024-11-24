@@ -353,7 +353,7 @@
 					"type": "btn_tutorial",
 					"properties": {
 						"type": "button",
-						"text": "Tutorial",
+						"text": "Controles",
 						"tooltip": "",
 						"initially-visible": true,
 						"enabled": true,
