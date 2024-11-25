@@ -1,6 +1,6 @@
 {
 	"projectFormatVersion": 1,
-	"savedWithRelease": 40702,
+	"savedWithRelease": 41600,
 	"name": "Baby-Island",
 	"runtime": "c3",
 	"useWorker": "auto",
@@ -199,7 +199,8 @@
 			"TeclaAbajo",
 			"TeclaDere",
 			"spr_ganaste",
-			"Audio"
+			"Audio",
+			"txt_estadisticas"
 		],
 		"subfolders": [
 			{
@@ -383,6 +384,166 @@
 					"file-info": {
 						"purpose": "none"
 					}
+				},
+				{
+					"name": "llave.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 457858101580161,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "arco.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 349883023737077,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "cuchillo.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 618716274974040,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "flechas.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 422334190444447,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "AtacArco.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 652760243075891,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "atacCuchillo.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 469260180040493,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "equipArco.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 710245208460042,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "equipcuchillo.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 939583735376594,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "tiking clock.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 707498199897855,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "puertaAbierta.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 384238456663135,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "puertaCerrada.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 956875865252320,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "Enemigo bb.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 285914565710806,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "EnemigobbMuerde.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 750213471733792,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "jefePisa.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 864676337769698,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "merchant.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 218958810205529,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "teclas.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 249918972318975,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "boton.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 896744836642566,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "escapaste.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 689646888094153,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "moriste.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 970823474467820,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "Timeout.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 500934961065162,
+					"file-info": {
+						"purpose": "none"
+					}
 				}
 			],
 			"subfolders": []
@@ -546,7 +707,6 @@
 		"preloadSounds": true,
 		"cordovaiOSScheme": "app",
 		"cordovaAndroidScheme": "https",
-		"autoReloadScriptsOnPreview": false,
 		"exportFileStructure": "folders",
 		"uidAllocationMode": "increment"
 	},

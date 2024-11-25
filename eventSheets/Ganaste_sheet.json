@@ -20,6 +20,18 @@
 					}
 				},
 				{
+					"id": "play",
+					"objectClass": "Audio",
+					"sid": 689067977930426,
+					"parameters": {
+						"audio-file": "boton",
+						"loop": "not-looping",
+						"volume": "0",
+						"stereo-pan": "0",
+						"tag-optional": "\"\""
+					}
+				},
+				{
 					"id": "reset-global-variables",
 					"objectClass": "System",
 					"sid": 743163988040720,
@@ -29,6 +41,39 @@
 				}
 			],
 			"sid": 467994589078317
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-start-of-layout",
+					"objectClass": "System",
+					"sid": 211081194017126
+				}
+			],
+			"actions": [
+				{
+					"id": "set-text",
+					"objectClass": "txt_estadisticas",
+					"sid": 770212727412265,
+					"parameters": {
+						"text": "\"Estadísticas: \" & newline & \r\n\"Tiempo: \" & Timer & newline & \r\n\"Vida: \" & VidaJugador & newline & \r\n\"Items conseguidos: \" & newline & \r\n\"Flechas: \" & cant_flechas & newline & \r\n\"Monedas: \" & Monedas\n"
+					}
+				},
+				{
+					"id": "play",
+					"objectClass": "Audio",
+					"sid": 445132025909238,
+					"parameters": {
+						"audio-file": "escapaste",
+						"loop": "not-looping",
+						"volume": "0",
+						"stereo-pan": "0",
+						"tag-optional": "\"\""
+					}
+				}
+			],
+			"sid": 406382066303291
 		}
 	],
 	"sid": 508717069211721

@@ -242,6 +242,16 @@
 			"sid": 349739070259421
 		},
 		{
+			"eventType": "variable",
+			"name": "Pausado",
+			"type": "boolean",
+			"initialValue": "false",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 618936823208551
+		},
+		{
 			"eventType": "group",
 			"disabled": false,
 			"title": "Enemigo Jefe",
@@ -318,7 +328,37 @@
 							}
 						}
 					],
-					"sid": 496598631512381
+					"sid": 496598631512381,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "trigger-once-while-true",
+									"objectClass": "System",
+									"sid": 550265028327399
+								}
+							],
+							"actions": [
+								{
+									"id": "play-at-object",
+									"objectClass": "Audio",
+									"sid": 214367420255623,
+									"parameters": {
+										"audio-file": "jefePisa",
+										"loop": "looping",
+										"volume": "-3",
+										"object": "spr_enemigo",
+										"inner-angle": "360",
+										"outer-angle": "360",
+										"outer-gain": "0",
+										"tag-optional": "\"jefePisa\""
+									}
+								}
+							],
+							"sid": 340586120377412
+						}
+					]
 				},
 				{
 					"eventType": "comment",
@@ -500,6 +540,14 @@
 								"animation": "\"Quieto\"",
 								"from": "beginning"
 							}
+						},
+						{
+							"id": "stop",
+							"objectClass": "Audio",
+							"sid": 427106320836932,
+							"parameters": {
+								"tag": "\"jefePisa\""
+							}
 						}
 					],
 					"sid": 506697130659460
@@ -648,6 +696,14 @@
 							"id": "destroy",
 							"objectClass": "pbar_vida_enemigo",
 							"sid": 161404596772461
+						},
+						{
+							"id": "stop",
+							"objectClass": "Audio",
+							"sid": 592907047663068,
+							"parameters": {
+								"tag": "\"jefePisa\""
+							}
 						}
 					],
 					"sid": 158403600614438
@@ -723,7 +779,37 @@
 							}
 						}
 					],
-					"sid": 480615393538914
+					"sid": 480615393538914,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "trigger-once-while-true",
+									"objectClass": "System",
+									"sid": 115032395182679
+								}
+							],
+							"actions": [
+								{
+									"id": "play-at-object",
+									"objectClass": "Audio",
+									"sid": 667267717744348,
+									"parameters": {
+										"audio-file": "Enemigo bb",
+										"loop": "looping",
+										"volume": "-3",
+										"object": "spr_enemigo_normal",
+										"inner-angle": "360",
+										"outer-angle": "360",
+										"outer-gain": "0",
+										"tag-optional": "\"enemigobb\""
+									}
+								}
+							],
+							"sid": 398668450146524
+						}
+					]
 				},
 				{
 					"eventType": "comment",
@@ -845,6 +931,14 @@
 							"objectClass": "spr_enemigo_normal",
 							"sid": 700236041394661,
 							"behaviorType": "MoveTo"
+						},
+						{
+							"id": "stop",
+							"objectClass": "Audio",
+							"sid": 757052249465421,
+							"parameters": {
+								"tag": "\"enemigobb\""
+							}
 						}
 					],
 					"sid": 750197160158101
@@ -1113,6 +1207,17 @@
 								"variable": "CantEnemigos",
 								"value": "1"
 							}
+						},
+						{
+							"id": "fade-volume",
+							"objectClass": "Audio",
+							"sid": 907504850480801,
+							"parameters": {
+								"tag": "\"enemigobb\"",
+								"db": "-100",
+								"duration": "1",
+								"ending": "stop"
+							}
 						}
 					],
 					"sid": 706835140234861
@@ -1188,6 +1293,18 @@
 									"parameters": {
 										"variable": "cant_flechas",
 										"value": "3"
+									}
+								},
+								{
+									"id": "play",
+									"objectClass": "Audio",
+									"sid": 106057925299264,
+									"parameters": {
+										"audio-file": "flechas",
+										"loop": "not-looping",
+										"volume": "-10",
+										"stereo-pan": "0",
+										"tag-optional": "\"\""
 									}
 								},
 								{
@@ -1295,51 +1412,97 @@
 									"parameters": {
 										"object": "spr_puerta"
 									}
-								},
-								{
-									"id": "compare-boolean-eventvar",
-									"objectClass": "System",
-									"sid": 712876096800555,
-									"parameters": {
-										"variable": "tieneLlave"
-									}
-								},
-								{
-									"id": "compare-eventvar",
-									"objectClass": "System",
-									"sid": 997667959784654,
-									"parameters": {
-										"variable": "Llave",
-										"comparison": 4,
-										"value": "0"
-									}
 								}
 							],
-							"actions": [
+							"actions": [],
+							"sid": 125450665316244,
+							"children": [
 								{
-									"id": "destroy",
-									"objectClass": "spr_puerta",
-									"sid": 703960328954725
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-boolean-eventvar",
+											"objectClass": "System",
+											"sid": 861726706740405,
+											"parameters": {
+												"variable": "tieneLlave"
+											}
+										},
+										{
+											"id": "compare-eventvar",
+											"objectClass": "System",
+											"sid": 139971082520426,
+											"parameters": {
+												"variable": "Llave",
+												"comparison": 4,
+												"value": "0"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "play",
+											"objectClass": "Audio",
+											"sid": 902721915983076,
+											"parameters": {
+												"audio-file": "puertaAbierta",
+												"loop": "not-looping",
+												"volume": "-3",
+												"stereo-pan": "0",
+												"tag-optional": "\"\""
+											}
+										},
+										{
+											"id": "destroy",
+											"objectClass": "spr_puerta",
+											"sid": 415652701674196
+										},
+										{
+											"id": "subtract-from-eventvar",
+											"objectClass": "System",
+											"sid": 961645657957793,
+											"parameters": {
+												"variable": "Llave",
+												"value": "1"
+											}
+										},
+										{
+											"id": "set-visible",
+											"objectClass": "hud_llave",
+											"sid": 547566643164886,
+											"parameters": {
+												"visibility": "invisible"
+											}
+										}
+									],
+									"sid": 916412574281747
 								},
 								{
-									"id": "subtract-from-eventvar",
-									"objectClass": "System",
-									"sid": 905807198730756,
-									"parameters": {
-										"variable": "Llave",
-										"value": "1"
-									}
-								},
-								{
-									"id": "set-visible",
-									"objectClass": "hud_llave",
-									"sid": 261021017394012,
-									"parameters": {
-										"visibility": "invisible"
-									}
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "else",
+											"objectClass": "System",
+											"sid": 198977934601139
+										}
+									],
+									"actions": [
+										{
+											"id": "play",
+											"objectClass": "Audio",
+											"sid": 914958608995740,
+											"parameters": {
+												"audio-file": "puertaCerrada",
+												"loop": "not-looping",
+												"volume": "-3",
+												"stereo-pan": "0",
+												"tag-optional": "\"\""
+											}
+										}
+									],
+									"sid": 263062305930996
 								}
-							],
-							"sid": 125450665316244
+							]
 						},
 						{
 							"eventType": "block",
@@ -1355,9 +1518,16 @@
 							],
 							"actions": [
 								{
-									"id": "destroy",
-									"objectClass": "spr_llave",
-									"sid": 944225009931257
+									"id": "play",
+									"objectClass": "Audio",
+									"sid": 806769097337494,
+									"parameters": {
+										"audio-file": "llave",
+										"loop": "not-looping",
+										"volume": "-2",
+										"stereo-pan": "0",
+										"tag-optional": "\"\""
+									}
 								},
 								{
 									"id": "add-to-eventvar",
@@ -1367,6 +1537,11 @@
 										"variable": "Llave",
 										"value": "1"
 									}
+								},
+								{
+									"id": "destroy",
+									"objectClass": "spr_llave",
+									"sid": 439115773750875
 								}
 							],
 							"sid": 576722458756140,
@@ -1450,11 +1625,21 @@
 								{
 									"id": "compare-eventvar",
 									"objectClass": "System",
-									"sid": 723001344269182,
+									"sid": 987861310113704,
 									"parameters": {
 										"variable": "VidaJugador",
-										"comparison": 0,
+										"comparison": 2,
 										"value": "5"
+									}
+								},
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 570253708730221,
+									"parameters": {
+										"variable": "VidaJugador",
+										"comparison": 4,
+										"value": "3"
 									}
 								}
 							],
@@ -1469,7 +1654,34 @@
 									}
 								}
 							],
-							"sid": 974581585896331
+							"sid": 974581585896331,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "trigger-once-while-true",
+											"objectClass": "System",
+											"sid": 176318408928334
+										}
+									],
+									"actions": [
+										{
+											"id": "play",
+											"objectClass": "Audio",
+											"sid": 753159317802893,
+											"parameters": {
+												"audio-file": "EnemigobbMuerde",
+												"loop": "not-looping",
+												"volume": "-3",
+												"stereo-pan": "0",
+												"tag-optional": "\"\""
+											}
+										}
+									],
+									"sid": 852790338333006
+								}
+							]
 						},
 						{
 							"eventType": "block",
@@ -1477,11 +1689,11 @@
 								{
 									"id": "compare-eventvar",
 									"objectClass": "System",
-									"sid": 794698712859580,
+									"sid": 915231303433682,
 									"parameters": {
 										"variable": "VidaJugador",
 										"comparison": 2,
-										"value": "5"
+										"value": "3"
 									}
 								}
 							],
@@ -1496,7 +1708,34 @@
 									}
 								}
 							],
-							"sid": 666037478220041
+							"sid": 666037478220041,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "trigger-once-while-true",
+											"objectClass": "System",
+											"sid": 951999406767728
+										}
+									],
+									"actions": [
+										{
+											"id": "play",
+											"objectClass": "Audio",
+											"sid": 795715745103764,
+											"parameters": {
+												"audio-file": "EnemigobbMuerde",
+												"loop": "not-looping",
+												"volume": "-3",
+												"stereo-pan": "0",
+												"tag-optional": "\"\""
+											}
+										}
+									],
+									"sid": 713221275547799
+								}
+							]
 						},
 						{
 							"eventType": "block",
@@ -1523,7 +1762,34 @@
 									}
 								}
 							],
-							"sid": 388651814042892
+							"sid": 388651814042892,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "trigger-once-while-true",
+											"objectClass": "System",
+											"sid": 505242042923700
+										}
+									],
+									"actions": [
+										{
+											"id": "play",
+											"objectClass": "Audio",
+											"sid": 429882322155209,
+											"parameters": {
+												"audio-file": "EnemigobbMuerde",
+												"loop": "not-looping",
+												"volume": "-3",
+												"stereo-pan": "0",
+												"tag-optional": "\"\""
+											}
+										}
+									],
+									"sid": 638152184985946
+								}
+							]
 						},
 						{
 							"eventType": "block",
@@ -1881,6 +2147,18 @@
 									"parameters": {
 										"text": "\"X\" & cant_flechas"
 									}
+								},
+								{
+									"id": "play",
+									"objectClass": "Audio",
+									"sid": 405162008892560,
+									"parameters": {
+										"audio-file": "AtacArco",
+										"loop": "not-looping",
+										"volume": "-3",
+										"stereo-pan": "0",
+										"tag-optional": "\"\""
+									}
 								}
 							],
 							"sid": 228845603176006
@@ -2053,6 +2331,11 @@
 										"variable": "Arco"
 									},
 									"isInverted": true
+								},
+								{
+									"id": "trigger-once-while-true",
+									"objectClass": "System",
+									"sid": 499002460449821
 								}
 							],
 							"actions": [
@@ -2063,6 +2346,27 @@
 									"parameters": {
 										"animation": "\"Ataca.Cuchillo\"",
 										"from": "beginning"
+									}
+								},
+								{
+									"id": "set-playback-rate",
+									"objectClass": "Audio",
+									"sid": 457779555172139,
+									"parameters": {
+										"tag": "\"\"",
+										"playback-rate": "1.0"
+									}
+								},
+								{
+									"id": "play",
+									"objectClass": "Audio",
+									"sid": 253944442124500,
+									"parameters": {
+										"audio-file": "atacCuchillo",
+										"loop": "not-looping",
+										"volume": "-3",
+										"stereo-pan": "0",
+										"tag-optional": "\"\""
 									}
 								}
 							],
@@ -2452,6 +2756,18 @@
 									}
 								},
 								{
+									"id": "play",
+									"objectClass": "Audio",
+									"sid": 543992909667161,
+									"parameters": {
+										"audio-file": "cuchillo",
+										"loop": "not-looping",
+										"volume": "-2",
+										"stereo-pan": "0",
+										"tag-optional": "\"\""
+									}
+								},
+								{
 									"id": "destroy",
 									"objectClass": "cofre_cuchillo",
 									"sid": 718055598208078
@@ -2526,6 +2842,18 @@
 									"parameters": {
 										"variable": "Arco",
 										"value": "true"
+									}
+								},
+								{
+									"id": "play",
+									"objectClass": "Audio",
+									"sid": 921522162023289,
+									"parameters": {
+										"audio-file": "arco",
+										"loop": "not-looping",
+										"volume": "-2",
+										"stereo-pan": "0",
+										"tag-optional": "\"\""
 									}
 								},
 								{
@@ -2771,6 +3099,18 @@
 									}
 								},
 								{
+									"id": "play",
+									"objectClass": "Audio",
+									"sid": 333049020093059,
+									"parameters": {
+										"audio-file": "flechas",
+										"loop": "not-looping",
+										"volume": "-10",
+										"stereo-pan": "0",
+										"tag-optional": "\"\""
+									}
+								},
+								{
 									"id": "set-text",
 									"objectClass": "txt_cantflechas",
 									"sid": 175502948349586,
@@ -2928,13 +3268,13 @@
 						{
 							"id": "play",
 							"objectClass": "Audio",
-							"sid": 151927385417197,
+							"sid": 346495858993373,
 							"parameters": {
 								"audio-file": "Night Sounds 10 Minutes",
 								"loop": "looping",
-								"volume": "-5",
+								"volume": "-3",
 								"stereo-pan": "0",
-								"tag-optional": "\"\""
+								"tag-optional": "\"music\""
 							}
 						},
 						{
@@ -2948,11 +3288,11 @@
 						{
 							"id": "set-listener-orientation",
 							"objectClass": "Audio",
-							"sid": 637415734795711,
+							"sid": 135626342818385,
 							"parameters": {
 								"forwardX": "spr_player.8Direction.VectorX",
 								"forwardY": "spr_player.8Direction.VectorY",
-								"forwardZ": "-1",
+								"forwardZ": "1",
 								"upX": "spr_player.X",
 								"upY": "spr_player.Y",
 								"upZ": "0"
@@ -3282,11 +3622,23 @@
 						{
 							"id": "play",
 							"objectClass": "Audio",
-							"sid": 346121115477766,
+							"sid": 341132806803044,
 							"parameters": {
 								"audio-file": "small-waves-onto-the-sand-143040",
 								"loop": "looping",
 								"volume": "-25",
+								"stereo-pan": "0",
+								"tag-optional": "\"music\""
+							}
+						},
+						{
+							"id": "play",
+							"objectClass": "Audio",
+							"sid": 195152691797627,
+							"parameters": {
+								"audio-file": "tiking clock",
+								"loop": "looping",
+								"volume": "-10",
 								"stereo-pan": "0",
 								"tag-optional": "\"\""
 							}
@@ -3398,15 +3750,6 @@
 					],
 					"actions": [
 						{
-							"id": "set-visible",
-							"objectClass": "spr_moriste",
-							"sid": 857741091642223,
-							"disabled": true,
-							"parameters": {
-								"visibility": "visible"
-							}
-						},
-						{
 							"id": "set-ignoring-input",
 							"objectClass": "spr_player",
 							"sid": 882207651935717,
@@ -3416,13 +3759,9 @@
 							}
 						},
 						{
-							"id": "set-time-scale",
-							"objectClass": "System",
-							"sid": 971588900222351,
-							"disabled": true,
-							"parameters": {
-								"time-scale": "0"
-							}
+							"id": "stop-all",
+							"objectClass": "Audio",
+							"sid": 322347467738350
 						},
 						{
 							"id": "go-to-layout",
@@ -3589,6 +3928,18 @@
 							}
 						},
 						{
+							"id": "play",
+							"objectClass": "Audio",
+							"sid": 684787312749628,
+							"parameters": {
+								"audio-file": "equipcuchillo",
+								"loop": "not-looping",
+								"volume": "-3",
+								"stereo-pan": "0",
+								"tag-optional": "\"\""
+							}
+						},
+						{
 							"id": "set-boolean-eventvar",
 							"objectClass": "System",
 							"sid": 717257838754854,
@@ -3652,6 +4003,18 @@
 							}
 						},
 						{
+							"id": "play",
+							"objectClass": "Audio",
+							"sid": 760453956112439,
+							"parameters": {
+								"audio-file": "equipArco",
+								"loop": "not-looping",
+								"volume": "-3",
+								"stereo-pan": "0",
+								"tag-optional": "\"\""
+							}
+						},
+						{
 							"id": "set-boolean-eventvar",
 							"objectClass": "System",
 							"sid": 148738354454324,
@@ -3682,6 +4045,102 @@
 						}
 					],
 					"sid": 767690816170808
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-key-pressed",
+							"objectClass": "Keyboard",
+							"sid": 887368807614646,
+							"parameters": {
+								"key": 80
+							}
+						},
+						{
+							"id": "compare-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 532094055519085,
+							"parameters": {
+								"variable": "Pausado"
+							},
+							"isInverted": true
+						},
+						{
+							"id": "is-visible",
+							"objectClass": "spr_player",
+							"sid": 806084255729462
+						}
+					],
+					"actions": [
+						{
+							"id": "set-time-scale",
+							"objectClass": "System",
+							"sid": 800788508520803,
+							"parameters": {
+								"time-scale": "0"
+							}
+						},
+						{
+							"id": "set-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 806236272329114,
+							"disabled": true,
+							"parameters": {
+								"variable": "Pausado",
+								"value": "true"
+							}
+						}
+					],
+					"sid": 834165389380693,
+					"disabled": true
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-key-pressed",
+							"objectClass": "Keyboard",
+							"sid": 298191322586345,
+							"parameters": {
+								"key": 80
+							}
+						},
+						{
+							"id": "compare-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 169510898899512,
+							"parameters": {
+								"variable": "Pausado"
+							}
+						},
+						{
+							"id": "is-visible",
+							"objectClass": "spr_player",
+							"sid": 690695591779242
+						}
+					],
+					"actions": [
+						{
+							"id": "set-time-scale",
+							"objectClass": "System",
+							"sid": 913070124417859,
+							"parameters": {
+								"time-scale": "1"
+							}
+						},
+						{
+							"id": "set-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 216523738493510,
+							"parameters": {
+								"variable": "Pausado",
+								"value": "false"
+							}
+						}
+					],
+					"sid": 333601773716484,
+					"disabled": true
 				}
 			],
 			"sid": 794891254663739
@@ -4064,6 +4523,18 @@
 								"off-time": "0.1",
 								"duration": "0.5"
 							}
+						},
+						{
+							"id": "play",
+							"objectClass": "Audio",
+							"sid": 866843817212755,
+							"parameters": {
+								"audio-file": "flechas",
+								"loop": "not-looping",
+								"volume": "-3",
+								"stereo-pan": "0",
+								"tag-optional": "\"\""
+							}
 						}
 					],
 					"sid": 474932239333823
@@ -4410,6 +4881,21 @@
 							"parameters": {
 								"variable": "Monedas",
 								"value": "30"
+							}
+						},
+						{
+							"id": "play-at-object",
+							"objectClass": "Audio",
+							"sid": 173698936853117,
+							"parameters": {
+								"audio-file": "merchant",
+								"loop": "not-looping",
+								"volume": "-3",
+								"object": "spr_merchant",
+								"inner-angle": "360",
+								"outer-angle": "360",
+								"outer-gain": "0",
+								"tag-optional": "\"\""
 							}
 						}
 					],

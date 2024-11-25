@@ -20,6 +20,18 @@
 					}
 				},
 				{
+					"id": "play",
+					"objectClass": "Audio",
+					"sid": 207233399136537,
+					"parameters": {
+						"audio-file": "boton",
+						"loop": "not-looping",
+						"volume": "0",
+						"stereo-pan": "0",
+						"tag-optional": "\"\""
+					}
+				},
+				{
 					"id": "reset-global-variables",
 					"objectClass": "System",
 					"sid": 947621365486793,
@@ -29,6 +41,31 @@
 				}
 			],
 			"sid": 693533178482451
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-start-of-layout",
+					"objectClass": "System",
+					"sid": 212832456114794
+				}
+			],
+			"actions": [
+				{
+					"id": "play",
+					"objectClass": "Audio",
+					"sid": 207984883718763,
+					"parameters": {
+						"audio-file": "moriste",
+						"loop": "not-looping",
+						"volume": "0",
+						"stereo-pan": "0",
+						"tag-optional": "\"\""
+					}
+				}
+			],
+			"sid": 945802605536997
 		}
 	],
 	"sid": 975590867680658

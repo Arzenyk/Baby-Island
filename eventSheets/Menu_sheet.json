@@ -18,6 +18,18 @@
 					"parameters": {
 						"layout": "Historia"
 					}
+				},
+				{
+					"id": "play",
+					"objectClass": "Audio",
+					"sid": 270877813642245,
+					"parameters": {
+						"audio-file": "boton",
+						"loop": "not-looping",
+						"volume": "0",
+						"stereo-pan": "0",
+						"tag-optional": "\"\""
+					}
 				}
 			],
 			"sid": 980873899264879
@@ -39,9 +51,46 @@
 					"parameters": {
 						"layout": "Tutorial"
 					}
+				},
+				{
+					"id": "play",
+					"objectClass": "Audio",
+					"sid": 195264374240882,
+					"parameters": {
+						"audio-file": "boton",
+						"loop": "not-looping",
+						"volume": "0",
+						"stereo-pan": "0",
+						"tag-optional": "\"\""
+					}
 				}
 			],
 			"sid": 251007026256006
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-start-of-layout",
+					"objectClass": "System",
+					"sid": 498100102881921
+				}
+			],
+			"actions": [
+				{
+					"id": "play",
+					"objectClass": "Audio",
+					"sid": 480681330994884,
+					"parameters": {
+						"audio-file": "small-waves-onto-the-sand-143040",
+						"loop": "looping",
+						"volume": "-10",
+						"stereo-pan": "0",
+						"tag-optional": "\"\""
+					}
+				}
+			],
+			"sid": 250690117336275
 		}
 	],
 	"sid": 117445633287180

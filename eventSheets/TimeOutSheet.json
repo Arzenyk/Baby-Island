@@ -18,9 +18,46 @@
 					"parameters": {
 						"layout": "Menu"
 					}
+				},
+				{
+					"id": "play",
+					"objectClass": "Audio",
+					"sid": 661435376738594,
+					"parameters": {
+						"audio-file": "boton",
+						"loop": "not-looping",
+						"volume": "0",
+						"stereo-pan": "0",
+						"tag-optional": "\"\""
+					}
 				}
 			],
 			"sid": 591570074302818
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-start-of-layout",
+					"objectClass": "System",
+					"sid": 814164144779828
+				}
+			],
+			"actions": [
+				{
+					"id": "play",
+					"objectClass": "Audio",
+					"sid": 429239950392886,
+					"parameters": {
+						"audio-file": "Timeout",
+						"loop": "not-looping",
+						"volume": "0",
+						"stereo-pan": "0",
+						"tag-optional": "\"\""
+					}
+				}
+			],
+			"sid": 524022542810467
 		}
 	],
 	"sid": 236035516312105

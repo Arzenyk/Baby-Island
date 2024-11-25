@@ -18,6 +18,18 @@
 					"parameters": {
 						"layout": "Menu"
 					}
+				},
+				{
+					"id": "play",
+					"objectClass": "Audio",
+					"sid": 780159063798376,
+					"parameters": {
+						"audio-file": "boton",
+						"loop": "not-looping",
+						"volume": "0",
+						"stereo-pan": "0",
+						"tag-optional": "\"\""
+					}
 				}
 			],
 			"sid": 258622226096196
@@ -725,6 +737,53 @@
 				}
 			],
 			"sid": 178537291257507
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-any-key-pressed",
+					"objectClass": "Keyboard",
+					"sid": 788809836137676
+				}
+			],
+			"actions": [
+				{
+					"id": "play",
+					"objectClass": "Audio",
+					"sid": 661701734597698,
+					"parameters": {
+						"audio-file": "teclas",
+						"loop": "not-looping",
+						"volume": "-3",
+						"stereo-pan": "0",
+						"tag-optional": "\"\""
+					}
+				}
+			],
+			"sid": 839740991550573
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-start-of-layout",
+					"objectClass": "System",
+					"sid": 328991137411790
+				}
+			],
+			"actions": [
+				{
+					"id": "set-enabled",
+					"objectClass": "spr_player",
+					"sid": 605207361505861,
+					"behaviorType": "ScrollTo",
+					"parameters": {
+						"state": "disabled"
+					}
+				}
+			],
+			"sid": 281890388310537
 		}
 	],
 	"sid": 663790178378976
