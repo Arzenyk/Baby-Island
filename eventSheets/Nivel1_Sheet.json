@@ -1255,6 +1255,18 @@
 									}
 								},
 								{
+									"id": "play",
+									"objectClass": "Audio",
+									"sid": 537711625691564,
+									"parameters": {
+										"audio-file": "moneda",
+										"loop": "not-looping",
+										"volume": "-10",
+										"stereo-pan": "0",
+										"tag-optional": "\"\""
+									}
+								},
+								{
 									"id": "destroy",
 									"objectClass": "spr_moneda",
 									"sid": 458598029910082
@@ -2680,6 +2692,18 @@
 									}
 								},
 								{
+									"id": "play",
+									"objectClass": "Audio",
+									"sid": 162357128115416,
+									"parameters": {
+										"audio-file": "moneda",
+										"loop": "not-looping",
+										"volume": "-10",
+										"stereo-pan": "0",
+										"tag-optional": "\"\""
+									}
+								},
+								{
 									"id": "set-text",
 									"objectClass": "txt_monedas",
 									"sid": 341962621723355,
@@ -2770,6 +2794,75 @@
 						}
 					],
 					"sid": 818325178420812
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-moving",
+							"objectClass": "spr_player",
+							"sid": 267200506502054,
+							"behaviorType": "8Direction"
+						},
+						{
+							"id": "trigger-once-while-true",
+							"objectClass": "System",
+							"sid": 307117941411838
+						}
+					],
+					"actions": [
+						{
+							"id": "set-playback-rate",
+							"objectClass": "Audio",
+							"sid": 586981697536918,
+							"parameters": {
+								"tag": "\"sandwalk\"",
+								"playback-rate": "1.0"
+							}
+						},
+						{
+							"id": "play",
+							"objectClass": "Audio",
+							"sid": 201821750331038,
+							"parameters": {
+								"audio-file": "sandwalk",
+								"loop": "looping",
+								"volume": "-5",
+								"stereo-pan": "0",
+								"tag-optional": "\"sandwalk\""
+							}
+						}
+					],
+					"sid": 752729099547074
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-moving",
+							"objectClass": "spr_player",
+							"sid": 568207684042628,
+							"behaviorType": "8Direction",
+							"isInverted": true
+						},
+						{
+							"id": "trigger-once-while-true",
+							"objectClass": "System",
+							"sid": 792399012723779
+						}
+					],
+					"actions": [
+						{
+							"id": "set-paused",
+							"objectClass": "Audio",
+							"sid": 721460372816754,
+							"parameters": {
+								"tag": "\"sandwalk\"",
+								"state": "pause"
+							}
+						}
+					],
+					"sid": 175798519201105
 				}
 			],
 			"sid": 222920941293229
@@ -2832,6 +2925,39 @@
 						}
 					],
 					"actions": [
+						{
+							"id": "play",
+							"objectClass": "Audio",
+							"sid": 151927385417197,
+							"parameters": {
+								"audio-file": "Night Sounds 10 Minutes",
+								"loop": "looping",
+								"volume": "-5",
+								"stereo-pan": "0",
+								"tag-optional": "\"\""
+							}
+						},
+						{
+							"id": "set-listener-object",
+							"objectClass": "Audio",
+							"sid": 815377585848002,
+							"parameters": {
+								"object": "spr_player"
+							}
+						},
+						{
+							"id": "set-listener-orientation",
+							"objectClass": "Audio",
+							"sid": 637415734795711,
+							"parameters": {
+								"forwardX": "spr_player.8Direction.VectorX",
+								"forwardY": "spr_player.8Direction.VectorY",
+								"forwardZ": "-1",
+								"upX": "spr_player.X",
+								"upY": "spr_player.Y",
+								"upZ": "0"
+							}
+						},
 						{
 							"id": "pin-to-object-properties",
 							"objectClass": "PopUp_text",
@@ -3151,6 +3277,18 @@
 							"parameters": {
 								"variable": "cant_flechas",
 								"value": "0"
+							}
+						},
+						{
+							"id": "play",
+							"objectClass": "Audio",
+							"sid": 346121115477766,
+							"parameters": {
+								"audio-file": "small-waves-onto-the-sand-143040",
+								"loop": "looping",
+								"volume": "-25",
+								"stereo-pan": "0",
+								"tag-optional": "\"\""
 							}
 						}
 					],
@@ -3827,6 +3965,18 @@
 							"parameters": {
 								"variable": "Monedas",
 								"value": "3"
+							}
+						},
+						{
+							"id": "play",
+							"objectClass": "Audio",
+							"sid": 822512501039574,
+							"parameters": {
+								"audio-file": "moneda",
+								"loop": "not-looping",
+								"volume": "-10",
+								"stereo-pan": "0",
+								"tag-optional": "\"\""
 							}
 						},
 						{

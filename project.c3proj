@@ -15,6 +15,13 @@
 		},
 		{
 			"type": "plugin",
+			"id": "Audio",
+			"name": "Audio",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
 			"id": "Button",
 			"name": "Button",
 			"author": "Scirra",
@@ -190,7 +197,9 @@
 			"TeclaArriba",
 			"TeclaIzq",
 			"TeclaAbajo",
-			"TeclaDere"
+			"TeclaDere",
+			"spr_ganaste",
+			"Audio"
 		],
 		"subfolders": [
 			{
@@ -358,11 +367,45 @@
 			"subfolders": []
 		},
 		"sound": {
-			"items": [],
+			"items": [
+				{
+					"name": "moneda.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 762251187023587,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "sandwalk.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 444279024997341,
+					"file-info": {
+						"purpose": "none"
+					}
+				}
+			],
 			"subfolders": []
 		},
 		"music": {
-			"items": [],
+			"items": [
+				{
+					"name": "Night Sounds 10 Minutes.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 203393502135978,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "small-waves-onto-the-sand-143040.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 866732033681744,
+					"file-info": {
+						"purpose": "none"
+					}
+				}
+			],
 			"subfolders": []
 		},
 		"video": {
